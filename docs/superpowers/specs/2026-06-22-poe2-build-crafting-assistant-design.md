@@ -82,6 +82,20 @@ bridge itself is fixed as Lua.
   best options / crafting" surface. Maintained by hand in this phase (no scraping
   yet).
 
+### Layer 3b — Crafting knowledge workspace
+A dedicated, structured workspace (separate from the general knowledge base) for
+crafting reference, organized so the same craft can be looked up by different
+entry points:
+- **By budget** — e.g. league-start / SSF, mid-tier, high-end / mirror.
+- **By base** — item base types (armour pieces, weapons, jewellery, etc.) and
+  their relevant mod pools.
+- **By method / outcome** — crafting techniques and the steps + expected cost to
+  hit a target item.
+
+Created/managed via the **`/scaffold-workspaces`** skill so the folder structure
+is generated consistently rather than hand-built. Content is markdown the
+assistant reads, cross-linked to the data sources below.
+
 ### Layer 4 — Analysis workflow
 A documented, repeatable loop the assistant runs:
 1. Import the owner's build → `eval.lua` → baseline metrics.
@@ -98,6 +112,27 @@ A documented, repeatable loop the assistant runs:
 - **Discovery / optimization:** systematic variant search — permute tree / gems /
   items, batch-evaluate through the bridge, rank by DPS / EHP / budget. The
   "trailblazing new meta" engine grows out of the working eval loop.
+
+## External Data Sources (items & crafting)
+
+Reference sources for the crafting workspace and (later) automated lookups:
+
+- **poe2db.tw** (`https://poe2db.tw/us/`) — comprehensive item / base / mod /
+  skill database. Use for authoritative base types, mod pools, tiers, and tags.
+- **craftofexile.com** (`https://www.craftofexile.com/?game=poe2`) — crafting
+  simulator with structured mod/probability data; useful for crafting steps,
+  odds, and expected cost. Its **About page**
+  (`https://www.craftofexile.com/about`) reportedly documents a **data view /
+  data extractor**, which may be the cleanest structured-data path — investigate
+  first.
+
+Both likely expose queryable data or APIs (craftofexile loads structured JSON and
+may offer the data extractor above; poe2db has predictable per-item URLs).
+**Confirming exact API/endpoint availability and terms of use is a research task
+during implementation.** In this
+phase they are primarily manual references the assistant consults and distills
+into the crafting workspace; programmatic pulls are a later enhancement alongside
+the economy module.
 
 ## Data Flow
 
@@ -140,3 +175,8 @@ UR HOMO.xml ──▶ eval.lua (luajit + PoB engine) ──▶ JSON metrics
   the reference dependency list).
 - Confirm `eval.lua` can load the cloned repo's `Data/` and `TreeData/` headlessly
   and produce non-zero DPS for `UR HOMO.xml`.
+- Scaffold the crafting knowledge workspace via `/scaffold-workspaces` (axes:
+  budget / base / method).
+- Research data-source access: poe2db.tw URL patterns, and craftofexile.com's
+  data view / data extractor (`/about`) + its structured JSON — including terms
+  of use — before any programmatic pulling.
