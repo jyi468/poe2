@@ -61,5 +61,11 @@ export function evaluateBuild(buildXmlPath: string): BuildMetrics {
   if (!stdout.trim()) {
     throw new Error(`empty output from eval.lua. stderr: ${res.stderr ?? ""}`);
   }
-  return parseEvalOutput(stdout);
+  try {
+    return parseEvalOutput(stdout);
+  } catch (e) {
+    const msg = (e as Error).message;
+    if (msg.startsWith("PoB eval error:")) throw e;
+    throw new Error(`${msg}\nluajit exit=${res.status}; stderr: ${(res.stderr ?? "").trim()}`);
+  }
 }
