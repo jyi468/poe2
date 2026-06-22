@@ -14,7 +14,7 @@ src/
 ├── analyze.ts          # diffMetrics(before, after) → delta object
 ├── build-io.ts         # readBuildXml(path), snapshotBuild(src, destDir), ONEDRIVE_BUILDS_DIR
 ├── build-code.ts       # decodeBuildCode(code), encodeBuildCode(xml)
-├── index.ts            # re-exports public API
+├── index.ts            # package entry (smoke export today; modules are imported by path)
 ├── *.test.ts           # vitest unit + smoke tests (co-located)
 └── fixtures/           # test fixture XML files
 ```
@@ -41,7 +41,7 @@ pnpm doctor
 | Skill | Use for |
 |-------|---------|
 | `everything-claude-code:tdd-workflow` | Write tests first, then implement |
-| `everything-claude-code:go-review` | N/A — use `code-review` skill instead |
+| `everything-claude-code:code-reviewer` (agent) | Review TypeScript changes before commit |
 
 ## Rules
 
