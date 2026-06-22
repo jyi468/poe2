@@ -18,6 +18,6 @@ if [ ! -f "$POB_REPO/runtime/lua/dkjson.lua" ]; then
 fi
 if [ "$fail" -eq 0 ]; then
 	echo "OK: luajit + PoB source + dkjson present."
-	echo "If eval.lua reports a missing 'lua-utf8' module, run: luarocks install luautf8"
+	echo "If eval.lua reports a missing 'lua-utf8' module: luarocks install luautf8 (or build from source — see Option B in docs/pob-setup.md)"
 fi
 exit "$fail"

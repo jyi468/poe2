@@ -32,8 +32,8 @@ Used when sudo isn't available. Requires `gcc`/`make`/`git` only.
 
 ## Verify
 
-3. Verify prerequisites: `pnpm doctor` (runs `pob/doctor.sh`).
-4. Smoke test the engine:
+1. Verify prerequisites: `pnpm doctor` (runs `pob/doctor.sh`).
+2. Smoke test the engine:
    `cd "$POB_REPO/src" && luajit "$OLDPWD/pob/eval.lua" "/mnt/c/Users/jyi46/OneDrive/Documents/Path of Building (PoE2)/Builds/UR HOMO.xml"`
    Expected: a single JSON line of numeric metrics (e.g. `Life`, `EnergyShield`).
    Note: defensive stats populate from any saved build; DPS fields read `0`
