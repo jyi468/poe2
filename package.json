@@ -7,7 +7,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
     "doctor": "bash pob/doctor.sh",
-    "economy": "tsx src/economy/pull.ts"
+    "economy": "tsx src/economy/pull.ts",
+    "trade": "tsx src/economy/trade.ts"
   },
   "devDependencies": {
     "typescript": "^5.5.0",

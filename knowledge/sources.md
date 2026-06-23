@@ -8,6 +8,13 @@
 
 Feeds `meta.md`. Stamp pulls with patch + date; these rot fast.
 
+- **Official trade2 API** — https://www.pathofexile.com/api/trade2 — authoritative listings
+  for **rare crafted items** (poe2scout only covers uniques + currency). Driven by
+  `pnpm trade` (`../src/economy/trade.ts`): `--find "<text>"` discovers stat ids,
+  `--stat id:min` filters, `--batch file.json` runs many queries. Flow: POST
+  `/search/poe2/{league}` → GET `/fetch/{ids}?query=...&realm=poe2`. Caveat: sort-by-price
+  *desc* surfaces troll "mirror" listings — always sort asc with mod filters for real floors,
+  and remember asking floors run above sold prices.
 - **poe2scout.com (API)** — https://poe2scout.com/api/openapi.json — live, trade-derived
   currency + unique prices with a clean JSON OpenAPI. **This is the automated source**:
   `pnpm economy` (`../src/economy/pull.ts`) pulls it into `../data/economy/`. Key
