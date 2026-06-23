@@ -64,3 +64,15 @@ Breach Rings are the only rings in PoE2 that can reach 50% quality (and reported
 > Margin:        ~3–9 div per successful craft across two attempts
 >
 > Note: Catalyst supply is tightly controlled by Genesis Tree node availability per account — factor this as an opportunity cost, not just a price. Breach Ring prices collapse as league matures and supply rises; best window is weeks 1–3.
+
+> **Verified prices — Runes of Aldur, 2026-06-23 (official trade2 + poe2scout; 1 div ≈ 348 ex).**
+> - **The real cost driver is slam currency, not catalysts.** Flesh Catalyst ~2 ex (refined
+>   ~18 ex) — trivial. But **Perfect Exalted Orb ≈ 1,159 ex (3.3 div)** and you need 3–6 per
+>   ring → **~10–20 div in slams per ring**.
+> - **Output:** a quality ring with 60+ life + a resist floors at **~1–2 div** (49 listings);
+>   only exceptional T1 multi-mod 50%+ quality rings reach the 5–50 div range.
+>
+> **Verdict: underwater at the floor late-league — do NOT run for profit now.** Input
+> (~10–20 div/ring) exceeds the ~1–2 div output floor; you only win on a rare premium hit.
+> This confirms the weeks-1–3-only window. Treat late-league runs as learning the Genesis
+> Tree, not as a money-maker. (Asking floors exceed real sold prices.)

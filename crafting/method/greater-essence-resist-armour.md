@@ -55,3 +55,17 @@ Resistances are the primary gearing bottleneck for new and progression character
 > Margin:        ~0.25–0.95 div per successful attempt (before failed attempts)
 >
 > Note: essence and exalt prices fluctuate week over week; verify poe.ninja before setting list prices. Essences farmed in SSF have opportunity cost, not a cash cost.
+
+> **Verified sale floor — Runes of Aldur, 2026-06-23 (official trade2 API; 1 div ≈ 348 ex).**
+> Searched live listings for the crafted output, cheapest first (asking floor):
+> - **Dual-resist (25+/25+) + 70 life chest:** floor **1 ex**, 1066 listings — effectively
+>   worthless. Low/partial rolls do **not** sell.
+> - **Triple-resist (35+ each) + 90 life chest:** only **12 listings**, floor **8 ex**,
+>   realistic **25–50 ex**, clean pieces **1 div**.
+> - Input check: resistance essences (Greater Essence of Grounding/Insulation) are **~1 ex
+>   each**; a craft costs ~5–15 ex.
+>
+> **Verdict: profitable, but only on high rolls, and the absolute margin is small (tens of
+> ex per success).** This is a safe learning/cash-floor method, not a high-earner. Misses
+> sell at the ~1 ex floor, so keep input cost minimal. (Asking floors run above real sold
+> prices; treat as order-of-magnitude.)

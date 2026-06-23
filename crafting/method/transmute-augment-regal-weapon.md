@@ -58,3 +58,15 @@ Low-level and mid-tier players constantly need weapon upgrades during acts 1–3
 > Margin:        ~0.25–0.75 div per session, before failed attempts discarded
 >
 > Note: Common orb prices fluctuate heavily week-to-week in early league. Verify poe.ninja rates and trade site listings before each session.
+
+> **Verified sale floor — Runes of Aldur, 2026-06-23 (official trade2 API; 1 div ≈ 348 ex).**
+> Searched live martial-weapon listings, cheapest first (asking floor):
+> - **2-mod weapon (120%+ phys, 15%+ attack speed):** floor **1 ex**, 1917 listings —
+>   worthless. Two mods is not enough.
+> - **Strong 3-mod weapon (130%+ phys, 18%+ attack speed, flat phys):** **74 listings**,
+>   floor **5 ex**, realistic **10–30 ex**, premium pieces **1 div+**.
+>
+> **Verdict: the documented 5–30 ex sweet spot holds — for genuinely strong 3-mod rares.**
+> The Magic two-mod output is near-worthless on trade now, so the profit is in promoting
+> good Magic bases to a clean 3-mod Rare before listing. Margin per session stays small;
+> this is a low-tier reps/volume play. (Asking floors exceed real sold prices.)

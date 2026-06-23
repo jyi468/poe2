@@ -67,3 +67,18 @@ Lich-pool modifiers — such as high-tier ailment application chances, defensive
 > Margin:        ~2.5–5.5 div per successful craft
 >
 > Note: Omen prices are especially volatile mid-league as supply from Ritual accumulates. Verify current prices before committing bones. Ancient Bone prices drop as league matures.
+
+> **Verified prices — Runes of Aldur, 2026-06-23 (official trade2 + poe2scout; 1 div ≈ 348 ex).**
+> - **Inputs are cheap and confirmed:** Omen of Sinistral/Dextral Necromancy ~3 ex, Omen of
+>   the Sovereign ~3 ex, Omen of the Liege ~1 ex, Omen of the Blackblooded ~45 ex, Omen of
+>   Abyssal Echoes ~92 ex. Method cost is dominated by the **base item**, not omens.
+>   **Gap:** poe2scout does not track Preserved/Ancient Bone prices — source them in-game.
+> - **Output (base-weapon proxy):** I could not filter the desecrated mod directly, so I
+>   priced the underlying weapon. A strong 3-mod martial weapon floors at **5–30 ex**,
+>   premium ones **1 div+**; the exclusive Lich mod stacks a premium on top of that.
+>
+> **Verdict: the real earner of the four — but selection-dependent.** Profitable only when
+> the base is already top-tier AND the exclusive mod is meta-relevant (cold/freeze →
+> Kurgal/Ulaman this patch). A random Lich mod on a weak base still sells near the ~5–10 ex
+> floor. Run it selectively; don't desecrate mediocre bases. (Asking floors exceed real
+> sold prices; the desecrated-mod premium is inferred, not directly measured.)

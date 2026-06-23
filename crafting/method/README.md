@@ -6,13 +6,20 @@ here is a qualitative band so this index does not rot.
 
 | Method | Capital | Margin (rough) | Risk | Best window | Link |
 |--------|---------|----------------|------|-------------|------|
-| Greater-essence resist armour | ssf | medium | low | any | [greater-essence-resist-armour.md](greater-essence-resist-armour.md) |
-| Transmute-augment-regal weapon flip | low | low | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
-| Desecration Lich modifier | mid | high | medium | any (inputs cheaper late) | [desecration-lich-modifier.md](desecration-lich-modifier.md) |
-| Genesis Breach Ring | high | high | high | weeks 1–3 only | [genesis-breach-ring.md](genesis-breach-ring.md) |
+| Greater-essence resist armour | ssf | low–medium † | low | any | [greater-essence-resist-armour.md](greater-essence-resist-armour.md) |
+| Transmute-augment-regal weapon flip | low | low † | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
+| Desecration Lich modifier | mid | high (selective) † | medium | any (inputs cheaper late) | [desecration-lich-modifier.md](desecration-lich-modifier.md) |
+| Genesis Breach Ring | high | high wk1–3 / **loss late** † | high | weeks 1–3 only | [genesis-breach-ring.md](genesis-breach-ring.md) |
 
 > Capital tiers: ssf / low / mid / high. See `_template.md` for the entry shape
 > and `../CONTEXT.md` for workspace rules.
+
+> † **Verified against live trade 2026-06-23** (official trade2 API + poe2scout; 1 div ≈ 348
+> ex). Each method's Worked-example block carries the dated sale-floor numbers. Headlines:
+> Desecration is the real earner but only on strong bases + meta-relevant mods; essence
+> armour and weapon flip are real-but-small (profit on high rolls only — partial outputs
+> sell at a ~1 ex floor); **Breach Ring is underwater late-league** (input ~10–20 div/ring
+> in Perfect Exalted slams vs a ~1–2 div output floor) — skip it for profit right now.
 
 > **Best window** = where in a league's lifecycle the method's margin is healthiest,
 > a durable property of the method's supply dynamics (not a live price). `any` means
