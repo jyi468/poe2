@@ -20,3 +20,34 @@ here is a qualitative band so this index does not rot.
 > rises — it is a week-1–3 play and roughly break-even late-league. Desecration is
 > patch-stable but its Ancient Bone inputs get *cheaper* as the league matures, so
 > late-league slightly favours it. Always confirm live prices before committing.
+
+## By budget — which methods to run
+
+Maps a starting bankroll to methods. This is durable guidance (capital bands, not live
+prices); recompute actual per-craft cost from `../../data/economy/latest.md` at consult
+time. A bankroll can run any method at or below its tier.
+
+| Bankroll | Lead with | Then / scale into | Avoid |
+|----------|-----------|-------------------|-------|
+| **ssf / a few div** | Greater-essence resist armour | Transmute-augment-regal weapon flip | high-variance slams |
+| **low (~5–15 div)** | Weapon flip for reps | First Desecration Lich attempts | Breach Ring (can't absorb variance) |
+| **mid (~15–40 div)** | Desecration Lich (main earner) | Essence armour as a cash-flow floor | committing all-in on one craft |
+| **high (~40+ div)** | Desecration Lich at volume | Genesis Breach Ring (week-1–3 only) | pure-ES targets (low demand this patch) |
+
+**Worked allocation — ~50 div, mid/late league, learn-as-you-go** (the canonical
+high-tier ask). Stage from cheap → expensive so early reps fund later variance:
+
+1. **~5 div — learn the cheap loops.** Greater-essence resist armour (hybrid resist/armour
+   is the favoured defence layer this patch) + a few weapon flips to practice reading mod
+   tiers and trade prices.
+2. **~30 div — Desecration Lich as the main earner.** Omens are cheap (a few ex each — see
+   `latest.md`), so cost is the base item; ~30 div funds many attempts. Pick the Lich pool
+   by demand: **Kurgal** (freeze/ailment) and **Ulaman** (added cold) track the cold/freeze
+   meta; **Amanamu** (defence) tracks hybrid-defence stackers. Source bones in-game —
+   poe2scout does not list them.
+3. **~10 div — one Breach Ring as an experiment, optional.** Late-league its margin is gone;
+   the real cost driver is Perfect/Greater Exalted Orbs (~3.3 div each), so 10 div is ~3–4
+   rings. Treat as learning the Genesis Tree for next league's week-1 window.
+
+Keep ~5 div as a buffer for omen/catalyst price spikes. See `../../knowledge/meta.md` for
+the demand side (what sells) and `../../data/economy/latest.md` for live input prices.
