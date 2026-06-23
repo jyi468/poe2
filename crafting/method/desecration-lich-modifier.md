@@ -6,7 +6,7 @@ Use the Well of Souls Desecration system to add a exclusive Lich-pool modifier t
 
 ## Target base(s)
 
-ilvl 80+ Rare body armour (Rib), helmet (Cranium), weapon (Jawbone), or jewellery (Collarbone) that already has 3–4 good mods and at least one open affix slot. The base type and ilvl must be high enough to access the top-tier Lich modifier pool. See ../../knowledge/sources.md for exact mod entries on poe2db.tw under "Desecrated modifier."
+ilvl 80+ Rare **weapon** (Jawbone) or **jewellery** (Collarbone — amulets, rings, belts) that already has 3–4 good mods and at least one open affix slot. The Lich-pool Omens (Blackblooded / Liege / Sovereign) are confirmed by GGG to function **only on weapons and jewellery**; they are incompatible with body armour, helmets, gloves, and boots (the game displays "Omen is Incompatible with this desecrating item" and the restriction is working as intended — see PoE forum thread #3842509). The base ilvl must be high enough to access the top-tier Lich modifier pool. See ../../knowledge/sources.md for exact mod entries on poe2db.tw under "Desecrated modifier."
 
 ## Starting capital
 
@@ -28,7 +28,7 @@ Requires access to Act 2's Well of Souls (unlocked after completing the Desecrat
    - Omen of the Blackblooded — Kurgal pool
    - Omen of the Liege — Amanamu pool
    - Omen of the Sovereign — Ulaman pool
-5. Apply the appropriate **Preserved Bone** to the item (Jawbone for weapons, Rib for body armour, Collarbone for jewellery, Cranium for helmets, Vertebrae for body armour — check tooltip).
+5. Apply the appropriate **Preserved Bone** to the item: Jawbone for weapons/quivers, Collarbone for jewellery (amulets, rings, belts).
 6. Travel to the Well of Souls and insert the item. The Well reveals three modifiers from the targeted Lich pool. Choose the best one.
 7. Optional: if all three reveals are poor, activate **Omen of Abyssal Echoes** before choosing to reroll the revealed set into a fresh three options once.
 8. If the final outcome is unsatisfactory, activate **Omen of Light** and use an Orb of Annulment to remove the newly added desecrated mod, then repeat from step 3 with a fresh bone.
@@ -40,7 +40,7 @@ Each Well of Souls reveal shows 3 out of the targeted Lich's pool of approximate
 
 ## Inputs
 
-- 1 Preserved or Ancient Bone (slot-appropriate: Jawbone/Rib/Collarbone/Cranium/Vertebrae) per attempt
+- 1 Preserved or Ancient Bone (slot-appropriate: Jawbone for weapons, Collarbone for jewellery) per attempt
 - 1 Omen of Sinistral or Dextral Necromancy per attempt (side control)
 - 1 Omen of the Blackblooded / Liege / Sovereign per attempt (Lich pool control)
 - Optional: 1 Omen of Abyssal Echoes per attempt (one free reroll of the three options)
@@ -59,11 +59,11 @@ Lich-pool modifiers — such as high-tier ailment application chances, defensive
 
 > Runes of Aldur, patch 0.5.3, 2026-06-22 (illustrative)
 >
-> Target: Kurgal ailment-on-hit mod on an ilvl 82 body armour with existing ES + life + chaos resist  
-> Inputs per run: 1 Ancient Rib (~15 exalts) + Omen of Sinistral Necromancy (~9 exalts) + Omen of the Blackblooded (~12 exalts) + Omen of Abyssal Echoes (~20 exalts) = ~56 exalts / attempt  
-> Attempts taken: 4 (hit target ailment mod on 4th attempt)  
+> Target: Ulaman offensive mod (added cold damage, high roll) on an ilvl 82 two-handed weapon with existing phys DPS + attack speed + crit chance  
+> Inputs per run: 1 Ancient Jawbone (~15 exalts) + Omen of Sinistral Necromancy (~9 exalts) + Omen of the Sovereign (~12 exalts) + Omen of Abyssal Echoes (~20 exalts) = ~56 exalts / attempt  
+> Attempts taken: 4 (hit target Ulaman cold damage mod on 4th attempt)  
 > Total input cost: ~224 exalts + base (~60 exalts) = ~284 exalts ≈ ~2.5 div  
-> Expected sale: ~5–8 div for a 5-mod body armour with exclusive Kurgal ailment mod  
+> Expected sale: ~5–8 div for a 5-mod weapon with exclusive Ulaman added damage mod  
 > Margin:        ~2.5–5.5 div per successful craft
 >
 > Note: Omen prices are especially volatile mid-league as supply from Ritual accumulates. Verify current prices before committing bones. Ancient Bone prices drop as league matures.

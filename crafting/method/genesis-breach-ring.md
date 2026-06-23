@@ -6,7 +6,7 @@ Use the Genesis Tree inside the Monastery of the Keepers to craft a high-quality
 
 ## Target base(s)
 
-Breach Ring bases (any sub-type). These are the only ring bases that accept up to 50% quality from catalysts (vs 20% cap on standard rings), and with Genesis Tree nodes can reach 65% quality — multiplicatively boosting all catalyst-tagged modifier values. See ../../knowledge/sources.md (poe2db.tw) for the full list of Breach Ring sub-types and their implicit modifiers.
+Breach Ring bases (any sub-type). These are the only ring bases that accept up to 50% quality from catalysts (vs 20% cap on standard rings), and with Genesis Tree nodes can reportedly reach 65% quality (per community reference; verify in-game — the 65% figure is sourced from the domistae.github.io PoE2 Crafting Codex, not GGG official docs) — multiplicatively boosting all catalyst-tagged modifier values. See ../../knowledge/sources.md (poe2db.tw) for the full list of Breach Ring sub-types and their implicit modifiers.
 
 ## Starting capital
 
@@ -50,7 +50,7 @@ High. Genesis Tree node investment is a sunk cost that pays off only across many
 
 ## Why it sells
 
-Breach Rings are the only rings in PoE2 that can reach 50–65% quality, multiplicatively boosting all matching mod values. A Breach Ring with 50%+ quality and three catalyst-biased mods (e.g., 65% quality Flesh-catalyst ring with T1 maximum life on two prefixes and a life-recovery suffix) represents a permanent power ceiling above what a standard ring can reach. BiS-seeking players in endgame optimisation mode pay 5–50+ Divines for rings that complete their defensive or offensive stacks.
+Breach Rings are the only rings in PoE2 that can reach 50% quality (and reportedly up to 65% with Genesis Tree nodes — per community reference; verify in-game), multiplicatively boosting all matching mod values. A Breach Ring with 50%+ quality and three catalyst-biased mods (e.g., 65% quality Flesh-catalyst ring with T1 maximum life on two prefixes and a life-recovery suffix) represents a permanent power ceiling above what a standard ring can reach. BiS-seeking players in endgame optimisation mode pay 5–50+ Divines for rings that complete their defensive or offensive stacks.
 
 ## Worked example
 
