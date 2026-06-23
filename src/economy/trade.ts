@@ -33,6 +33,8 @@ interface QuerySpec {
   stats?: StatFilter[];
   sort?: "asc" | "desc";
   limit?: number;
+  corrupted?: boolean;
+  qualityMin?: number;
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -81,7 +83,13 @@ function buildBody(spec: QuerySpec) {
   const typeFilters: Record<string, unknown> = {};
   if (spec.category) typeFilters.category = { option: spec.category };
   if (spec.rarity) typeFilters.rarity = { option: spec.rarity };
-  if (Object.keys(typeFilters).length) query.filters = { type_filters: { filters: typeFilters } };
+  const miscFilters: Record<string, unknown> = {};
+  if (spec.corrupted != null) miscFilters.corrupted = { option: String(spec.corrupted) };
+  if (spec.qualityMin != null) miscFilters.quality = { min: spec.qualityMin };
+  const filters: Record<string, unknown> = {};
+  if (Object.keys(typeFilters).length) filters.type_filters = { filters: typeFilters };
+  if (Object.keys(miscFilters).length) filters.misc_filters = { filters: miscFilters };
+  if (Object.keys(filters).length) query.filters = filters;
   return { query, sort: { price: spec.sort ?? "asc" } };
 }
 

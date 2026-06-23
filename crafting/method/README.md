@@ -9,6 +9,7 @@ here is a qualitative band so this index does not rot.
 | Greater-essence resist armour | ssf | low–medium † | low | any | [greater-essence-resist-armour.md](greater-essence-resist-armour.md) |
 | Transmute-augment-regal weapon flip | low | low † | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
 | Jewel crit-combo roll | low | medium (volume) † | low | any | [jewel-crit-combo.md](jewel-crit-combo.md) |
+| Jewel fractured multi-mod | mid | high † | high | any | [jewel-fractured-multimod.md](jewel-fractured-multimod.md) |
 | Desecration Lich modifier | mid | high (selective) † | medium | any (inputs cheaper late) | [desecration-lich-modifier.md](desecration-lich-modifier.md) |
 | Genesis Breach Ring | high | high wk1–3 / **loss late** † | high | weeks 1–3 only | [genesis-breach-ring.md](genesis-breach-ring.md) |
 
