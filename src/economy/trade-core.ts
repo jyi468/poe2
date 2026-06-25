@@ -123,7 +123,7 @@ export async function searchTrade(
   );
   const listings: TradeListing[] = [];
   for (const r of fetched.result) {
-    if (!r) continue;
+    if (!r || !r.listing?.price) continue;
     const price = r.listing?.price ?? null;
     const exalted = price ? (price.currency === "divine" ? price.amount * divine : price.amount) : null;
     listings.push({
