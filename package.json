@@ -8,7 +8,8 @@
     "test": "vitest run",
     "doctor": "bash pob/doctor.sh",
     "economy": "tsx src/economy/pull.ts",
-    "trade": "tsx src/economy/trade.ts"
+    "trade": "tsx src/economy/trade.ts",
+    "craft-sim": "tsx src/crafting-sim/magic-craft.ts"
   },
   "devDependencies": {
     "typescript": "^5.5.0",
