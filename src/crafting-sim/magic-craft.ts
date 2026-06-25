@@ -15,7 +15,8 @@
 //    from a documented estimate with a low/central/high band. Plug real weights
 //    from craftofexile/poe2db here to tighten the answer.
 
-import { loadModTiers, poolFor, statLow, statHigh, type ModTier } from "./pob-mods.js";
+import { loadModTiers, poolFor } from "./pob-mods.js";
+import { estimateCraft } from "./estimate.js";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -53,15 +54,6 @@ function orbPrices(): Record<string, number> {
   return map;
 }
 
-/** Fraction of a tier's roll-range that is strictly greater than `min`. */
-function fracAbove(tier: ModTier, min: number): number {
-  const lo = statLow(tier.stat);
-  const hi = statHigh(tier.stat);
-  if (hi <= min) return 0;
-  if (lo > min) return 1;
-  return (hi - min) / (hi - lo); // uniform over integer-ish range, good enough
-}
-
 function pct(x: number): string {
   return (x * 100).toPrecision(3) + "%";
 }
@@ -73,68 +65,38 @@ function oneIn(p: number): string {
 const tiers = loadModTiers();
 const prefixes = poolFor(tiers, BASE_WEIGHTKEYS, "Prefix", ITEM_LEVEL);
 const suffixes = poolFor(tiers, BASE_WEIGHTKEYS, "Suffix", ITEM_LEVEL);
+const prices = orbPrices();
 
-const physTiers = prefixes.filter((t) => t.group === PREFIX_GROUP);
-const qualifyingPhys = physTiers
-  .map((t) => ({ t, frac: fracAbove(t, PREFIX_MIN_VALUE) }))
-  .filter((x) => x.frac > 0);
-const suffixTarget = suffixes.find((t) => t.stat === SUFFIX_STAT_MATCH);
-
-const prefixGroups = new Set(prefixes.map((t) => t.group)).size;
-const suffixGroups = new Set(suffixes.map((t) => t.group)).size;
+const est = estimateCraft({
+  prefixes,
+  suffixes,
+  prefixGroup: PREFIX_GROUP,
+  prefixMin: PREFIX_MIN_VALUE,
+  suffixStat: SUFFIX_STAT_MATCH,
+  weights: { pref: P_PREF, suf: P_SUF },
+  orb: {
+    transmute: prices["Orb of Transmutation"] ?? 0.16,
+    augment: prices["Orb of Augmentation"] ?? 0.28,
+    divine: prices._divine,
+  },
+  buyPriceDiv: BUY_PRICE_DIV,
+});
 
 console.log(`\n=== ${BASE_WEIGHTKEYS[0]} @ ilvl ${ITEM_LEVEL} — magic Transmute->Augment craft ===\n`);
-console.log(`Prefix pool: ${prefixes.length} mods across ${prefixGroups} groups`);
-console.log(`Suffix pool: ${suffixes.length} mods across ${suffixGroups} groups\n`);
-
-console.log(`TARGET PREFIX  "%increased Physical Damage" > ${PREFIX_MIN_VALUE}% (group ${PREFIX_GROUP}):`);
-for (const t of physTiers) {
-  const f = fracAbove(t, PREFIX_MIN_VALUE);
-  const mark = f === 0 ? "  ✗" : f === 1 ? "  ✓" : `  ~${pct(f)} of rolls`;
-  console.log(`   ${t.affix.padEnd(14)} ${t.stat.padEnd(34)} ilvl${String(t.level).padStart(3)}${mark}`);
+console.log(`Prefix pool groups: ${est.prefixGroups}   Suffix pool groups: ${est.suffixGroups}\n`);
+console.log(`TARGET PREFIX "%increased Physical Damage" > ${PREFIX_MIN_VALUE}% (group ${PREFIX_GROUP}):`);
+for (const t of est.targetPrefixTiers) {
+  const mark = t.fracAboveMin === 0 ? "✗" : t.fracAboveMin === 1 ? "✓" : `~${pct(t.fracAboveMin)} of rolls`;
+  console.log(`   ${t.affix.padEnd(14)} ${t.stat.padEnd(34)} ilvl${String(t.level).padStart(3)}  ${mark}`);
 }
-console.log(`   -> ${qualifyingPhys.length}/${physTiers.length} tiers qualify (some partially)\n`);
-
-console.log(`TARGET SUFFIX  "${SUFFIX_STAT_MATCH}":`);
-if (suffixTarget) {
-  console.log(`   ${suffixTarget.affix} — ilvl ${suffixTarget.level} (top tier of its group) ✓ available\n`);
-} else {
-  console.log(`   ✗ NOT available at ilvl ${ITEM_LEVEL} — raise item level.\n`);
-  process.exit(1);
-}
-
-// per-attempt success ~= P_pref * P_suf  (Transmute+Augment fills 1 prefix + 1
-// suffix; success needs the prefix slot = qualifying phys AND suffix slot = +4).
-const prices = orbPrices();
-const transmute = prices["Orb of Transmutation"] ?? 0.16;
-const augment = prices["Orb of Augmentation"] ?? 0.28;
+console.log(`\nTARGET SUFFIX "${SUFFIX_STAT_MATCH}": ${est.targetSuffix ? `ilvl ${est.targetSuffix.level} ✓` : "✗ not available"}\n`);
 const DIV = prices._divine;
-
-console.log(`Orb prices (live, ${DIV.toFixed(0)} ex/div):  transmute ${transmute.toFixed(2)} ex · augment ${augment.toFixed(2)} ex\n`);
-
-function scenario(name: string, pPref: number, pSuf: number) {
-  const p = pPref * pSuf;
-  const attempts = 1 / p;
-  // cost/attempt: 1 transmute always; augment only when transmute hits a target (~pPref+pSuf of the time)
-  const costPerAttemptNoBase = transmute + (pPref + pSuf) * augment;
-  console.log(`-- ${name}: P_pref=${pct(pPref)}, P_suf=${pct(pSuf)}`);
-  console.log(`   per attempt: ${pct(p)}  (${oneIn(p)})   expected attempts: ${Math.round(attempts).toLocaleString()}`);
-  // break-even white-base price vs buying at BUY_PRICE_DIV
-  const budgetEx = BUY_PRICE_DIV * DIV;
-  const breakevenBaseEx = budgetEx / attempts - costPerAttemptNoBase;
-  console.log(`   currency only (free bases): ${(attempts * costPerAttemptNoBase / DIV).toFixed(1)} div expected`);
-  for (const base of [1, 3, 5, 10, 20]) {
-    const totalDiv = (attempts * (costPerAttemptNoBase + base)) / DIV;
-    console.log(`     + white base @ ${String(base).padStart(2)} ex:  ${totalDiv.toFixed(1).padStart(6)} div  ${totalDiv < BUY_PRICE_DIV ? "← cheaper than buying" : ""}`);
+for (const s of est.scenarios) {
+  console.log(`-- ${s.label}: P_pref=${pct(s.pPref)}, P_suf=${pct(s.pSuf)}`);
+  console.log(`   per attempt: ${pct(s.p)} (${oneIn(s.p)})  expected attempts: ${Math.round(s.attempts).toLocaleString()}`);
+  console.log(`   currency only (free bases): ${s.currencyOnlyDiv.toFixed(1)} div`);
+  for (const b of s.withBase) {
+    console.log(`     + white base @ ${String(b.baseEx).padStart(2)} ex: ${b.totalDiv.toFixed(1).padStart(6)} div  ${b.cheaperThanBuy ? "← cheaper than buying" : ""}`);
   }
-  console.log(`   BREAK-EVEN vs ${BUY_PRICE_DIV} div: craft wins if white bases cost < ${breakevenBaseEx.toFixed(1)} ex each\n`);
+  console.log(`   BREAK-EVEN vs ${BUY_PRICE_DIV} div: craft wins if white bases < ${s.breakevenBaseEx.toFixed(1)} ex each\n`);
 }
-
-scenario("LUCKY (high weights)", P_PREF.high, P_SUF.high);
-scenario("CENTRAL estimate", P_PREF.central, P_SUF.central);
-scenario("UNLUCKY (low weights)", P_PREF.low, P_SUF.low);
-
-console.log(`NOTE: result is a 2-mod MAGIC bow. A trade listing at ~${BUY_PRICE_DIV} div is`);
-console.log(`usually a RARE with these two as standout mods — to match it you'd Regal+Exalt`);
-console.log(`after, adding more cost/variance. Weights are modelled; plug real craftofexile`);
-console.log(`numbers into P_PREF / P_SUF for a precise answer.\n`);
