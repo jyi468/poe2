@@ -4,6 +4,7 @@ dist/
 *.log
 builds/
 .tmp-builds/
+.observer.lock
 
 # Economy pulls: keep latest.{json,md} as the current reference; ignore dated snapshots.
 data/economy/snapshot-*.json
