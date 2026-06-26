@@ -90,7 +90,6 @@ for (const t of est.targetPrefixTiers) {
   console.log(`   ${t.affix.padEnd(14)} ${t.stat.padEnd(34)} ilvl${String(t.level).padStart(3)}  ${mark}`);
 }
 console.log(`\nTARGET SUFFIX "${SUFFIX_STAT_MATCH}": ${est.targetSuffix ? `ilvl ${est.targetSuffix.level} ✓` : "✗ not available"}\n`);
-const DIV = prices._divine;
 for (const s of est.scenarios) {
   console.log(`-- ${s.label}: P_pref=${pct(s.pPref)}, P_suf=${pct(s.pSuf)}`);
   console.log(`   per attempt: ${pct(s.p)} (${oneIn(s.p)})  expected attempts: ${Math.round(s.attempts).toLocaleString()}`);

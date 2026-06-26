@@ -61,7 +61,7 @@ export default function TradeTab() {
           {resp.listings.map((l, i) => (
             <div key={i} style={{ marginBottom: ".4rem" }}>
               <b>{l.priceAmount} {l.priceCurrency}</b> <span className="muted">(~{l.priceExalted} ex)</span> · {l.typeLine}
-              <ul style={{ margin: ".2rem 0" }}>{l.mods.map((m, j) => <li key={j} className="muted">{m}</li>)}</ul>
+              <ul style={{ margin: ".2rem 0" }}>{(l.mods ?? []).map((m, j) => <li key={j} className="muted">{m}</li>)}</ul>
             </div>
           ))}
         </>

@@ -59,7 +59,7 @@ export function scanSlots(ilvl: number, tiers: ModTier[] = loadModTiers()): Slot
     }
     return {
       slot: s.name,
-      keys: s.keys,
+      keys: [...s.keys],
       prefixCount: pre.length,
       prefixGroups: groups(pre),
       suffixCount: suf.length,

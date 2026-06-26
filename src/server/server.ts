@@ -15,13 +15,13 @@ import {
 const PORT = Number(process.env.PORT ?? 5179);
 const DIST = resolve(fileURLToPath(new URL(".", import.meta.url)), "../../app/dist");
 
-const ROUTES: Record<string, { method: string; handler: Handler }> = {
-  "GET /api/economy": { method: "GET", handler: getEconomy },
-  "POST /api/economy/refresh": { method: "POST", handler: refreshEconomy },
-  "GET /api/methods": { method: "GET", handler: getMethods },
-  "GET /api/slots": { method: "GET", handler: getSlots },
-  "POST /api/craft": { method: "POST", handler: postCraft },
-  "POST /api/trade": { method: "POST", handler: postTrade },
+const ROUTES: Record<string, Handler> = {
+  "GET /api/economy": getEconomy,
+  "POST /api/economy/refresh": refreshEconomy,
+  "GET /api/methods": getMethods,
+  "GET /api/slots": getSlots,
+  "POST /api/craft": postCraft,
+  "POST /api/trade": postTrade,
 };
 
 const MIME: Record<string, string> = {
@@ -56,7 +56,7 @@ export function createServer() {
     const route = ROUTES[key];
     if (route) {
       const body = req.method === "POST" ? await readBody(req).catch(() => ({})) : {};
-      return wrap(route.handler)(req, res, body);
+      return wrap(route)(req, res, body);
     }
     if (req.method === "GET" && !url.startsWith("/api")) return serveStatic(url, res);
     sendJson(res, 404, { ok: false, error: `no route ${key}` });

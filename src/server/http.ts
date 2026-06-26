@@ -27,7 +27,7 @@ export function wrap(handler: Handler) {
       const data = await handler(req, body);
       sendJson(res, 200, { ok: true, data });
     } catch (err) {
-      sendJson(res, 500, { ok: false, error: (err as Error).message });
+      sendJson(res, 500, { ok: false, error: err instanceof Error ? err.message : String(err) });
     }
   };
 }

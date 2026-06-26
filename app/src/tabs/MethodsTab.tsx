@@ -26,12 +26,12 @@ export default function MethodsTab() {
       <h3>Method profit board</h3>
       <table>
         <thead>
-          <tr><th>Method</th><th>Capital</th><th>Margin</th><th>Risk</th><th>Best window</th></tr>
+          <tr><th>Method</th><th>Capital</th><th>Margin</th><th>Risk</th><th>Best window</th><th>Doc</th></tr>
         </thead>
         <tbody>
           {rows.map((r) => (
             <tr key={r.method}>
-              <td>{r.method}</td><td>{r.capital}</td><td>{r.margin}</td><td>{r.risk}</td><td>{r.bestWindow}</td>
+              <td>{r.method}</td><td>{r.capital}</td><td>{r.margin}</td><td>{r.risk}</td><td>{r.bestWindow}</td><td className="muted">{r.link}</td>
             </tr>
           ))}
         </tbody>
