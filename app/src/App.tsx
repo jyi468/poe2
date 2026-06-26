@@ -4,9 +4,11 @@ import MethodsTab from "./tabs/MethodsTab.js";
 import CraftSimTab from "./tabs/CraftSimTab.js";
 import TradeTab from "./tabs/TradeTab.js";
 import FlowchartTab from "./tabs/FlowchartTab.js";
+import DesecrationTab from "./tabs/DesecrationTab.js";
 
 const TABS = [
   { id: "flowchart", label: "Flowchart", el: <FlowchartTab /> },
+  { id: "desecration", label: "Desecration", el: <DesecrationTab /> },
   { id: "economy", label: "Economy", el: <EconomyTab /> },
   { id: "methods", label: "Methods", el: <MethodsTab /> },
   { id: "craft", label: "Craft sim", el: <CraftSimTab /> },

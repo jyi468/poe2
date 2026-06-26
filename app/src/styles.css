@@ -26,3 +26,12 @@ input, select { background: #20242b; color: #e6e6e6; border: 1px solid #2a2f37; 
 .mermaid-svg { background: #1b1e24; border: 1px solid #2a2f37; border-radius: 8px; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
 .mermaid-svg svg { max-width: 100%; height: auto; }
 .mermaid-error { background: #5a1d1d; color: #ffd7d7; padding: .8rem; border-radius: 6px; white-space: pre-wrap; font-size: 12px; }
+
+/* Desecration tab */
+.desec-card { border: 1px solid #2a2f37; border-radius: 8px; padding: 1rem; margin: 1.2rem 0; background: #181b20; }
+.desec-card h3 { margin-top: 0; }
+.floor { margin-top: .8rem; border-top: 1px solid #2a2f37; padding-top: .8rem; }
+.floor-controls { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+.floor-controls select { min-width: 22rem; max-width: 100%; }
+.pos { color: #7fd68a; }
+.neg { color: #e58b8b; }

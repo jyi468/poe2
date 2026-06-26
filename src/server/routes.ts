@@ -12,6 +12,7 @@ import { findStats, searchTrade, type QuerySpec } from "../economy/trade-core.js
 import { loadModTiers, poolFor } from "../crafting-sim/pob-mods.js";
 import { estimateCraft } from "../crafting-sim/estimate.js";
 import { scanSlots, SLOT_DEFS } from "../crafting-sim/slots.js";
+import { evaluateDesecItems } from "../crafting-sim/desecration-items.js";
 import { loadMethodBoard } from "../methods/parse.js";
 
 export const getEconomy = async () => readLatestSnapshot();
@@ -32,6 +33,34 @@ export const refreshEconomy = async () => {
 export const getMethods = async () => loadMethodBoard();
 
 export const getSlots = async () => scanSlots(82);
+
+/**
+ * Per-item-type Desecration EV, built from live omen prices. Bone/base/reveal
+ * odds are modelled (flagged in the payload); sale floors are fetched on demand
+ * via POST /api/trade with each item's desecrated stat id.
+ */
+export const getDesecration = async () => {
+  const snap = await readLatestSnapshot().catch(() => null);
+  const divine = snap?.divinePriceExalted ?? 345;
+  const byName = new Map((snap?.currencies ?? []).map((c) => [c.name, c.priceExalted]));
+  const divOf = (name: string, fallbackEx: number) => (byName.get(name) ?? fallbackEx) / divine;
+  const omen = (name: string) => byName.get(name) ?? null;
+  return {
+    pulledAt: snap?.pulledAt ?? null,
+    divine,
+    // Live omen prices (ex) the EV is built from — surfaced for transparency.
+    omenPricesEx: {
+      "Omen of Sinistral Necromancy": omen("Omen of Sinistral Necromancy"),
+      "Omen of Dextral Necromancy": omen("Omen of Dextral Necromancy"),
+      "Omen of the Sovereign": omen("Omen of the Sovereign"),
+      "Omen of the Liege": omen("Omen of the Liege"),
+      "Omen of the Blackblooded": omen("Omen of the Blackblooded"),
+      "Omen of Abyssal Echoes": omen("Omen of Abyssal Echoes"),
+      "Omen of Light": omen("Omen of Light"),
+    },
+    items: evaluateDesecItems(divOf),
+  };
+};
 
 interface CraftBody {
   slot: string;
