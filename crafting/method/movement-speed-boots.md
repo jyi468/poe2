@@ -62,6 +62,21 @@ Exalted Orbs (see Inputs).
    on a near-top-end base whose clean outcome clears ~6+ div. See Expected profit.
 8. List on trade. Lead the listing with the MS roll and resist totals — that is what buyers search.
 
+### Optional finish — Essence of Hysteria (guaranteed 30% MS)
+
+**Essence of Hysteria** adds a guaranteed **30% movement speed** to boots (remove-1/add-1 on a Rare),
+the only deterministic MS source — there is no standard MS essence. **It is a narrow finishing move,
+not a default**, for two reasons confirmed against live trade (2026-06-26):
+- **Raw 30–35% MS boots floor at ~1–2 ex.** Hysteria costs **~0.84 div** (`pnpm prices essences`). Paying
+  0.84 div to *add* MS only nets out if the rest of the boot is already premium (life + 2 capped resists
+  + chaos) **and** its suffixes are full so MS cannot just be slammed for ~free.
+- **It corrupts the item** — no further crafting after, and it removes a *random* existing mod, so only
+  apply when there is a junk mod to lose.
+
+Use it to rescue an otherwise-finished, suffix-full boot that is missing only MS. For the normal lean
+path, keep buying a base that already rolled MS (step 1) — it is far cheaper. See
+[`essence-value-map.md`](essence-value-map.md) for the full essence cost/value picture.
+
 ## Outcome odds
 
 Movement speed is bought, not rolled, so it is effectively guaranteed; the essence resist is

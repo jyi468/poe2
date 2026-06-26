@@ -37,6 +37,7 @@ poe2-assistant/
 | Run / debug the PoB2 bridge | `pob/` | `pob/eval.lua`, `pob/doctor.sh` | `src/`, `crafting/` |
 | Look up crafting method / cost | `crafting/` | `crafting/method/README.md`, `crafting/method/*.md` | `src/`, `pob/` |
 | Pull / read live economy prices | `src/economy/` | `src/economy/pull.ts`, `data/economy/latest.md` | `pob/`, `crafting/` |
+| Look up one category's full live prices | `src/economy/` | `src/economy/query.ts` (`pnpm prices <cat> [--grep] [--top]`) | `pob/`, `crafting/` |
 | Research mechanics / meta | `knowledge/` | `knowledge/mechanics.md`, `knowledge/meta.md` | `src/`, `crafting/` |
 | Run the build-improvement loop | `knowledge/workflows/` | `knowledge/workflows/build-analysis.md` | `crafting/` |
 | First-time setup | `docs/` | `docs/pob-setup.md` | all others |
@@ -57,3 +58,4 @@ poe2-assistant/
 - **No hardcoded secrets** — OneDrive paths come from `ONEDRIVE_BUILDS_DIR` env var
 - **No code changes in `knowledge/` or `crafting/`** — those directories are docs only
 - Do not commit the `.superpowers/` scratch directory
+- **Keep docs current** — always update `CONTEXT.md` and `CLAUDE.md` whenever changes affect project structure, workflows, conventions, or routing; don't let them drift from the code

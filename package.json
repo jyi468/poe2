@@ -8,6 +8,7 @@
     "test": "vitest run",
     "doctor": "bash pob/doctor.sh",
     "economy": "tsx src/economy/pull.ts",
+    "prices": "tsx src/economy/query.ts",
     "trade": "tsx src/economy/trade.ts",
     "craft-sim": "tsx src/crafting-sim/magic-craft.ts",
     "boots-sim": "tsx src/crafting-sim/boots-craft.ts",

@@ -8,6 +8,7 @@ here is a qualitative band so this index does not rot.
 |--------|---------|----------------|------|-------------|------|
 | Greater-essence resist armour | ssf | low–medium † | low | any | [greater-essence-resist-armour.md](greater-essence-resist-armour.md) |
 | Movement-speed boots | low | thin/volume (lean) † | low | any | [movement-speed-boots.md](movement-speed-boots.md) |
+| Essence value map (cross-method ref) | any | reference † | — | any | [essence-value-map.md](essence-value-map.md) |
 | Transmute-augment-regal weapon flip | low | low † | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
 | Jewel crit-combo roll | low | medium (volume) † | low | any | [jewel-crit-combo.md](jewel-crit-combo.md) |
 | Jewel fractured multi-mod | mid | high † | high | any | [jewel-fractured-multimod.md](jewel-fractured-multimod.md) |
