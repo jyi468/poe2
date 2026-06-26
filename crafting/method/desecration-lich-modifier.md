@@ -55,6 +55,17 @@ Medium-high. The Rare base has substantial sunk cost (20–80 Exalted Orbs). If 
 
 Lich-pool modifiers — such as high-tier ailment application chances, defensive bonuses above the normal Rare mod ceiling, and specific offensive bonuses from Ulaman's pool — are unobtainable through any other means (no essence, no Exalt, no bench craft replicates them). Endgame players theory-crafting around ailment builds or wanting to push maximum defences will pay 1–10 Divines for an item carrying one of these exclusive affixes alongside otherwise strong mods.
 
+## Expected profit (modelled)
+
+> **Reproduce / re-price:** `pnpm desecration-sim` (`src/crafting-sim/desecration-craft.ts`)
+> computes EV from the live snapshot. Costs are exact; the reveal share `w` is a modelled band.
+>
+> **Live finding (2026-06-26):** Omen of Light is **~8.9 div per clear** (Light + Annul), so
+> "clear the bad mod and retry on the same base" costs **3–6× more than starting fresh**. Re-bone
+> a **fresh cheap base** instead of Light-clearing. At a ~1-div base this craft is **~break-even**;
+> it is clearly **+EV only with sub-0.5-div bases and few cycles** (use Abyssal Echoes every cycle —
+> a cheap reroll to 6 shown). Keep the base cheap and **never Light-clear at current prices.**
+
 ## Worked example
 
 > Runes of Aldur, patch 0.5.3, 2026-06-22 (illustrative)

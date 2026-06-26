@@ -7,6 +7,7 @@ here is a qualitative band so this index does not rot.
 | Method | Capital | Margin (rough) | Risk | Best window | Link |
 |--------|---------|----------------|------|-------------|------|
 | Greater-essence resist armour | ssf | low–medium † | low | any | [greater-essence-resist-armour.md](greater-essence-resist-armour.md) |
+| Movement-speed boots | low | thin/volume (lean) † | low | any | [movement-speed-boots.md](movement-speed-boots.md) |
 | Transmute-augment-regal weapon flip | low | low † | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
 | Jewel crit-combo roll | low | medium (volume) † | low | any | [jewel-crit-combo.md](jewel-crit-combo.md) |
 | Jewel fractured multi-mod | mid | high † | high | any | [jewel-fractured-multimod.md](jewel-fractured-multimod.md) |
@@ -31,6 +32,10 @@ here is a qualitative band so this index does not rot.
 > late-league slightly favours it. Always confirm live prices before committing.
 
 ## By budget — which methods to run
+
+> For a staged **learning path** that sequences these methods into a bankroll-building ladder
+> (with the deterministic toolkit and live EV via `pnpm boots-sim` / `pnpm desecration-sim`), see
+> [`../../knowledge/workflows/crafting-ladder.md`](../../knowledge/workflows/crafting-ladder.md).
 
 Maps a starting bankroll to methods. This is durable guidance (capital bands, not live
 prices); recompute actual per-craft cost from `../../data/economy/latest.md` at consult

@@ -1,233 +1,242 @@
 {
   "realm": "poe2",
   "league": "Runes of Aldur",
-  "pulledAt": "2026-06-25T21:00:33.168Z",
-  "divinePriceExalted": 342.32818025957783,
+  "pulledAt": "2026-06-26T03:03:26.365Z",
+  "divinePriceExalted": 344.56247028916954,
   "currencies": [
     {
       "key": "mirror",
       "name": "Mirror of Kalandra",
       "type": null,
       "category": "currency",
-      "priceExalted": 1545139.5570716357,
-      "quantity": 58,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1591865.3603332597,
+      "quantity": 26,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "hinekoras-lock",
       "name": "Hinekora's Lock",
       "type": null,
       "category": "currency",
-      "priceExalted": 327847.3952893054,
-      "quantity": 113,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 324788.1643643924,
+      "quantity": 77,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "fracturing-orb",
       "name": "Fracturing Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 2251.540439252714,
-      "quantity": 6321,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2480.521587656924,
+      "quantity": 4595,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-chaos-orb",
       "name": "Perfect Chaos Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 1617.6305496465231,
-      "quantity": 9090,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1341.6667898440212,
+      "quantity": 7786,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-exalted-orb",
       "name": "Perfect Exalted Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 1087.3378186587302,
-      "quantity": 11799,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 826.6345645810069,
+      "quantity": 8335,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "divine",
       "name": "Divine Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 342.32818025957783,
-      "quantity": 1758274,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 344.56247028916954,
+      "quantity": 1163403,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "annul",
       "name": "Orb of Annulment",
       "type": null,
       "category": "currency",
-      "priceExalted": 247.7787029475697,
-      "quantity": 71264,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 232.74713088469045,
+      "quantity": 52467,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-chaos-orb",
       "name": "Greater Chaos Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 112.89157882126881,
-      "quantity": 82640,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 102.97248975298638,
+      "quantity": 59497,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-jewellers-orb",
       "name": "Perfect Jeweller's Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 95.90685082862589,
-      "quantity": 18003,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 96.33721683286528,
+      "quantity": 12429,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "cryptic-key",
       "name": "Cryptic Key",
       "type": null,
       "category": "currency",
-      "priceExalted": 58.1570447905281,
-      "quantity": 367,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 63.641143364130535,
+      "quantity": 330,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "chaos",
       "name": "Chaos Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 37.91848483382517,
-      "quantity": 3600581,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 34.99930616879021,
+      "quantity": 2721426,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-regal-orb",
       "name": "Perfect Regal Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 32.292098674870545,
-      "quantity": 8701,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 32.09272097591373,
+      "quantity": 5865,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-orb-of-augmentation",
       "name": "Perfect Orb of Augmentation",
       "type": null,
       "category": "currency",
-      "priceExalted": 15.494700010689135,
-      "quantity": 48657,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 14.755659568451248,
+      "quantity": 32882,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-orb-of-transmutation",
       "name": "Perfect Orb of Transmutation",
       "type": null,
       "category": "currency",
-      "priceExalted": 10.405217482925984,
-      "quantity": 20805,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 8.748790561519021,
+      "quantity": 17304,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "chance",
       "name": "Orb of Chance",
       "type": null,
       "category": "currency",
-      "priceExalted": 7.96204292580418,
-      "quantity": 45317,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "gcp",
-      "name": "Gemcutter's Prism",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 4.40629405939205,
-      "quantity": 60825,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 7.992147724585759,
+      "quantity": 30417,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-exalted-orb",
       "name": "Greater Exalted Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 3.6232218277765273,
-      "quantity": 76971,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.5292169410642535,
+      "quantity": 49971,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "gcp",
+      "name": "Gemcutter's Prism",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 3.4806824229996556,
+      "quantity": 44797,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "etcher",
       "name": "Arcanist's Etcher",
       "type": null,
       "category": "currency",
-      "priceExalted": 3.350744590037556,
-      "quantity": 28912,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.018511486638258,
+      "quantity": 20457,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "vaal",
       "name": "Vaal Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 2.8008726134930333,
-      "quantity": 208611,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-regal-orb",
-      "name": "Greater Regal Orb",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 2.262799669093031,
-      "quantity": 16563,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "scrap",
-      "name": "Armourer's Scrap",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 1.5881163097392772,
-      "quantity": 181693,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "chance-shard",
-      "name": "Chance Shard",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 1.452411509812188,
-      "quantity": 119,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-jewellers-orb",
-      "name": "Greater Jeweller's Orb",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 1.368657978698595,
-      "quantity": 4510,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "bauble",
-      "name": "Glassblower's Bauble",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 1.157856572729436,
-      "quantity": 14483,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.6102317563608577,
+      "quantity": 142688,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "artificers",
       "name": "Artificer's Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 1.076580328990143,
-      "quantity": 14978,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.50102474738469,
+      "quantity": 15279,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-regal-orb",
+      "name": "Greater Regal Orb",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 2.190202248967209,
+      "quantity": 14363,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "chance-shard",
+      "name": "Chance Shard",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 2.1615690435786155,
+      "quantity": 286,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "bauble",
+      "name": "Glassblower's Bauble",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 1.9891957615005473,
+      "quantity": 12076,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-jewellers-orb",
+      "name": "Greater Jeweller's Orb",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 1.2514206491241264,
+      "quantity": 3918,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "scrap",
+      "name": "Armourer's Scrap",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 1.1654331512762555,
+      "quantity": 148672,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "transmutation-shard",
+      "name": "Transmutation Shard",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 1,
+      "quantity": 7,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "exalted",
@@ -235,89 +244,80 @@
       "type": null,
       "category": "currency",
       "priceExalted": 1,
-      "quantity": 57575667,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 39394405,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "alch",
       "name": "Orb of Alchemy",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.9759491465590804,
-      "quantity": 177519,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.7918170031566487,
+      "quantity": 127123,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "whetstone",
       "name": "Blacksmith's Whetstone",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.7168421126321703,
-      "quantity": 47016,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.714390221534992,
+      "quantity": 43969,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "regal",
       "name": "Regal Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.6013268486875399,
-      "quantity": 55117,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.6729513309937335,
+      "quantity": 45269,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "artificers-shard",
       "name": "Artificer's Shard",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.5,
-      "quantity": 40,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-orb-of-augmentation",
-      "name": "Greater Orb of Augmentation",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 0.2641520898761233,
-      "quantity": 62579,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "aug",
-      "name": "Orb of Augmentation",
-      "type": null,
-      "category": "currency",
-      "priceExalted": 0.23500291881723728,
-      "quantity": 50250,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.4603174603174603,
+      "quantity": 63,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-orb-of-transmutation",
       "name": "Greater Orb of Transmutation",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.20203499309483408,
-      "quantity": 46349,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.2486208007552094,
+      "quantity": 15903,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "transmutation-shard",
-      "name": "Transmutation Shard",
+      "key": "greater-orb-of-augmentation",
+      "name": "Greater Orb of Augmentation",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.2,
-      "quantity": 10,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.21701297489429985,
+      "quantity": 41153,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "aug",
+      "name": "Orb of Augmentation",
+      "type": null,
+      "category": "currency",
+      "priceExalted": 0.20266895584035308,
+      "quantity": 53824,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "transmute",
       "name": "Orb of Transmutation",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.122855068187462,
-      "quantity": 60862,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.14908696386967712,
+      "quantity": 28237,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "regal-shard",
@@ -333,440 +333,197 @@
       "name": "Lesser Jeweller's Orb",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.029689608636977057,
-      "quantity": 771,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.03333333333333333,
+      "quantity": 211,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "wisdom",
       "name": "Scroll of Wisdom",
       "type": null,
       "category": "currency",
-      "priceExalted": 0.02898549158620286,
-      "quantity": 189040,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.022539395596952796,
+      "quantity": 213278,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-hysteria",
       "name": "Essence of Hysteria",
       "type": null,
       "category": "essences",
-      "priceExalted": 285.21918918915924,
-      "quantity": 875,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 289.2360696121947,
+      "quantity": 507,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-horror",
       "name": "Essence of Horror",
       "type": null,
       "category": "essences",
-      "priceExalted": 136.95707410469376,
-      "quantity": 750,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 131.46553076293043,
+      "quantity": 423,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-command",
-      "name": "Essence of Command",
+      "key": "lesser-essence-of-ruin",
+      "name": "Lesser Essence of Ruin",
       "type": null,
       "category": "essences",
-      "priceExalted": 86.08204506489446,
-      "quantity": 4,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-abrasion",
-      "name": "Lesser Essence of Abrasion",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 50.492045446692046,
-      "quantity": 28,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-thawing",
-      "name": "Essence of Thawing",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 44.16602253244723,
-      "quantity": 8,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 100,
+      "quantity": 1,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-opulence",
       "name": "Essence of Opulence",
       "type": null,
       "category": "essences",
-      "priceExalted": 40.25,
-      "quantity": 12,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 75.49921943988899,
+      "quantity": 8,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-abrasion",
-      "name": "Essence of Abrasion",
+      "key": "lesser-essence-of-grounding",
+      "name": "Lesser Essence of Grounding",
       "type": null,
       "category": "essences",
-      "priceExalted": 39.5,
-      "quantity": 14,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-the-breach",
-      "name": "Essence of the Breach",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 34.8344949620224,
-      "quantity": 2079,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 70,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-delirium",
       "name": "Essence of Delirium",
       "type": null,
       "category": "essences",
-      "priceExalted": 32.84436808416604,
-      "quantity": 258,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 48.65249508614686,
+      "quantity": 749,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-grounding",
-      "name": "Essence of Grounding",
+      "key": "essence-of-abrasion",
+      "name": "Essence of Abrasion",
       "type": null,
       "category": "essences",
-      "priceExalted": 30.666666666666668,
-      "quantity": 3,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 42.57142857142857,
+      "quantity": 7,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-ruin",
-      "name": "Essence of Ruin",
+      "key": "essence-of-battle",
+      "name": "Essence of Battle",
       "type": null,
       "category": "essences",
-      "priceExalted": 25,
-      "quantity": 2,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 37.227037558177294,
+      "quantity": 1,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "perfect-essence-of-the-infinite",
-      "name": "Perfect Essence of the Infinite",
+      "key": "essence-of-the-breach",
+      "name": "Essence of the Breach",
       "type": null,
       "category": "essences",
-      "priceExalted": 21.369839255753966,
-      "quantity": 1955,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-the-abyss",
-      "name": "Essence of the Abyss",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 18.469964789389703,
-      "quantity": 5134,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-haste",
-      "name": "Perfect Essence of Haste",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 17.55386487262171,
-      "quantity": 655,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-opulence",
-      "name": "Perfect Essence of Opulence",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 14.728257930671367,
-      "quantity": 418,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 31.040198513517073,
+      "quantity": 1244,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-the-infinite",
       "name": "Essence of the Infinite",
       "type": null,
       "category": "essences",
-      "priceExalted": 14.666666666666666,
+      "priceExalted": 31,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-abrasion",
+      "name": "Lesser Essence of Abrasion",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 30.33316813542624,
+      "quantity": 21,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-grounding",
+      "name": "Essence of Grounding",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 29.666666666666668,
       "quantity": 3,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-opulence",
-      "name": "Greater Essence of Opulence",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 14.348225310359899,
-      "quantity": 1943,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-command",
-      "name": "Lesser Essence of Command",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 14.25,
-      "quantity": 8,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-battle",
-      "name": "Greater Essence of Battle",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 13.693127210383114,
-      "quantity": 25,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-battle",
-      "name": "Perfect Essence of Battle",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 13.234091523282368,
-      "quantity": 1440,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-seeking",
-      "name": "Perfect Essence of Seeking",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 12.504637848492337,
-      "quantity": 528,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-haste",
-      "name": "Lesser Essence of Haste",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 11.333333333333334,
-      "quantity": 6,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-haste",
-      "name": "Essence of Haste",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 10.5,
-      "quantity": 6,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-electricity",
-      "name": "Lesser Essence of Electricity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 10,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-insulation",
-      "name": "Essence of Insulation",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 10,
-      "quantity": 6,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-seeking",
-      "name": "Greater Essence of Seeking",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 8.947958373349229,
-      "quantity": 632,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-enhancement",
-      "name": "Perfect Essence of Enhancement",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 8.781451981676279,
-      "quantity": 1311,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-grounding",
-      "name": "Perfect Essence of Grounding",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 8.590364819405414,
-      "quantity": 662,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-enhancement",
-      "name": "Essence of Enhancement",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 7.291848483382518,
-      "quantity": 20,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-electricity",
-      "name": "Essence of Electricity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 7,
-      "quantity": 6,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-the-body",
-      "name": "Essence of the Body",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 6.214285714285714,
-      "quantity": 14,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-sorcery",
-      "name": "Perfect Essence of Sorcery",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 5.046399036408517,
-      "quantity": 582,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-battle",
-      "name": "Lesser Essence of Battle",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 5,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-enhancement",
-      "name": "Greater Essence of Enhancement",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 4.86541943630211,
-      "quantity": 735,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-alacrity",
-      "name": "Essence of Alacrity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 4.2,
-      "quantity": 5,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-ruin",
-      "name": "Greater Essence of Ruin",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.9603678572063212,
-      "quantity": 416,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-the-body",
-      "name": "Perfect Essence of the Body",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.910599796490493,
-      "quantity": 97,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-electricity",
-      "name": "Perfect Essence of Electricity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.824884792626728,
-      "quantity": 651,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-thawing",
-      "name": "Perfect Essence of Thawing",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.7096774193548385,
-      "quantity": 94,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-ice",
-      "name": "Perfect Essence of Ice",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.451507646029877,
-      "quantity": 323,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-command",
-      "name": "Perfect Essence of Command",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.410869058236339,
-      "quantity": 159,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "essence-of-insanity",
-      "name": "Essence of Insanity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.3603603603603602,
-      "quantity": 111,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "perfect-essence-of-abrasion",
-      "name": "Perfect Essence of Abrasion",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3.1469115191986643,
-      "quantity": 599,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-enhancement",
-      "name": "Lesser Essence of Enhancement",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 3,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-seeking",
       "name": "Essence of Seeking",
       "type": null,
       "category": "essences",
-      "priceExalted": 3,
-      "quantity": 2,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 19.916666666666668,
+      "quantity": 12,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-ice",
-      "name": "Essence of Ice",
+      "key": "essence-of-the-abyss",
+      "name": "Essence of the Abyss",
       "type": null,
       "category": "essences",
-      "priceExalted": 3,
-      "quantity": 3,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 15.697606707061345,
+      "quantity": 3116,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "lesser-essence-of-opulence",
-      "name": "Lesser Essence of Opulence",
+      "key": "perfect-essence-of-the-infinite",
+      "name": "Perfect Essence of the Infinite",
       "type": null,
       "category": "essences",
-      "priceExalted": 3,
-      "quantity": 1,
+      "priceExalted": 14.804374986636258,
+      "quantity": 1317,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-opulence",
+      "name": "Greater Essence of Opulence",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 14.620829642794076,
+      "quantity": 1462,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-haste",
+      "name": "Essence of Haste",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 14.25,
+      "quantity": 13,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-enhancement",
+      "name": "Essence of Enhancement",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 12.84,
+      "quantity": 25,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-opulence",
+      "name": "Perfect Essence of Opulence",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 12.816927388135824,
+      "quantity": 367,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-haste",
+      "name": "Lesser Essence of Haste",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 12.2,
+      "quantity": 5,
       "time": "2026-06-25T00:00:00"
     },
     {
@@ -774,130 +531,310 @@
       "name": "Lesser Essence of Alacrity",
       "type": null,
       "category": "essences",
-      "priceExalted": 3,
-      "quantity": 4,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 12,
+      "quantity": 1,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-battle",
-      "name": "Essence of Battle",
+      "key": "perfect-essence-of-battle",
+      "name": "Perfect Essence of Battle",
       "type": null,
       "category": "essences",
-      "priceExalted": 3,
-      "quantity": 3,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 11.969552751710108,
+      "quantity": 914,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "lesser-essence-of-sorcery",
-      "name": "Lesser Essence of Sorcery",
+      "key": "lesser-essence-of-opulence",
+      "name": "Lesser Essence of Opulence",
       "type": null,
       "category": "essences",
-      "priceExalted": 2.7777777777777777,
-      "quantity": 27,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 11.5,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-haste",
-      "name": "Greater Essence of Haste",
+      "key": "perfect-essence-of-haste",
+      "name": "Perfect Essence of Haste",
       "type": null,
       "category": "essences",
-      "priceExalted": 2.673659040703229,
-      "quantity": 334,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 11.480211237363681,
+      "quantity": 351,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-insulation",
+      "name": "Essence of Insulation",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 10,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-essence-of-flames",
       "name": "Perfect Essence of Flames",
       "type": null,
       "category": "essences",
-      "priceExalted": 2.25,
-      "quantity": 204,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 8.828364698980835,
+      "quantity": 130,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "perfect-essence-of-alacrity",
-      "name": "Perfect Essence of Alacrity",
+      "key": "essence-of-the-body",
+      "name": "Essence of the Body",
       "type": null,
       "category": "essences",
-      "priceExalted": 2.1209302325581394,
-      "quantity": 215,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 7.5,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "essence-of-flames",
-      "name": "Essence of Flames",
+      "key": "greater-essence-of-seeking",
+      "name": "Greater Essence of Seeking",
       "type": null,
       "category": "essences",
-      "priceExalted": 2,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 7.4964773457217255,
+      "quantity": 498,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-the-body",
+      "name": "Lesser Essence of the Body",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 7.399861233758043,
+      "quantity": 6,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-insanity",
+      "name": "Essence of Insanity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 7.10296684803125,
+      "quantity": 176,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-sorcery",
+      "name": "Lesser Essence of Sorcery",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 6.571428571428571,
+      "quantity": 7,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-grounding",
+      "name": "Perfect Essence of Grounding",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 6.376989232303287,
+      "quantity": 754,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-enhancement",
+      "name": "Lesser Essence of Enhancement",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 6.333333333333333,
+      "quantity": 3,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-enhancement",
+      "name": "Perfect Essence of Enhancement",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 6.270028296551549,
+      "quantity": 867,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-electricity",
+      "name": "Essence of Electricity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 6,
+      "quantity": 3,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-command",
+      "name": "Greater Essence of Command",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 5.096684666940672,
+      "quantity": 31,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-sorcery",
+      "name": "Perfect Essence of Sorcery",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 4.56769229781463,
+      "quantity": 348,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-abrasion",
+      "name": "Perfect Essence of Abrasion",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 3.9830829559163994,
+      "quantity": 355,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-essence-of-the-mind",
       "name": "Perfect Essence of the Mind",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.7215909090909092,
-      "quantity": 352,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.830331240859767,
+      "quantity": 347,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-insulation",
-      "name": "Greater Essence of Insulation",
+      "key": "perfect-essence-of-alacrity",
+      "name": "Perfect Essence of Alacrity",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.4414588533051207,
-      "quantity": 689,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.8114493301610888,
+      "quantity": 119,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "lesser-essence-of-insulation",
-      "name": "Lesser Essence of Insulation",
+      "key": "greater-essence-of-ruin",
+      "name": "Greater Essence of Ruin",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.375,
-      "quantity": 8,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.595875887885115,
+      "quantity": 245,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-electricity",
+      "name": "Lesser Essence of Electricity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 3.3,
+      "quantity": 10,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-haste",
+      "name": "Greater Essence of Haste",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 3.289576935744061,
+      "quantity": 330,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-electricity",
+      "name": "Perfect Essence of Electricity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 3.0510204081632653,
+      "quantity": 197,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-command",
+      "name": "Lesser Essence of Command",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 2.6666666666666665,
+      "quantity": 6,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-enhancement",
+      "name": "Greater Essence of Enhancement",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 2.6279950156204284,
+      "quantity": 540,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-essence-of-grounding",
       "name": "Greater Essence of Grounding",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.296286591825947,
-      "quantity": 531,
+      "priceExalted": 2.3194443039677046,
+      "quantity": 424,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-flames",
+      "name": "Lesser Essence of Flames",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 2.1666666666666665,
+      "quantity": 6,
       "time": "2026-06-25T00:00:00"
     },
     {
-      "key": "greater-essence-of-thawing",
-      "name": "Greater Essence of Thawing",
+      "key": "essence-of-ice",
+      "name": "Essence of Ice",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.26141836163809,
-      "quantity": 598,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.1,
+      "quantity": 10,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-abrasion",
-      "name": "Greater Essence of Abrasion",
+      "key": "essence-of-thawing",
+      "name": "Essence of Thawing",
       "type": null,
       "category": "essences",
-      "priceExalted": 1.2506154462123953,
-      "quantity": 807,
+      "priceExalted": 2,
+      "quantity": 4,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-ice",
+      "name": "Perfect Essence of Ice",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 1.9398496240601504,
+      "quantity": 133,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-alacrity",
+      "name": "Essence of Alacrity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 1.8,
+      "quantity": 5,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-seeking",
+      "name": "Perfect Essence of Seeking",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 1.4090856527938653,
+      "quantity": 132,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-insulation",
+      "name": "Lesser Essence of Insulation",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 1,
+      "quantity": 2,
       "time": "2026-06-25T00:00:00"
     },
     {
       "key": "lesser-essence-of-thawing",
       "name": "Lesser Essence of Thawing",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 1,
-      "quantity": 4,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-ruin",
-      "name": "Lesser Essence of Ruin",
       "type": null,
       "category": "essences",
       "priceExalted": 1,
@@ -914,13 +851,22 @@
       "time": "2026-06-25T00:00:00"
     },
     {
-      "key": "essence-of-sorcery",
-      "name": "Essence of Sorcery",
+      "key": "perfect-essence-of-thawing",
+      "name": "Perfect Essence of Thawing",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 1,
+      "quantity": 23,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-ruin",
+      "name": "Essence of Ruin",
       "type": null,
       "category": "essences",
       "priceExalted": 1,
       "quantity": 1,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "essence-of-the-mind",
@@ -928,8 +874,8 @@
       "type": null,
       "category": "essences",
       "priceExalted": 1,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-essence-of-insulation",
@@ -937,8 +883,8 @@
       "type": null,
       "category": "essences",
       "priceExalted": 1,
-      "quantity": 62,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 14,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "lesser-essence-of-the-infinite",
@@ -946,8 +892,8 @@
       "type": null,
       "category": "essences",
       "priceExalted": 1,
-      "quantity": 6,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "lesser-essence-of-seeking",
@@ -956,1053 +902,1116 @@
       "category": "essences",
       "priceExalted": 1,
       "quantity": 1,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "lesser-essence-of-the-body",
-      "name": "Lesser Essence of the Body",
+      "key": "lesser-essence-of-battle",
+      "name": "Lesser Essence of Battle",
       "type": null,
       "category": "essences",
       "priceExalted": 1,
       "quantity": 1,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-ice",
-      "name": "Lesser Essence of Ice",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 1,
-      "quantity": 1,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-command",
-      "name": "Greater Essence of Command",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 0.541033434650456,
-      "quantity": 329,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-flames",
-      "name": "Lesser Essence of Flames",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 0.5,
-      "quantity": 2,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-electricity",
-      "name": "Greater Essence of Electricity",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 0.4444444444444444,
-      "quantity": 27,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "lesser-essence-of-grounding",
-      "name": "Lesser Essence of Grounding",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 0.4,
-      "quantity": 5,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "greater-essence-of-ice",
-      "name": "Greater Essence of Ice",
-      "type": null,
-      "category": "essences",
-      "priceExalted": 0.3870967741935484,
-      "quantity": 62,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "perfect-essence-of-ruin",
       "name": "Perfect Essence of Ruin",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.3333333333333333,
-      "quantity": 99,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1,
+      "quantity": 12,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-alacrity",
-      "name": "Greater Essence of Alacrity",
+      "key": "essence-of-flames",
+      "name": "Essence of Flames",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.23809523809523808,
-      "quantity": 84,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.9333333333333333,
+      "quantity": 15,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-flames",
-      "name": "Greater Essence of Flames",
+      "key": "greater-essence-of-insulation",
+      "name": "Greater Essence of Insulation",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.16822429906542055,
-      "quantity": 107,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.9107101557666084,
+      "quantity": 336,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-sorcery",
-      "name": "Greater Essence of Sorcery",
+      "key": "perfect-essence-of-command",
+      "name": "Perfect Essence of Command",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.16666666666666666,
-      "quantity": 157,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.8,
+      "quantity": 45,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-essence-of-the-body",
       "name": "Greater Essence of the Body",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.13725490196078433,
-      "quantity": 52,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.7096662285288744,
+      "quantity": 62,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "greater-essence-of-the-infinite",
-      "name": "Greater Essence of the Infinite",
+      "key": "greater-essence-of-abrasion",
+      "name": "Greater Essence of Abrasion",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.125,
-      "quantity": 90,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.6769159607055406,
+      "quantity": 195,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "lesser-essence-of-ice",
+      "name": "Lesser Essence of Ice",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.6666666666666666,
+      "quantity": 3,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-command",
+      "name": "Essence of Command",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.5,
+      "quantity": 2,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "essence-of-sorcery",
+      "name": "Essence of Sorcery",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.5,
+      "quantity": 4,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "perfect-essence-of-the-body",
+      "name": "Perfect Essence of the Body",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.5,
+      "quantity": 22,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-thawing",
+      "name": "Greater Essence of Thawing",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.4725274725274725,
+      "quantity": 273,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-ice",
+      "name": "Greater Essence of Ice",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.32,
+      "quantity": 25,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-sorcery",
+      "name": "Greater Essence of Sorcery",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.2857142857142857,
+      "quantity": 77,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-electricity",
+      "name": "Greater Essence of Electricity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.1896551724137931,
+      "quantity": 116,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-alacrity",
+      "name": "Greater Essence of Alacrity",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.15555555555555556,
+      "quantity": 54,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-flames",
+      "name": "Greater Essence of Flames",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.14285714285714285,
+      "quantity": 85,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-battle",
+      "name": "Greater Essence of Battle",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.1111111111111111,
+      "quantity": 27,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "greater-essence-of-the-mind",
       "name": "Greater Essence of the Mind",
       "type": null,
       "category": "essences",
-      "priceExalted": 0.09090909090909091,
-      "quantity": 12,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.08695652173913043,
+      "quantity": 92,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "greater-essence-of-the-infinite",
+      "name": "Greater Essence of the Infinite",
+      "type": null,
+      "category": "essences",
+      "priceExalted": 0.08333333333333333,
+      "quantity": 48,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "raven-touched-shard",
       "name": "Raven-Touched Shard",
       "type": null,
       "category": "ritual",
-      "priceExalted": 31898.76225146066,
-      "quantity": 275,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 33017.10144792004,
+      "quantity": 199,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-chance",
       "name": "Omen of Chance",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4626.787926225321,
-      "quantity": 421,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4694.43291188318,
+      "quantity": 463,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-sinistral-annulment",
       "name": "Omen of Sinistral Annulment",
       "type": null,
       "category": "ritual",
-      "priceExalted": 3919.518462211054,
-      "quantity": 2928,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3815.83014412912,
+      "quantity": 2576,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-sinistral-erasure",
       "name": "Omen of Sinistral Erasure",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2967.882813090072,
-      "quantity": 3440,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2894.374501354804,
+      "quantity": 2730,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-light",
       "name": "Omen of Light",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2929.4792274225933,
-      "quantity": 15012,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2839.4385431895175,
+      "quantity": 12370,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-dextral-erasure",
       "name": "Omen of Dextral Erasure",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2534.4427758694087,
-      "quantity": 3338,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2471.994187870474,
+      "quantity": 2542,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-dextral-annulment",
       "name": "Omen of Dextral Annulment",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2310.183124729549,
-      "quantity": 3039,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2283.4286694887815,
+      "quantity": 2274,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-whittling",
       "name": "Omen of Whittling",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2307.7001020977827,
-      "quantity": 16693,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2275.1607119125183,
+      "quantity": 14233,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "head-of-the-king",
       "name": "Head of the King",
       "type": null,
       "category": "ritual",
-      "priceExalted": 401.41351533421874,
-      "quantity": 5221,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 369.17095340918195,
+      "quantity": 3773,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-the-hunt",
       "name": "Omen of the Hunt",
       "type": null,
       "category": "ritual",
-      "priceExalted": 158.5090102610002,
-      "quantity": 128,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 160.0798036304323,
+      "quantity": 68,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-dextral-crystallisation",
       "name": "Omen of Dextral Crystallisation",
       "type": null,
       "category": "ritual",
-      "priceExalted": 148.84452505732173,
-      "quantity": 5591,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-chaotic-rarity",
-      "name": "Omen of Chaotic Rarity",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 125.82873407733084,
-      "quantity": 18950,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-secret-compartments",
-      "name": "Omen of Secret Compartments",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 118.66100805526573,
-      "quantity": 116,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-chaotic-monsters",
-      "name": "Omen of Chaotic Monsters",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 101.63868237988046,
-      "quantity": 19551,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-abyssal-echoes",
-      "name": "Omen of Abyssal Echoes",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 93.50263770792546,
-      "quantity": 38242,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 120.21192938096561,
+      "quantity": 4018,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-sanctification",
       "name": "Omen of Sanctification",
       "type": null,
       "category": "ritual",
-      "priceExalted": 89.08160712315048,
-      "quantity": 914,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 112.67614771348946,
+      "quantity": 533,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-chaotic-quantity",
-      "name": "Omen of Chaotic Quantity",
+      "key": "omen-of-secret-compartments",
+      "name": "Omen of Secret Compartments",
       "type": null,
       "category": "ritual",
-      "priceExalted": 80.40708849651509,
-      "quantity": 29528,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 106.83908626411025,
+      "quantity": 49,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-the-blackblooded",
-      "name": "Omen of the Blackblooded",
+      "key": "omen-of-chaotic-rarity",
+      "name": "Omen of Chaotic Rarity",
       "type": null,
       "category": "ritual",
-      "priceExalted": 73.78351196760654,
-      "quantity": 746,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 106.053010682982,
+      "quantity": 12975,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-abyssal-echoes",
+      "name": "Omen of Abyssal Echoes",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 91.35329359651232,
+      "quantity": 27268,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-the-blessed",
       "name": "Omen of the Blessed",
       "type": null,
       "category": "ritual",
-      "priceExalted": 60.15241901439549,
-      "quantity": 1770,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 79.36566875116979,
+      "quantity": 1115,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-reinforcements",
-      "name": "Omen of Reinforcements",
+      "key": "omen-of-chaotic-monsters",
+      "name": "Omen of Chaotic Monsters",
       "type": null,
       "category": "ritual",
-      "priceExalted": 58.3185293791428,
-      "quantity": 68,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "idol-of-eramir",
-      "name": "Idol of Eramir",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 50.41109687747862,
-      "quantity": 192,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-sinistral-crystallisation",
-      "name": "Omen of Sinistral Crystallisation",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 33.318235215886226,
-      "quantity": 4542,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "idol-of-the-martyr",
-      "name": "Idol of the Martyr",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 29.913415560168048,
-      "quantity": 81,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-chaotic-effectiveness",
-      "name": "Omen of Chaotic Effectiveness",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 29.33214121679297,
-      "quantity": 15736,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 75.74516682179036,
+      "quantity": 13110,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-answered-prayers",
       "name": "Omen of Answered Prayers",
       "type": null,
       "category": "ritual",
-      "priceExalted": 29.06451612903226,
-      "quantity": 31,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 70.46209658562026,
+      "quantity": 33,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-sinistral-exaltation",
-      "name": "Omen of Sinistral Exaltation",
+      "key": "omen-of-chaotic-quantity",
+      "name": "Omen of Chaotic Quantity",
       "type": null,
       "category": "ritual",
-      "priceExalted": 20.869606779166205,
-      "quantity": 8705,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 68.54488785620286,
+      "quantity": 20812,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "idol-of-yeena",
-      "name": "Idol of Yeena",
+      "key": "omen-of-the-blackblooded",
+      "name": "Omen of the Blackblooded",
       "type": null,
       "category": "ritual",
-      "priceExalted": 16.63048086075823,
-      "quantity": 46,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 59.74833791346273,
+      "quantity": 484,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "idol-of-alira",
-      "name": "Idol of Alira",
+      "key": "omen-of-reinforcements",
+      "name": "Omen of Reinforcements",
       "type": null,
       "category": "ritual",
-      "priceExalted": 14.410939341985928,
-      "quantity": 30,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 52.38293076288981,
+      "quantity": 38,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-amelioration",
-      "name": "Omen of Amelioration",
+      "key": "idol-of-eramir",
+      "name": "Idol of Eramir",
       "type": null,
       "category": "ritual",
-      "priceExalted": 11.648461437051525,
-      "quantity": 17782,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 37.18181573710315,
+      "quantity": 135,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "idol-of-the-sycophant",
-      "name": "Idol of the Sycophant",
+      "key": "omen-of-sinistral-crystallisation",
+      "name": "Omen of Sinistral Crystallisation",
       "type": null,
       "category": "ritual",
-      "priceExalted": 11.216157022794341,
-      "quantity": 22,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 31.918071187356578,
+      "quantity": 3915,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-resurgence",
-      "name": "Omen of Resurgence",
+      "key": "omen-of-chaotic-effectiveness",
+      "name": "Omen of Chaotic Effectiveness",
       "type": null,
       "category": "ritual",
-      "priceExalted": 10.819020899316572,
-      "quantity": 11908,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-bartering",
-      "name": "Omen of Bartering",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 9.047175288345194,
-      "quantity": 27198,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "idol-of-kraityn",
-      "name": "Idol of Kraityn",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 7.5510269352125094,
-      "quantity": 18,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-catalysing-exaltation",
-      "name": "Omen of Catalysing Exaltation",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 6.234091551499724,
-      "quantity": 2790,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-the-ancients",
-      "name": "Omen of the Ancients",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 6.124119422099322,
-      "quantity": 6705,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 27.6469553603578,
+      "quantity": 9347,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "idol-of-greust",
       "name": "Idol of Greust",
       "type": null,
       "category": "ritual",
-      "priceExalted": 5.76,
-      "quantity": 25,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 22.888580519462316,
+      "quantity": 18,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "call-of-the-shadows",
-      "name": "Call of the Shadows",
+      "key": "omen-of-resurgence",
+      "name": "Omen of Resurgence",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4.867789766084627,
-      "quantity": 9471,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 16.758729609497884,
+      "quantity": 7074,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "idol-of-the-pharisee",
-      "name": "Idol of the Pharisee",
+      "key": "omen-of-sinistral-exaltation",
+      "name": "Omen of Sinistral Exaltation",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4.381753564954597,
-      "quantity": 136,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 16.74094453878149,
+      "quantity": 3911,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-the-sovereign",
-      "name": "Omen of the Sovereign",
+      "key": "idol-of-the-martyr",
+      "name": "Idol of the Martyr",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4.315497728539051,
-      "quantity": 449,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 15.105263157894736,
+      "quantity": 19,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "idol-of-oak",
       "name": "Idol of Oak",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4.308641975308642,
-      "quantity": 81,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 12.363942796602942,
+      "quantity": 51,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-amelioration",
+      "name": "Omen of Amelioration",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 11.27403948185373,
+      "quantity": 13769,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "idol-of-the-pharisee",
+      "name": "Idol of the Pharisee",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 10.399907489172028,
+      "quantity": 30,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "idol-of-kraityn",
+      "name": "Idol of Kraityn",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 9.83325624097669,
+      "quantity": 18,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "idol-of-the-sycophant",
+      "name": "Idol of the Sycophant",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 9.318181818181818,
+      "quantity": 22,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-bartering",
+      "name": "Omen of Bartering",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 8.089028861113547,
+      "quantity": 14413,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-catalysing-exaltation",
+      "name": "Omen of Catalysing Exaltation",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 6.3289894964765185,
+      "quantity": 2151,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-the-ancients",
+      "name": "Omen of the Ancients",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 5.686133992193444,
+      "quantity": 6005,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "idol-of-yeena",
+      "name": "Idol of Yeena",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 5.333304423699592,
+      "quantity": 24,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-dextral-exaltation",
       "name": "Omen of Dextral Exaltation",
       "type": null,
       "category": "ritual",
-      "priceExalted": 4.117855027517959,
-      "quantity": 4029,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4.850695566595298,
+      "quantity": 2655,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-dextral-necromancy",
-      "name": "Omen of Dextral Necromancy",
+      "key": "call-of-the-shadows",
+      "name": "Call of the Shadows",
       "type": null,
       "category": "ritual",
-      "priceExalted": 3.9464390503986206,
-      "quantity": 8096,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4.463408191811478,
+      "quantity": 9832,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "idol-of-alira",
+      "name": "Idol of Alira",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 4.333310205626341,
+      "quantity": 30,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-the-sovereign",
+      "name": "Omen of the Sovereign",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 3.9406265966902323,
+      "quantity": 219,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-greater-exaltation",
       "name": "Omen of Greater Exaltation",
       "type": null,
       "category": "ritual",
-      "priceExalted": 3.7754082471758323,
-      "quantity": 13013,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.430770831267957,
+      "quantity": 9099,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "snake-idol",
-      "name": "Snake Idol",
+      "key": "omen-of-dextral-necromancy",
+      "name": "Omen of Dextral Necromancy",
       "type": null,
       "category": "ritual",
-      "priceExalted": 2.5926390036944333,
-      "quantity": 206,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-sinistral-necromancy",
-      "name": "Omen of Sinistral Necromancy",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 1.8641071386167543,
-      "quantity": 11966,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.434470343969834,
+      "quantity": 7303,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "omen-of-refreshment",
       "name": "Omen of Refreshment",
       "type": null,
       "category": "ritual",
-      "priceExalted": 0.9035479731744513,
-      "quantity": 2177,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1.8952190904716928,
+      "quantity": 986,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-gambling",
-      "name": "Omen of Gambling",
+      "key": "snake-idol",
+      "name": "Snake Idol",
       "type": null,
       "category": "ritual",
-      "priceExalted": 0.8786905020370784,
-      "quantity": 1976,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1.7105080570734266,
+      "quantity": 76,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "omen-of-putrefaction",
-      "name": "Omen of Putrefaction",
+      "key": "omen-of-sinistral-necromancy",
+      "name": "Omen of Sinistral Necromancy",
       "type": null,
       "category": "ritual",
-      "priceExalted": 0.7850664675283346,
-      "quantity": 6379,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "omen-of-the-liege",
-      "name": "Omen of the Liege",
-      "type": null,
-      "category": "ritual",
-      "priceExalted": 0.6189279966846802,
-      "quantity": 452,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1.3356381021433734,
+      "quantity": 9705,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "idol-of-silk",
       "name": "Idol of Silk",
       "type": null,
       "category": "ritual",
-      "priceExalted": 0.5,
-      "quantity": 4,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1,
+      "quantity": 1,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "refined-sibilant-catalyst",
-      "name": "Refined Sibilant Catalyst",
+      "key": "omen-of-gambling",
+      "name": "Omen of Gambling",
       "type": null,
-      "category": "breach",
-      "priceExalted": 964.8709317999683,
-      "quantity": 2430,
-      "time": "2026-06-25T00:00:00"
+      "category": "ritual",
+      "priceExalted": 0.9566959054584685,
+      "quantity": 967,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-the-liege",
+      "name": "Omen of the Liege",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 0.9299584778841855,
+      "quantity": 1269,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "omen-of-putrefaction",
+      "name": "Omen of Putrefaction",
+      "type": null,
+      "category": "ritual",
+      "priceExalted": 0.7350297638637409,
+      "quantity": 4852,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-reaver-catalyst",
       "name": "Refined Reaver Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 949.1072679320413,
-      "quantity": 3070,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 938.0290286812258,
+      "quantity": 1578,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "refined-sibilant-catalyst",
+      "name": "Refined Sibilant Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 924.4915269594478,
+      "quantity": 1516,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-necrotic-catalyst",
       "name": "Refined Necrotic Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 207.2329794007617,
-      "quantity": 1912,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 188.43460381737196,
+      "quantity": 1664,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "sibilant-catalyst",
       "name": "Sibilant Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 139.27548415935243,
-      "quantity": 18284,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 116.02747687092506,
+      "quantity": 10824,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "reaver-catalyst",
       "name": "Reaver Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 104.71079274875447,
-      "quantity": 17387,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 100.24472962099605,
+      "quantity": 12691,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "skittering-catalyst",
       "name": "Skittering Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 47.759891881785194,
-      "quantity": 8503,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "refined-tuls-catalyst",
-      "name": "Refined Tul's Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 46.288506618659724,
-      "quantity": 1901,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "refined-skittering-catalyst",
-      "name": "Refined Skittering Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 42.98703168960405,
-      "quantity": 732,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 50.857968317182284,
+      "quantity": 5944,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-carapace-catalyst",
       "name": "Refined Carapace Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 37.518309144271676,
-      "quantity": 2919,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 47.971980396672976,
+      "quantity": 2741,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "refined-skittering-catalyst",
+      "name": "Refined Skittering Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 46.9970620550767,
+      "quantity": 410,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "refined-tuls-catalyst",
+      "name": "Refined Tul's Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 42.16186195740358,
+      "quantity": 1666,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-eshs-catalyst",
       "name": "Refined Esh's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 33.50474766953681,
-      "quantity": 1335,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "refined-uul-netols-catalyst",
-      "name": "Refined Uul-Netol's Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 28.995700639983134,
-      "quantity": 1182,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 37.74271828621085,
+      "quantity": 1441,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-xophs-catalyst",
       "name": "Refined Xoph's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 28.885959518202952,
-      "quantity": 1604,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "refined-flesh-catalyst",
-      "name": "Refined Flesh Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 28.70513476335838,
-      "quantity": 2444,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 31.064064392010923,
+      "quantity": 1354,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-neural-catalyst",
       "name": "Refined Neural Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 28.383378220735967,
-      "quantity": 2456,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 30.26580441894338,
+      "quantity": 2136,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "refined-flesh-catalyst",
+      "name": "Refined Flesh Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 29.925894645790166,
+      "quantity": 1535,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-chayulas-catalyst",
       "name": "Refined Chayula's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 25.40238665343553,
-      "quantity": 500,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 29.761705706663793,
+      "quantity": 489,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "refined-uul-netols-catalyst",
+      "name": "Refined Uul-Netol's Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 29.74800551554567,
+      "quantity": 799,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "refined-adaptive-catalyst",
       "name": "Refined Adaptive Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 21.417426657818122,
-      "quantity": 1874,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "necrotic-catalyst",
-      "name": "Necrotic Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 9.912346914809513,
-      "quantity": 12198,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "tuls-catalyst",
-      "name": "Tul's Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 9.637943680799207,
-      "quantity": 17539,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "eshs-catalyst",
-      "name": "Esh's Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 9.55924344243828,
-      "quantity": 16911,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 26.80518444477135,
+      "quantity": 1254,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "neural-catalyst",
       "name": "Neural Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 9.51403605888808,
-      "quantity": 24964,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 10.490279594546823,
+      "quantity": 19853,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "eshs-catalyst",
+      "name": "Esh's Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 10.231082622453695,
+      "quantity": 10626,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "tuls-catalyst",
+      "name": "Tul's Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 9.886739850603815,
+      "quantity": 9262,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "necrotic-catalyst",
+      "name": "Necrotic Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 8.701272295363172,
+      "quantity": 7355,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "xophs-catalyst",
       "name": "Xoph's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 8.615228387284818,
-      "quantity": 16309,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 8.564758001589711,
+      "quantity": 10415,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "chayulas-catalyst",
       "name": "Chayula's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 3.3754555310007204,
-      "quantity": 5513,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "carapace-catalyst",
-      "name": "Carapace Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 2.7235689367712275,
-      "quantity": 19915,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "adaptive-catalyst",
-      "name": "Adaptive Catalyst",
-      "type": null,
-      "category": "breach",
-      "priceExalted": 2.6796741696730395,
-      "quantity": 12933,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 5.8351599840101,
+      "quantity": 6157,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "uul-netols-catalyst",
       "name": "Uul-Netol's Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 2.3679960651759995,
-      "quantity": 9338,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 3.4340064156957553,
+      "quantity": 7197,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "adaptive-catalyst",
+      "name": "Adaptive Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 2.84412019561543,
+      "quantity": 9086,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "carapace-catalyst",
+      "name": "Carapace Catalyst",
+      "type": null,
+      "category": "breach",
+      "priceExalted": 2.658653617099096,
+      "quantity": 12094,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "flesh-catalyst",
       "name": "Flesh Catalyst",
       "type": null,
       "category": "breach",
-      "priceExalted": 2.2886012961673603,
-      "quantity": 15192,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.403849776345648,
+      "quantity": 9124,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "azmeri-reliquary-key",
       "name": "Azmeri Reliquary Key",
       "type": null,
       "category": "fragments",
-      "priceExalted": 45700.81206465364,
+      "priceExalted": 41175.21519955576,
       "quantity": 6,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "faded-crisis-fragment",
-      "name": "Faded Crisis Fragment",
-      "type": null,
-      "category": "fragments",
-      "priceExalted": 2455.8879525133075,
-      "quantity": 2220,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "breachlord-sac",
       "name": "Breachlord Sac",
       "type": null,
       "category": "fragments",
-      "priceExalted": 2325.9519382930052,
-      "quantity": 889,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2603.551044828582,
+      "quantity": 789,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "faded-crisis-fragment",
+      "name": "Faded Crisis Fragment",
+      "type": null,
+      "category": "fragments",
+      "priceExalted": 2203.112807475043,
+      "quantity": 1604,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "origin-core",
       "name": "Origin Core",
       "type": null,
       "category": "fragments",
-      "priceExalted": 1774.9668022422784,
-      "quantity": 1129,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "cowardly-fate",
-      "name": "Cowardly Fate",
-      "type": null,
-      "category": "fragments",
-      "priceExalted": 1289.3553250589307,
-      "quantity": 414,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1823.292247563966,
+      "quantity": 720,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "deadly-fate",
       "name": "Deadly Fate",
       "type": null,
       "category": "fragments",
-      "priceExalted": 1270.2923057546939,
-      "quantity": 397,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1311.4514297082208,
+      "quantity": 552,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "victorious-fate",
       "name": "Victorious Fate",
       "type": null,
       "category": "fragments",
-      "priceExalted": 1224.363838211258,
-      "quantity": 388,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1288.107841071634,
+      "quantity": 448,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "cowardly-fate",
+      "name": "Cowardly Fate",
+      "type": null,
+      "category": "fragments",
+      "priceExalted": 1270.562071691621,
+      "quantity": 484,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "origin-cradle",
       "name": "Origin Cradle",
       "type": null,
       "category": "fragments",
-      "priceExalted": 933.3146727251244,
-      "quantity": 1520,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 922.8300600932845,
+      "quantity": 1185,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "simulacrum",
       "name": "Simulacrum",
       "type": null,
       "category": "fragments",
-      "priceExalted": 726.7545240794061,
-      "quantity": 9758,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 635.8035919429459,
+      "quantity": 6609,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "origin-spark",
       "name": "Origin Spark",
       "type": null,
       "category": "fragments",
-      "priceExalted": 593.3568119246551,
-      "quantity": 1545,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 608.5277823317555,
+      "quantity": 1185,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "kulemaks-invitation",
       "name": "Kulemak's Invitation",
       "type": null,
       "category": "fragments",
-      "priceExalted": 439.62538835496315,
-      "quantity": 6020,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "weathered-crisis-fragment",
-      "name": "Weathered Crisis Fragment",
-      "type": null,
-      "category": "fragments",
-      "priceExalted": 411.45479817839134,
-      "quantity": 2127,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 430.2757213615768,
+      "quantity": 6033,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "ancient-crisis-fragment",
       "name": "Ancient Crisis Fragment",
       "type": null,
       "category": "fragments",
-      "priceExalted": 368.70375054399767,
-      "quantity": 2168,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 388.2087256044083,
+      "quantity": 1739,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "weathered-crisis-fragment",
+      "name": "Weathered Crisis Fragment",
+      "type": null,
+      "category": "fragments",
+      "priceExalted": 374.42518516779563,
+      "quantity": 1585,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "breachstone",
       "name": "Breachstone",
       "type": null,
       "category": "fragments",
-      "priceExalted": 108.91262178884188,
-      "quantity": 1660,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 107.99885373090248,
+      "quantity": 876,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "an-audience-with-the-king",
       "name": "An Audience with the King",
       "type": null,
       "category": "fragments",
-      "priceExalted": 5.65264025337319,
-      "quantity": 4120,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.862765591835399,
+      "quantity": 3911,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "simulacrum-splinter",
       "name": "Simulacrum Splinter",
       "type": null,
       "category": "fragments",
-      "priceExalted": 2.184872009461149,
-      "quantity": 76801,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2.1397321005309218,
+      "quantity": 65191,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "breach-splinter",
       "name": "Breach Splinter",
       "type": null,
       "category": "fragments",
-      "priceExalted": 0.23359801291173915,
-      "quantity": 188319,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 0.20048987118093067,
+      "quantity": 125820,
+      "time": "2026-06-26T00:00:00"
     }
   ],
   "uniques": [
-    {
-      "key": "Mageblood",
-      "name": "Mageblood",
-      "type": "Utility Belt",
-      "category": "accessory",
-      "priceExalted": 199216.23295682555,
-      "quantity": 3942,
-      "time": "2026-06-25T00:00:00"
-    },
     {
       "key": "The Gnashing Sash",
       "name": "The Gnashing Sash",
       "type": "Wide Belt",
       "category": "accessory",
-      "priceExalted": 81914.56947237893,
-      "quantity": 7,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 217312.03444259363,
+      "quantity": 6,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Mageblood",
+      "name": "Mageblood",
+      "type": "Utility Belt",
+      "category": "accessory",
+      "priceExalted": 210000,
+      "quantity": 4123,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Headhunter",
       "name": "Headhunter",
       "type": "Heavy Belt",
       "category": "accessory",
-      "priceExalted": 62880.568308919246,
-      "quantity": 770,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 80767.63946783064,
+      "quantity": 426,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Safrin's Resolve",
       "name": "Safrin's Resolve",
       "type": "Ring",
       "category": "accessory",
-      "priceExalted": 7860.071038614906,
-      "quantity": 95,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 10860.372734105604,
+      "quantity": 88,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Kalandra's Touch",
       "name": "Kalandra's Touch",
       "type": "Ring",
       "category": "accessory",
-      "priceExalted": 6299,
-      "quantity": 756,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 7555,
+      "quantity": 554,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Bursting Decay",
       "name": "Bursting Decay",
       "type": "Unset Ring",
       "category": "accessory",
-      "priceExalted": 4716.0426231689435,
-      "quantity": 93,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4708.427412922862,
+      "quantity": 88,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Eshtera's Path",
       "name": "Eshtera's Path",
       "type": "Ring",
       "category": "accessory",
-      "priceExalted": 1886.4170492675776,
-      "quantity": 281,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 2172.0745468211207,
+      "quantity": 275,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Taming",
       "name": "The Taming",
       "type": "Prismatic Ring",
       "category": "accessory",
-      "priceExalted": 1180.816315281797,
-      "quantity": 1358,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1116.811126745319,
+      "quantity": 1111,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Dream Fragments",
-      "name": "Dream Fragments",
-      "type": "Sapphire Ring",
+      "key": "Choir of the Storm",
+      "name": "Choir of the Storm",
+      "type": "Jade Amulet",
+      "category": "accessory",
+      "priceExalted": 50,
+      "quantity": 2326,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Snakepit",
+      "name": "Snakepit",
+      "type": "Pearl Ring",
       "category": "accessory",
       "priceExalted": 40,
-      "quantity": 2324,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4837,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Berek's Grip",
@@ -2014,13 +2023,13 @@
       "time": null
     },
     {
-      "key": "Snakepit",
-      "name": "Snakepit",
-      "type": "Pearl Ring",
+      "key": "Dream Fragments",
+      "name": "Dream Fragments",
+      "type": "Sapphire Ring",
       "category": "accessory",
       "priceExalted": 35,
-      "quantity": 4769,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2448,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Berek's Respite",
@@ -2032,40 +2041,13 @@
       "time": null
     },
     {
-      "key": "Choir of the Storm",
-      "name": "Choir of the Storm",
-      "type": "Jade Amulet",
-      "category": "accessory",
-      "priceExalted": 30,
-      "quantity": 2281,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Astramentis",
-      "name": "Astramentis",
-      "type": "Stellar Amulet",
-      "category": "accessory",
-      "priceExalted": 30,
-      "quantity": 3532,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
       "key": "Zaida's Longevity",
       "name": "Zaida's Longevity",
       "type": "Ring",
       "category": "accessory",
-      "priceExalted": 29,
-      "quantity": 418,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Levinstone",
-      "name": "Levinstone",
-      "type": "Topaz Ring",
-      "category": "accessory",
-      "priceExalted": 28,
-      "quantity": 1942,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 30,
+      "quantity": 420,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Berek's Pass",
@@ -2081,54 +2063,54 @@
       "name": "Original Sin",
       "type": "Amethyst Ring",
       "category": "accessory",
-      "priceExalted": 15,
-      "quantity": 923,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 23,
+      "quantity": 949,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Astramentis",
+      "name": "Astramentis",
+      "type": "Stellar Amulet",
+      "category": "accessory",
+      "priceExalted": 20,
+      "quantity": 3736,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Levinstone",
+      "name": "Levinstone",
+      "type": "Topaz Ring",
+      "category": "accessory",
+      "priceExalted": 18,
+      "quantity": 2295,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Yoke of Suffering",
       "name": "Yoke of Suffering",
       "type": "Bloodstone Amulet",
       "category": "accessory",
-      "priceExalted": 10,
-      "quantity": 10092,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Ventor's Gamble",
-      "name": "Ventor's Gamble",
-      "type": "Gold Ring",
-      "category": "accessory",
-      "priceExalted": 10,
-      "quantity": 23699,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 8,
+      "quantity": 10024,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Andvarius",
       "name": "Andvarius",
       "type": "Gold Ring",
       "category": "accessory",
-      "priceExalted": 9,
-      "quantity": 3158,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 8,
+      "quantity": 3387,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Ingenuity",
-      "name": "Ingenuity",
-      "type": "Utility Belt",
+      "key": "Ventor's Gamble",
+      "name": "Ventor's Gamble",
+      "type": "Gold Ring",
       "category": "accessory",
-      "priceExalted": 5,
-      "quantity": 21272,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Doedre's Damning",
-      "name": "Doedre's Damning",
-      "type": "Lazuli Ring",
-      "category": "accessory",
-      "priceExalted": 5,
-      "quantity": 1483,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 7,
+      "quantity": 23854,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Eventide Petals",
@@ -2145,53 +2127,44 @@
       "type": "Amber Amulet",
       "category": "accessory",
       "priceExalted": 4,
-      "quantity": 5023,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4967,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Defiance of Destiny",
       "name": "Defiance of Destiny",
       "type": "Jade Amulet",
       "category": "accessory",
-      "priceExalted": 3,
-      "quantity": 6145,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4,
+      "quantity": 6082,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Immaculate Adherence",
-      "name": "Immaculate Adherence",
-      "type": "Solar Amulet",
+      "key": "Ingenuity",
+      "name": "Ingenuity",
+      "type": "Utility Belt",
       "category": "accessory",
-      "priceExalted": 3,
-      "quantity": 935,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4,
+      "quantity": 21281,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Perandus Seal",
-      "name": "Perandus Seal",
-      "type": "Gold Ring",
+      "key": "Blackflame",
+      "name": "Blackflame",
+      "type": "Amethyst Ring",
       "category": "accessory",
-      "priceExalted": 3,
-      "quantity": 1294,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 4,
+      "quantity": 2270,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Death Rush",
-      "name": "Death Rush",
-      "type": "Emerald Ring",
+      "key": "Doedre's Damning",
+      "name": "Doedre's Damning",
+      "type": "Lazuli Ring",
       "category": "accessory",
       "priceExalted": 3,
-      "quantity": 3691,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Thief's Torment",
-      "name": "Thief's Torment",
-      "type": "Emerald Ring",
-      "category": "accessory",
-      "priceExalted": 3,
-      "quantity": 1214,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1449,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Meginord's Girdle",
@@ -2199,8 +2172,44 @@
       "type": "Rawhide Belt",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 4199,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4413,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Shavronne's Satchel",
+      "name": "Shavronne's Satchel",
+      "type": "Fine Belt",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 5646,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Blackheart",
+      "name": "Blackheart",
+      "type": "Iron Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 4302,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Icefang Orbit",
+      "name": "Icefang Orbit",
+      "type": "Iron Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 2438,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Venopuncture",
+      "name": "Venopuncture",
+      "type": "Iron Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 2653,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Prized Pain",
@@ -2208,8 +2217,17 @@
       "type": "Iron Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 1614,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1814,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Perandus Seal",
+      "name": "Perandus Seal",
+      "type": "Gold Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 1393,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Glowswarm",
@@ -2217,8 +2235,8 @@
       "type": "Lazuli Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3200,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3011,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Seed of Cataclysm",
@@ -2226,8 +2244,8 @@
       "type": "Lazuli Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 2301,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2267,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Blistering Bond",
@@ -2235,8 +2253,8 @@
       "type": "Ruby Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 1893,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1843,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Cracklecreep",
@@ -2244,8 +2262,8 @@
       "type": "Ruby Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3218,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3226,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Polcirkeln",
@@ -2253,17 +2271,8 @@
       "type": "Sapphire Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 5187,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Whisper of the Brotherhood",
-      "name": "Whisper of the Brotherhood",
-      "type": "Sapphire Ring",
-      "category": "accessory",
-      "priceExalted": 2,
-      "quantity": 2840,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5484,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Call of the Brotherhood",
@@ -2271,8 +2280,8 @@
       "type": "Topaz Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 5270,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5312,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Burrower",
@@ -2280,17 +2289,17 @@
       "type": "Topaz Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 1799,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1708,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Blackflame",
-      "name": "Blackflame",
+      "key": "Ming's Heart",
+      "name": "Ming's Heart",
       "type": "Amethyst Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 2258,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3396,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Veilpiercer",
@@ -2298,8 +2307,26 @@
       "type": "Amethyst Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3700,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3623,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Death Rush",
+      "name": "Death Rush",
+      "type": "Emerald Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 3887,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Thief's Torment",
+      "name": "Thief's Torment",
+      "type": "Emerald Ring",
+      "category": "accessory",
+      "priceExalted": 2,
+      "quantity": 1057,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Vigilant View",
@@ -2307,8 +2334,8 @@
       "type": "Emerald Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3302,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3343,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Heartbound Loop",
@@ -2316,8 +2343,8 @@
       "type": "Pearl Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3602,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3496,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Evergrasping Ring",
@@ -2325,8 +2352,8 @@
       "type": "Pearl Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 5591,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5754,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Gifts from Above",
@@ -2334,8 +2361,8 @@
       "type": "Prismatic Ring",
       "category": "accessory",
       "priceExalted": 2,
-      "quantity": 3818,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3787,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Idol of Uldurn",
@@ -2343,8 +2370,8 @@
       "type": "Crimson Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 6188,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 6260,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Igniferis",
@@ -2352,8 +2379,8 @@
       "type": "Crimson Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 8989,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 9136,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Eye of Chayula",
@@ -2361,8 +2388,8 @@
       "type": "Gold Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 1532,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1550,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Serpent's Egg",
@@ -2370,8 +2397,8 @@
       "type": "Gold Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 5944,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5967,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Everlasting Gaze",
@@ -2379,8 +2406,8 @@
       "type": "Azure Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 11844,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 11931,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Ungil's Harmony",
@@ -2388,8 +2415,8 @@
       "type": "Azure Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 8287,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 8388,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Revered Resin",
@@ -2397,8 +2424,8 @@
       "type": "Amber Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 7202,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7292,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Xoph's Blood",
@@ -2406,8 +2433,8 @@
       "type": "Amber Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 1730,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1731,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Surefooted Sigil",
@@ -2415,8 +2442,8 @@
       "type": "Jade Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 4547,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4682,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Ligurium Talisman",
@@ -2424,8 +2451,8 @@
       "type": "Lapis Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 7583,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7709,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Pandemonius",
@@ -2433,8 +2460,8 @@
       "type": "Lapis Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 1643,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1664,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Stone of Lazhwar",
@@ -2442,8 +2469,8 @@
       "type": "Lapis Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 5335,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5422,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Rondel of Fragility",
@@ -2451,8 +2478,8 @@
       "type": "Lunar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 10232,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 10289,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Anvil",
@@ -2460,8 +2487,8 @@
       "type": "Bloodstone Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 1641,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1662,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Fixation of Yix",
@@ -2469,8 +2496,8 @@
       "type": "Stellar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 14485,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 14529,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Strugglescream",
@@ -2478,8 +2505,8 @@
       "type": "Stellar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 892,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 915,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Hinekora's Sight",
@@ -2487,8 +2514,8 @@
       "type": "Stellar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 3071,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3184,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Beacon of Azis",
@@ -2496,8 +2523,8 @@
       "type": "Solar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 12421,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 12462,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Fireflower",
@@ -2505,8 +2532,17 @@
       "type": "Solar Amulet",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 5028,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5205,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Immaculate Adherence",
+      "name": "Immaculate Adherence",
+      "type": "Solar Amulet",
+      "category": "accessory",
+      "priceExalted": 1,
+      "quantity": 979,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Midnight Braid",
@@ -2514,8 +2550,8 @@
       "type": "Rawhide Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 11370,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 11421,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Cat O' Nine Tails",
@@ -2523,17 +2559,8 @@
       "type": "Utility Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 4729,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Shavronne's Satchel",
-      "name": "Shavronne's Satchel",
-      "type": "Fine Belt",
-      "category": "accessory",
-      "priceExalted": 1,
-      "quantity": 5235,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4763,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Darkness Enthroned",
@@ -2541,8 +2568,8 @@
       "type": "Fine Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 20977,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 21206,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Keelhaul",
@@ -2550,8 +2577,8 @@
       "type": "Linen Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 6561,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 6633,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Umbilicus Immortalis",
@@ -2559,8 +2586,8 @@
       "type": "Linen Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 10944,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 11048,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Birthright Buckle",
@@ -2568,8 +2595,8 @@
       "type": "Wide Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 11319,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 11375,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Byrnabas",
@@ -2577,8 +2604,8 @@
       "type": "Wide Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 2795,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2814,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Soul Tether",
@@ -2586,8 +2613,8 @@
       "type": "Long Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 8220,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 8403,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Goregirdle",
@@ -2595,8 +2622,8 @@
       "type": "Plate Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 3779,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3751,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Ryslatha's Coil",
@@ -2604,8 +2631,8 @@
       "type": "Ornate Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 6999,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7019,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Coward's Legacy",
@@ -2613,8 +2640,8 @@
       "type": "Mail Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 5404,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5501,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Bijouborne",
@@ -2622,8 +2649,8 @@
       "type": "Double Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 8385,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 8558,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Zerphi's Genesis",
@@ -2631,8 +2658,8 @@
       "type": "Heavy Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 1306,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1315,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Waistgate",
@@ -2640,44 +2667,17 @@
       "type": "Heavy Belt",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 7714,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7797,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Blackheart",
-      "name": "Blackheart",
-      "type": "Iron Ring",
+      "key": "Whisper of the Brotherhood",
+      "name": "Whisper of the Brotherhood",
+      "type": "Sapphire Ring",
       "category": "accessory",
       "priceExalted": 1,
-      "quantity": 4280,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Icefang Orbit",
-      "name": "Icefang Orbit",
-      "type": "Iron Ring",
-      "category": "accessory",
-      "priceExalted": 1,
-      "quantity": 2486,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Venopuncture",
-      "name": "Venopuncture",
-      "type": "Iron Ring",
-      "category": "accessory",
-      "priceExalted": 1,
-      "quantity": 2694,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Ming's Heart",
-      "name": "Ming's Heart",
-      "type": "Amethyst Ring",
-      "category": "accessory",
-      "priceExalted": 1,
-      "quantity": 3474,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2741,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Grip of Kulemak",
@@ -2693,9 +2693,9 @@
       "name": "Temporalis",
       "type": "Silk Robe",
       "category": "armour",
-      "priceExalted": 1191586.7694540198,
-      "quantity": 30,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1411486.4430092582,
+      "quantity": 32,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Rathpith Globe",
@@ -2729,18 +2729,18 @@
       "name": "Tabula Rasa",
       "type": "Garment",
       "category": "armour",
-      "priceExalted": 1580.9716608796132,
-      "quantity": 508,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 1448.049697880747,
+      "quantity": 505,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Morior Invictus",
       "name": "Morior Invictus",
       "type": "Grand Regalia",
       "category": "armour",
-      "priceExalted": 632.3886643518453,
-      "quantity": 5636,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 781.7677887217232,
+      "quantity": 5566,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Alpha's Howl",
@@ -2810,9 +2810,9 @@
       "name": "Maligaro's Virtuosity",
       "type": "Fine Bracers",
       "category": "armour",
-      "priceExalted": 30,
-      "quantity": 3540,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 40,
+      "quantity": 3824,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Hand of Wisdom and Action",
@@ -2831,15 +2831,6 @@
       "priceExalted": 30,
       "quantity": 3395,
       "time": null
-    },
-    {
-      "key": "The Brass Dome",
-      "name": "The Brass Dome",
-      "type": "Champion Cuirass",
-      "category": "armour",
-      "priceExalted": 20,
-      "quantity": 3319,
-      "time": "2026-06-25T00:00:00"
     },
     {
       "key": "Greymake",
@@ -2873,9 +2864,9 @@
       "name": "Sine Aequo",
       "type": "Grand Manchettes",
       "category": "armour",
-      "priceExalted": 18,
-      "quantity": 2388,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 15,
+      "quantity": 2307,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Forgotten Warden",
@@ -2887,22 +2878,13 @@
       "time": null
     },
     {
-      "key": "The Covenant",
-      "name": "The Covenant",
-      "type": "Altar Robe",
-      "category": "armour",
-      "priceExalted": 10,
-      "quantity": 3629,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
       "key": "Myris Uxor",
       "name": "Myris Uxor",
       "type": "Covert Hood",
       "category": "armour",
-      "priceExalted": 10,
-      "quantity": 5380,
-      "time": "2026-06-25T00:00:00"
+      "priceExalted": 14,
+      "quantity": 5054,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Crown of the Victor",
@@ -2923,6 +2905,15 @@
       "time": null
     },
     {
+      "key": "The Brass Dome",
+      "name": "The Brass Dome",
+      "type": "Champion Cuirass",
+      "category": "armour",
+      "priceExalted": 9,
+      "quantity": 4089,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
       "key": "Cornathaum",
       "name": "Cornathaum",
       "type": "Heavy Crown",
@@ -2941,6 +2932,24 @@
       "time": null
     },
     {
+      "key": "The Covenant",
+      "name": "The Covenant",
+      "type": "Altar Robe",
+      "category": "armour",
+      "priceExalted": 8,
+      "quantity": 3651,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Kaom's Heart",
+      "name": "Kaom's Heart",
+      "type": "Conqueror Plate",
+      "category": "armour",
+      "priceExalted": 7,
+      "quantity": 1122,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
       "key": "Facebreaker",
       "name": "Facebreaker",
       "type": "Stocky Mitts",
@@ -2950,22 +2959,13 @@
       "time": "2026-06-25T00:00:00"
     },
     {
-      "key": "Kaom's Heart",
-      "name": "Kaom's Heart",
-      "type": "Conqueror Plate",
-      "category": "armour",
-      "priceExalted": 5,
-      "quantity": 1104,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
       "key": "Skin of the Loyal",
       "name": "Skin of the Loyal",
       "type": "Garment",
       "category": "armour",
       "priceExalted": 5,
-      "quantity": 517,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 513,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Nightfall",
@@ -2977,22 +2977,13 @@
       "time": null
     },
     {
-      "key": "Ghostwrithe",
-      "name": "Ghostwrithe",
-      "type": "Tattered Robe",
-      "category": "armour",
-      "priceExalted": 4,
-      "quantity": 1297,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
       "key": "Reverie",
       "name": "Reverie",
       "type": "Shaman Mantle",
       "category": "armour",
       "priceExalted": 4,
-      "quantity": 3791,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3785,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Goldrim",
@@ -3027,8 +3018,8 @@
       "type": "Smuggler Coat",
       "category": "armour",
       "priceExalted": 3,
-      "quantity": 2361,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2409,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Prism Guardian",
@@ -3103,22 +3094,31 @@
       "time": null
     },
     {
-      "key": "Foxshade",
-      "name": "Foxshade",
-      "type": "Quilted Vest",
+      "key": "Cloak of Flame",
+      "name": "Cloak of Flame",
+      "type": "Silk Robe",
       "category": "armour",
       "priceExalted": 2,
-      "quantity": 3416,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2511,
+      "time": "2026-06-26T00:00:00"
     },
     {
-      "key": "Blackbraid",
-      "name": "Blackbraid",
-      "type": "Fur Plate",
+      "key": "Perfidy",
+      "name": "Perfidy",
+      "type": "Knight Armour",
       "category": "armour",
       "priceExalted": 2,
-      "quantity": 1871,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 6769,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Enfolding Dawn",
+      "name": "Enfolding Dawn",
+      "type": "Pilgrim Vestments",
+      "category": "armour",
+      "priceExalted": 2,
+      "quantity": 7005,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Atziri's Step",
@@ -3126,26 +3126,8 @@
       "type": "Cinched Boots",
       "category": "armour",
       "priceExalted": 2,
-      "quantity": 9454,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Trampletoe",
-      "name": "Trampletoe",
-      "type": "Trimmed Greaves",
-      "category": "armour",
-      "priceExalted": 2,
-      "quantity": 2949,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Ab Aeterno",
-      "name": "Ab Aeterno",
-      "type": "Grand Cuisses",
-      "category": "armour",
-      "priceExalted": 2,
-      "quantity": 429,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 9611,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Treefingers",
@@ -3153,8 +3135,8 @@
       "type": "Riveted Mitts",
       "category": "armour",
       "priceExalted": 2,
-      "quantity": 2546,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2600,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Lochtonial Caress",
@@ -3162,8 +3144,8 @@
       "type": "Tempered Mitts",
       "category": "armour",
       "priceExalted": 2,
-      "quantity": 12042,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 11938,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Cloak of Defiance",
@@ -3216,8 +3198,17 @@
       "type": "Leather Vest",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3933,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3956,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Foxshade",
+      "name": "Foxshade",
+      "type": "Quilted Vest",
+      "category": "armour",
+      "priceExalted": 1,
+      "quantity": 3433,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Ashrend",
@@ -3225,8 +3216,8 @@
       "type": "Pathfinder Coat",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 968,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 959,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Sands of Silk",
@@ -3234,8 +3225,8 @@
       "type": "Shrouded Vest",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4505,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4365,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Briskwrap",
@@ -3243,8 +3234,8 @@
       "type": "Rhoahide Coat",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 10035,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 10102,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Dustbloom",
@@ -3252,8 +3243,8 @@
       "type": "Studded Vest",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5136,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5186,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Rat Cage",
@@ -3261,8 +3252,8 @@
       "type": "Scout's Vest",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4746,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4772,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Quatl's Molt",
@@ -3270,8 +3261,8 @@
       "type": "Serpentscale Coat",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2211,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2235,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Apron of Emiran",
@@ -3279,8 +3270,8 @@
       "type": "Hermit Garb",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3125,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3143,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Gloomform",
@@ -3288,8 +3279,8 @@
       "type": "Waxed Jacket",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5543,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5601,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Sierran Inheritance",
@@ -3297,8 +3288,8 @@
       "type": "Marabout Garb",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1245,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1248,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Dancing Mirage",
@@ -3306,8 +3297,8 @@
       "type": "Wayfarer Jacket",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4207,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4211,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Redflare Conduit",
@@ -3315,8 +3306,8 @@
       "type": "Anchorite Garb",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5175,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5280,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Zerphi's Serape",
@@ -3325,7 +3316,16 @@
       "category": "armour",
       "priceExalted": 1,
       "quantity": 1482,
-      "time": "2026-06-25T00:00:00"
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Ghostwrithe",
+      "name": "Ghostwrithe",
+      "type": "Tattered Robe",
+      "category": "armour",
+      "priceExalted": 1,
+      "quantity": 1348,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Bitterbloom",
@@ -3333,8 +3333,8 @@
       "type": "Feathered Robe",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4097,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4151,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Black Doubt",
@@ -3342,8 +3342,8 @@
       "type": "Hexer's Robe",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4995,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5074,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Necromantle",
@@ -3351,17 +3351,8 @@
       "type": "Bone Raiment",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 8460,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Cloak of Flame",
-      "name": "Cloak of Flame",
-      "type": "Silk Robe",
-      "category": "armour",
-      "priceExalted": 1,
-      "quantity": 2542,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 8568,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Prayers for Rain",
@@ -3369,8 +3360,8 @@
       "type": "Keth Raiment",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5156,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5196,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Tetzlapokal's Desire",
@@ -3378,8 +3369,8 @@
       "type": "Votive Raiment",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2064,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2072,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Bramblejack",
@@ -3387,8 +3378,17 @@
       "type": "Rusted Cuirass",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3807,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3865,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Blackbraid",
+      "name": "Blackbraid",
+      "type": "Fur Plate",
+      "category": "armour",
+      "priceExalted": 1,
+      "quantity": 1902,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Edyrn's Tusks",
@@ -3396,8 +3396,8 @@
       "type": "Iron Cuirass",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4651,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4686,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Titanrot Cataphract",
@@ -3405,8 +3405,8 @@
       "type": "Maraketh Cuirass",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 6822,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 6942,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Wandering Reliquary",
@@ -3414,8 +3414,8 @@
       "type": "Steel Plate",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4878,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4927,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Kingsguard",
@@ -3423,8 +3423,8 @@
       "type": "Full Plate",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3692,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3720,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Greed's Embrace",
@@ -3432,8 +3432,8 @@
       "type": "Vaal Cuirass",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2650,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2677,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Coat of Red",
@@ -3441,8 +3441,8 @@
       "type": "Chain Mail",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3953,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4001,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Barrow Dweller",
@@ -3450,8 +3450,8 @@
       "type": "Rogue Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4530,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4570,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Irongrasp",
@@ -3459,8 +3459,8 @@
       "type": "Vagabond Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 7447,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7516,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Pariah's Embrace",
@@ -3468,8 +3468,8 @@
       "type": "Cloaked Mail",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 8330,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 8360,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Belly of the Beast",
@@ -3477,8 +3477,8 @@
       "type": "Explorer Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1818,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1823,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Pragmatism",
@@ -3486,8 +3486,8 @@
       "type": "Explorer Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 382,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 383,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Doryani's Prototype",
@@ -3495,17 +3495,8 @@
       "type": "Scale Mail",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1174,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Perfidy",
-      "name": "Perfidy",
-      "type": "Knight Armour",
-      "category": "armour",
-      "priceExalted": 1,
-      "quantity": 6725,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1243,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Widow's Reign",
@@ -3513,8 +3504,8 @@
       "type": "Knight Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1579,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1600,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Sunken Vessel",
@@ -3522,17 +3513,8 @@
       "type": "Knight Armour",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 7582,
-      "time": "2026-06-25T00:00:00"
-    },
-    {
-      "key": "Enfolding Dawn",
-      "name": "Enfolding Dawn",
-      "type": "Pilgrim Vestments",
-      "category": "armour",
-      "priceExalted": 1,
-      "quantity": 7004,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7661,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Icetomb",
@@ -3540,8 +3522,8 @@
       "type": "Mail Vestments",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2619,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2638,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Voll's Protector",
@@ -3549,8 +3531,8 @@
       "type": "Ironclad Vestments",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1607,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1627,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Soul Mantle",
@@ -3558,8 +3540,8 @@
       "type": "Sacrificial Mantle",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 6453,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 6439,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Couture of Crimson",
@@ -3567,8 +3549,8 @@
       "type": "Gilded Vestments",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2431,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2469,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Briarpatch",
@@ -3576,8 +3558,8 @@
       "type": "Laced Boots",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4428,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4554,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Gamblesprint",
@@ -3585,8 +3567,8 @@
       "type": "Embossed Boots",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4400,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4466,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Bushwhack",
@@ -3594,8 +3576,8 @@
       "type": "Lizardscale Boots",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 7099,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 7125,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Ghostmarch",
@@ -3603,8 +3585,8 @@
       "type": "Threaded Shoes",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2217,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2197,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Luminous Pace",
@@ -3612,8 +3594,8 @@
       "type": "Straw Sandals",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3636,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3603,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Wondertrap",
@@ -3621,8 +3603,8 @@
       "type": "Silk Slippers",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5518,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5530,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Windscream",
@@ -3630,8 +3612,8 @@
       "type": "Feathered Sandals",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3425,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3581,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Legionstride",
@@ -3639,8 +3621,17 @@
       "type": "Rough Greaves",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3484,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3517,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Trampletoe",
+      "name": "Trampletoe",
+      "type": "Trimmed Greaves",
+      "category": "armour",
+      "priceExalted": 1,
+      "quantity": 3032,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Birth of Fury",
@@ -3648,8 +3639,8 @@
       "type": "Stone Greaves",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5561,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5628,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "The Knight-errant",
@@ -3657,8 +3648,8 @@
       "type": "Mail Sabatons",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 3579,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 3601,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Darkray Vectors",
@@ -3666,8 +3657,8 @@
       "type": "Braced Sabatons",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 1286,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 1299,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Obern's Bastion",
@@ -3675,8 +3666,17 @@
       "type": "Stacked Sabatons",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 5168,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 5191,
+      "time": "2026-06-26T00:00:00"
+    },
+    {
+      "key": "Ab Aeterno",
+      "name": "Ab Aeterno",
+      "type": "Grand Cuisses",
+      "category": "armour",
+      "priceExalted": 1,
+      "quantity": 438,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Northpaw",
@@ -3684,8 +3684,8 @@
       "type": "Suede Bracers",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2593,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2685,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Idle Hands",
@@ -3693,8 +3693,8 @@
       "type": "Sectioned Bracers",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 4225,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 4271,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Snakebite",
@@ -3702,8 +3702,8 @@
       "type": "Spined Bracers",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2729,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2735,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Candlemaker",
@@ -3711,8 +3711,8 @@
       "type": "Sombre Gloves",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 2490,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 2484,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Doedre's Tenure",
@@ -3720,8 +3720,8 @@
       "type": "Stitched Gloves",
       "category": "armour",
       "priceExalted": 1,
-      "quantity": 10241,
-      "time": "2026-06-25T00:00:00"
+      "quantity": 10244,
+      "time": "2026-06-26T00:00:00"
     },
     {
       "key": "Radiant Grief",
