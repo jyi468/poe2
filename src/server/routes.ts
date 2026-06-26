@@ -2,6 +2,9 @@
 // adds the envelope. Network/disk errors surface as {ok:false,error}.
 
 import type { IncomingMessage } from "node:http";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { getLeagues } from "../economy/client.js";
 import { pullEconomy, readLatestSnapshot, writeSnapshot } from "../economy/pull-core.js";
@@ -12,6 +15,13 @@ import { scanSlots, SLOT_DEFS } from "../crafting-sim/slots.js";
 import { loadMethodBoard } from "../methods/parse.js";
 
 export const getEconomy = async () => readLatestSnapshot();
+
+/** Serve the crafting decision flowchart markdown for the Flowchart tab. */
+export const getFlowchart = async (): Promise<{ markdown: string }> => {
+  const here = fileURLToPath(new URL(".", import.meta.url));
+  const file = resolve(here, "../../crafting/crafting-flowchart.md");
+  return { markdown: await readFile(file, "utf8") };
+};
 
 export const refreshEconomy = async () => {
   const snapshot = await pullEconomy({ realm: "poe2" });

@@ -15,12 +15,12 @@ app/
 ├── tsconfig.json
 └── src/
     ├── main.tsx          # React entry
-    ├── App.tsx           # tab shell (Economy · Methods · Craft sim · Trade)
+    ├── App.tsx           # tab shell (Flowchart · Economy · Methods · Craft sim · Trade)
     ├── api.ts            # get/post helpers — unwrap the {ok,data|error} envelope
     ├── allocation.ts     # shared client-side helpers
     ├── format.ts         # display formatting
     ├── styles.css
-    ├── tabs/             # EconomyTab, MethodsTab, CraftSimTab, TradeTab
+    ├── tabs/             # FlowchartTab, EconomyTab, MethodsTab, CraftSimTab, TradeTab
     └── components/       # ErrorBanner, PriceTable (shared UI)
 ```
 

@@ -13,3 +13,16 @@ button.act { background: #3a6ea5; color: #fff; border: 0; padding: .45rem .9rem;
 .stat { display: inline-block; margin-right: 1.5rem; }
 .stat b { display: block; font-size: 1.1rem; }
 input, select { background: #20242b; color: #e6e6e6; border: 1px solid #2a2f37; padding: .35rem; border-radius: 4px; }
+
+/* Flowchart tab: rendered markdown + mermaid diagrams */
+.flowchart { line-height: 1.5; }
+.flowchart h1 { font-size: 1.5rem; }
+.flowchart h2 { font-size: 1.2rem; margin-top: 1.8rem; border-bottom: 1px solid #2a2f37; padding-bottom: .3rem; }
+.flowchart h3 { font-size: 1rem; color: #9aa3af; }
+.flowchart a { color: #6ea8e0; }
+.flowchart blockquote { margin: .8rem 0; padding: .4rem .9rem; border-left: 3px solid #3a6ea5; background: #1b1e24; color: #b9c0c9; }
+.flowchart code { background: #20242b; padding: .1rem .35rem; border-radius: 4px; font-size: 12px; }
+.flowchart th { cursor: default; }
+.mermaid-svg { background: #1b1e24; border: 1px solid #2a2f37; border-radius: 8px; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+.mermaid-svg svg { max-width: 100%; height: auto; }
+.mermaid-error { background: #5a1d1d; color: #ffd7d7; padding: .8rem; border-radius: 6px; white-space: pre-wrap; font-size: 12px; }
