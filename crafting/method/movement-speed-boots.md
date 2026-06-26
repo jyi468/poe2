@@ -21,7 +21,7 @@ ilvl 80+ boots, base chosen to match demand:
 the tier below it unlocks at **ilvl 70** (confirmed via community crafting data, 2026-06-26 — see
 Sources in the worked example). So buy an **ilvl 82** base to have a shot at T1 MS, and treat
 **25%+** as the floor a buyer will accept. Movement speed only appears on Magic+ items, so you are
-buying a Magic or partial Rare base that already carries the MS suffix — never a white base.
+buying a Magic or partial Rare base that already carries the MS prefix — never a white base.
 Premium "≈50% MS" boots are this crafted ≈30–35% mod **stacked with a movement-speed rune** in the
 socket plus charm/passive sources — worth advertising in the listing. Confirm live tier numbers on
 poe2db.tw before relying on them (`../../knowledge/sources.md`); no game data is hard-coded here.
@@ -30,22 +30,24 @@ poe2db.tw before relying on them (`../../knowledge/sources.md`); no game data is
 
 **Tier:** low–mid
 
-The base item is the only meaningful cost. A Magic boot with a 25–30% MS suffix is a few to a few
-dozen Exalts; a Magic boot already carrying MS + one good resist is more. Budget roughly **0.3–1
-div per craft** including consumables. Higher tier (`mid`) only if you push top tiers with Perfect
-Exalted Orbs (see Inputs).
+The base item is the only meaningful cost, and it is small. A Magic boot with a **T1 35% MS prefix
+floors at ~1 ex** (verified live); a boot already carrying MS + one good resist is a little more.
+Budget roughly **0.3–1 div per craft** including consumables. Higher tier (`mid`) only if you push
+top tiers with Perfect Exalted Orbs (see Inputs).
 
 ## Recipe
 
-1. **Acquire the MS base.** Buy a Magic ilvl 80+ boot whose suffix is **25%+ movement speed**
-   (ideally 30%+). One-mod Magic MS boots are cheap; a two-mod Magic boot with MS + a useful
-   resist saves you a step. Confirm the build-appropriate base type from the target list above.
+1. **Acquire the MS base.** Buy a Magic ilvl 80+ boot whose **prefix** is **25%+ movement speed**
+   (ideally the **T1 35%** roll, which needs ilvl 82). Movement speed is a **prefix**, not a suffix
+   (live listings read `35% increased Movement Speed [P1]`). One-mod Magic MS boots are cheap — a
+   **T1 35% magic base floors at ~1 ex** (verified 2026-06-26) — so always start from a 35% base;
+   a two-mod Magic boot with MS + a useful resist saves you a step. Confirm the base type above.
 2. **Thin junk if needed.** If the base is Magic with MS + a useless second mod, use an **Orb of
    Annulment** to try to strip the junk mod, leaving a clean MS-only Magic boot. Skip if MS is the
    only mod or the second mod is already a resist you want.
 3. **Lock a resistance with a Greater Essence.** Apply a resist-aligned **Greater Essence**
    (Grounding / Insulation / etc.) to upgrade the boot to Rare with a guaranteed resistance,
-   preserving the existing MS suffix. You now have MS + 1 resist locked.
+   preserving the existing MS prefix. You now have MS + 1 resist locked.
 4. **Add a prefix (life / defence).** Use **Omen of Sinistral Exaltation + a regular Exalted Orb**
    (the omen ~0.05 div, the Exalt ~0.003 div — effectively free) to force the slam onto the
    **prefix** side, targeting high life, %ES, or %evasion. **Do NOT default to a Perfect Exalted
@@ -53,8 +55,9 @@ Exalted Orbs (see Inputs).
    genuinely top-end base (see Expected profit).
 5. **Add the remaining suffix (second resist / attributes).** Use **Omen of Dextral Exaltation +
    an Exalted Orb** to slam the open **suffix** side for a second resistance or a needed attribute.
-   Note: MS + 2 resists already consumes all three suffix slots, so the realistic top-end is
-   **30% MS + 2 resists** (suffixes) **+ high life + %defence** (prefixes).
+   Note: movement speed is a **prefix** (T1 35% @ ilvl 82, T2 30% @ ilvl 70), so a maxed boot is
+   **35% MS + high life + %ES/evasion** (three prefixes) **+ two resists + chaos/attribute** (three
+   suffixes) — MS sharing the prefix side with life/defence is the real slot-pressure, not the suffixes.
 6. **Fill to 5–6 mods**, alternating Sinistral/Dextral Exaltation omens to control sides.
 7. **Accept misses — do not "recover" cheap boots.** If a slam lands a dead mod, sell the boot as
    a partial roll. **Omen of Whittling costs ~6.6 div** (live, 2026-06-26) — using it to fix a mod
@@ -62,19 +65,29 @@ Exalted Orbs (see Inputs).
    on a near-top-end base whose clean outcome clears ~6+ div. See Expected profit.
 8. List on trade. Lead the listing with the MS roll and resist totals — that is what buyers search.
 
-### Optional finish — Essence of Hysteria (guaranteed 30% MS)
+### Essence of Hysteria (guaranteed 30% MS) — verified NOT worth it
 
-**Essence of Hysteria** adds a guaranteed **30% movement speed** to boots (remove-1/add-1 on a Rare),
-the only deterministic MS source — there is no standard MS essence. **It is a narrow finishing move,
-not a default**, for two reasons confirmed against live trade (2026-06-26):
-- **Raw 30–35% MS boots floor at ~1–2 ex.** Hysteria costs **~0.84 div** (`pnpm prices essences`). Paying
-  0.84 div to *add* MS only nets out if the rest of the boot is already premium (life + 2 capped resists
-  + chaos) **and** its suffixes are full so MS cannot just be slammed for ~free.
-- **It corrupts the item** — no further crafting after, and it removes a *random* existing mod, so only
-  apply when there is a junk mod to lose.
+**Essence of Hysteria** adds a guaranteed **30% movement speed prefix** to a Rare boot
+(remove-1/add-1), the only deterministic MS source. It pairs with **Omen of Crystallisation** to
+control the removal — Dextral removes a suffix, Sinistral removes a prefix (these omens explicitly
+modify "Perfect or Corrupted Essence" removal). On paper that determinism is appealing. **In practice
+it loses to simply buying a base, confirmed against live trade (2026-06-26):**
 
-Use it to rescue an otherwise-finished, suffix-full boot that is missing only MS. For the normal lean
-path, keep buying a base that already rolled MS (step 1) — it is far cheaper. See
+| | Buy 35% (T1) base | Hysteria finish (30%, T2) |
+|---|---|---|
+| Acquire MS | **~1 ex** (max tier, 400+ listings) | **0.84 div** essence + **0.11–0.38 div** Crystallisation omen |
+| MS tier | **35% (T1, best)** | 30% (T2, worse) |
+| After | full crafting freedom | **corrupted — locked, no further crafting** |
+
+Why it collapses: **MS is the *cheapest* part of a boot to acquire** — a buyable max-tier prefix for
+~1 ex — not the hard part. The value lives in the multi-mod package (T1 life/ES + chaos + double res),
+which Hysteria does nothing for. And because Hysteria **corrupts**, there is no "craft it on later" —
+the Crystallisation determinism only protects mods *during* the slam, which you never need if you just
+start from the 1-ex 35% base. **Always buy the 35% base (step 1).**
+
+**The only defensible niche:** an already near-perfect *non-MS* rare boot (lucky drop or a fractured
+base with an amazing package) where MS can't be slammed in — then Hysteria + Sinistral Crystallisation
+bolts on a guaranteed 30% as a corrupting finisher, accepting T2. Rare, and still second-best. See
 [`essence-value-map.md`](essence-value-map.md) for the full essence cost/value picture.
 
 ## Outcome odds
@@ -167,12 +180,12 @@ not consumable spend.
 
 > Runes of Aldur, patch 0.5.3, 2026-06-26 (illustrative)
 >
-> Base: ilvl 82 Magic evasion boot, **30% movement speed** (T1) suffix only — bought ~20 ex
+> Base: ilvl 82 Magic evasion boot, **35% movement speed** (T1) prefix only — bought ~1 ex
 > Greater Essence of Insulation (lightning resist) → Rare, MS + lightning res locked — ~2 ex
 > Omen of Sinistral Exaltation + Exalted Orb → high life prefix — ~few ex
 > Omen of Dextral Exaltation + Exalted Orb → cold resist suffix — ~few ex
 > 1 Perfect Exalted Orb → %evasion prefix at high tier — ~3.2 div
-> Result: 30% MS + lightning res + cold res + high life + %evasion (5-mod evasion boot)
+> Result: 35% MS + lightning res + cold res + high life + %evasion (5-mod evasion boot)
 > Input cost:    ~3.4 div (base + essence + omens + 1 Perfect Exalt)
 > Expected sale: this build hit the ~8% premium tail → ~3 div asking (~1.5–2 div realised); the
 >                modal lean outcome is ~0.3–1 div (see Expected profit for the full distribution)

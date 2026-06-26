@@ -55,10 +55,13 @@ Value = (essence is cheap) × (guaranteed mod is scarce/hard to roll) × (mod be
 
 These cost real div and **corrupt the item**, so they pay off only on an *already near-complete* piece:
 
-- **Hysteria → 30% movement speed on boots** (~**0.84 div**, qty 1049). Tempting, but raw 30–35% MS
-  boots floor at ~1–2 ex (see table) — so paying 0.84 div to *add* MS only makes sense on a boot whose
-  other mods are already premium **and** whose suffixes are full so MS can't be slammed. Otherwise just
-  buy a base that already rolled MS. See `movement-speed-boots.md` → "Optional finish".
+- **Hysteria → 30% movement speed on boots** (~**0.84 div**, qty 1049). **Verified not worth it.** MS is
+  a **prefix**, and a **T1 35% magic base floors at ~1 ex** (400+ listings) — top-tier MS is the cheapest
+  part to acquire. Hysteria gives a *worse* 30% (T2) for 0.84 div + a Crystallisation omen (0.11–0.38 div)
+  and **corrupts** the item (no crafting after). It pairs with Omen of Crystallisation (Dextral removes a
+  suffix / Sinistral a prefix) to control the removal, but that determinism solves a non-problem: you'd
+  just start from the 1-ex 35% base. Niche only: salvaging an already-near-perfect non-MS boot. Full
+  breakdown in `movement-speed-boots.md`.
 - **Horror → 100% increased effect of socketed items** (gloves/boots, ~**0.51 div**, qty 726). Build-enabler for specific rune/socket setups; niche demand.
 - **Delirium → random notable passive on body armour** (~**0.28 div**, qty 482). Lottery upside.
 
