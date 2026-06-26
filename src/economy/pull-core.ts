@@ -12,7 +12,7 @@ import { formatDigest } from "./digest.js";
 import { normalizeItem, pickCurrentLeague } from "./normalize.js";
 import type { EconomySnapshot, NormalizedItem, RawItem } from "./types.js";
 
-export const DEFAULT_CURRENCY_CATS = ["currency", "essences", "ritual", "breach", "fragments"];
+export const DEFAULT_CURRENCY_CATS = ["currency", "essences", "ritual", "breach", "fragments", "delirium"];
 export const DEFAULT_UNIQUE_CATS = ["accessory", "armour", "weapon", "jewel", "flask"];
 
 export interface PullOpts {

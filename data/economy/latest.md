@@ -1,80 +1,80 @@
 # Economy snapshot — Runes of Aldur
 
-> Realm `poe2` · pulled 2026-06-26T03:03:26.365Z · source poe2scout.com (live trade-derived).
-> 1 Divine ≈ **345 Exalted**.
+> Realm `poe2` · pulled 2026-06-26T20:03:25.005Z · source poe2scout.com (live trade-derived).
+> 1 Divine ≈ **364 Exalted**.
 > Prices rot fast — re-pull before any large trade. Generated file; do not hand-edit.
 
-## Top currencies (213 tracked)
+## Top currencies (239 tracked)
 
 | Item | Price | Listed qty |
 |------|-------|-----------|
-| Mirror of Kalandra | 1,591,865 ex (4620.0 div) | 26 |
-| Hinekora's Lock | 324,788 ex (942.6 div) | 77 |
-| Azmeri Reliquary Key | 41,175 ex (119.5 div) | 6 |
-| Raven-Touched Shard | 33,017 ex (95.8 div) | 199 |
-| Omen of Chance | 4,694 ex (13.6 div) | 463 |
-| Omen of Sinistral Annulment | 3,816 ex (11.1 div) | 2576 |
-| Omen of Sinistral Erasure | 2,894 ex (8.4 div) | 2730 |
-| Omen of Light | 2,839 ex (8.2 div) | 12370 |
-| Breachlord Sac | 2,604 ex (7.6 div) | 789 |
-| Fracturing Orb | 2,481 ex (7.2 div) | 4595 |
-| Omen of Dextral Erasure | 2,472 ex (7.2 div) | 2542 |
-| Omen of Dextral Annulment | 2,283 ex (6.6 div) | 2274 |
-| Omen of Whittling | 2,275 ex (6.6 div) | 14233 |
-| Faded Crisis Fragment | 2,203 ex (6.4 div) | 1604 |
-| Origin Core | 1,823 ex (5.3 div) | 720 |
-| Perfect Chaos Orb | 1,342 ex (3.9 div) | 7786 |
-| Deadly Fate | 1,311 ex (3.8 div) | 552 |
-| Victorious Fate | 1,288 ex (3.7 div) | 448 |
-| Cowardly Fate | 1,271 ex (3.7 div) | 484 |
-| Refined Reaver Catalyst | 938 ex (2.7 div) | 1578 |
+| Mirror of Kalandra | 1,690,443 ex (4644.9 div) | 54 |
+| Hinekora's Lock | 297,424 ex (817.3 div) | 119 |
+| Azmeri Reliquary Key | 42,845 ex (117.7 div) | 11 |
+| Raven-Touched Shard | 35,141 ex (96.6 div) | 291 |
+| Omen of Chance | 4,885 ex (13.4 div) | 520 |
+| Omen of Sinistral Annulment | 4,222 ex (11.6 div) | 3497 |
+| Omen of Sinistral Erasure | 3,775 ex (10.4 div) | 3289 |
+| Omen of Light | 3,149 ex (8.7 div) | 14824 |
+| Fracturing Orb | 3,055 ex (8.4 div) | 6507 |
+| Breachlord Sac | 2,739 ex (7.5 div) | 948 |
+| Omen of Whittling | 2,579 ex (7.1 div) | 20720 |
+| Faded Crisis Fragment | 2,437 ex (6.7 div) | 2129 |
+| Omen of Dextral Erasure | 2,404 ex (6.6 div) | 5230 |
+| Omen of Dextral Annulment | 2,384 ex (6.6 div) | 4047 |
+| Origin Core | 1,868 ex (5.1 div) | 1098 |
+| Cowardly Fate | 1,515 ex (4.2 div) | 496 |
+| Victorious Fate | 1,506 ex (4.1 div) | 542 |
+| Deadly Fate | 1,504 ex (4.1 div) | 487 |
+| Perfect Chaos Orb | 1,216 ex (3.3 div) | 8794 |
+| Simulacrum | 1,042 ex (2.9 div) | 11203 |
 
 ## Crafting inputs (omens / catalysts / bones / essences)
 
 | Item | Price | Listed qty |
 |------|-------|-----------|
-| Omen of Chance | 4,694 ex (13.6 div) | 463 |
-| Omen of Sinistral Annulment | 3,816 ex (11.1 div) | 2576 |
-| Omen of Sinistral Erasure | 2,894 ex (8.4 div) | 2730 |
-| Omen of Light | 2,839 ex (8.2 div) | 12370 |
-| Omen of Dextral Erasure | 2,472 ex (7.2 div) | 2542 |
-| Omen of Dextral Annulment | 2,283 ex (6.6 div) | 2274 |
-| Omen of Whittling | 2,275 ex (6.6 div) | 14233 |
-| Refined Reaver Catalyst | 938 ex (2.7 div) | 1578 |
-| Refined Sibilant Catalyst | 924 ex (2.7 div) | 1516 |
-| Ancient Crisis Fragment | 388 ex (1.1 div) | 1739 |
-| Essence of Hysteria | 289 ex | 507 |
-| Refined Necrotic Catalyst | 188 ex | 1664 |
-| Omen of the Hunt | 160 ex | 68 |
-| Essence of Horror | 131 ex | 423 |
-| Omen of Dextral Crystallisation | 120 ex | 4018 |
-| Sibilant Catalyst | 116 ex | 10824 |
-| Omen of Sanctification | 113 ex | 533 |
-| Omen of Secret Compartments | 107 ex | 49 |
-| Omen of Chaotic Rarity | 106 ex | 12975 |
-| Reaver Catalyst | 100 ex | 12691 |
+| Omen of Chance | 4,885 ex (13.4 div) | 520 |
+| Omen of Sinistral Annulment | 4,222 ex (11.6 div) | 3497 |
+| Omen of Sinistral Erasure | 3,775 ex (10.4 div) | 3289 |
+| Omen of Light | 3,149 ex (8.7 div) | 14824 |
+| Omen of Whittling | 2,579 ex (7.1 div) | 20720 |
+| Omen of Dextral Erasure | 2,404 ex (6.6 div) | 5230 |
+| Omen of Dextral Annulment | 2,384 ex (6.6 div) | 4047 |
+| Refined Reaver Catalyst | 1,020 ex (2.8 div) | 2550 |
+| Refined Sibilant Catalyst | 994 ex (2.7 div) | 3038 |
+| Ancient Potent Liquid Contempt | 622 ex (1.7 div) | 854 |
+| Ancient Crisis Fragment | 397 ex (1.1 div) | 2136 |
+| Essence of Hysteria | 311 ex | 872 |
+| Refined Necrotic Catalyst | 216 ex | 2030 |
+| Omen of the Hunt | 161 ex | 85 |
+| Sibilant Catalyst | 150 ex | 17052 |
+| Essence of Horror | 149 ex | 684 |
+| Reaver Catalyst | 134 ex | 17424 |
+| Omen of Dextral Crystallisation | 127 ex | 7483 |
+| Omen of Secret Compartments | 120 ex | 73 |
+| Omen of Chaotic Rarity | 111 ex | 22061 |
 
 ## Top uniques (434 tracked)
 
 | Item | Price | Listed qty |
 |------|-------|-----------|
-| Temporalis (Silk Robe) | 1,411,486 ex (4096.5 div) | 32 |
-| The Dancing Dervish (Scimitar) | 804,633 ex (2335.2 div) | 3 |
-| The Gnashing Sash (Wide Belt) | 217,312 ex (630.7 div) | 6 |
-| Mageblood (Utility Belt) | 210,000 ex (609.5 div) | 4123 |
-| Voices (Sapphire) | 166,626 ex (483.6 div) | 109 |
-| Bluetongue (Shortsword) | 98,872 ex (286.9 div) | 1 |
-| Headhunter (Heavy Belt) | 80,768 ex (234.4 div) | 426 |
-| Runeseeker's Call (Runic Fork) | 80,578 ex (233.9 div) | 110 |
-| Winter's Bite (Glass Shank) | 75,144 ex (218.1 div) | 8 |
-| Redbeak (Shortsword) | 67,053 ex (194.6 div) | 4 |
-| INCOMPLETE (Dull Hatchet) | 50,290 ex (146.0 div) | 64 |
-| Safrin's Resolve (Ring) | 10,860 ex (31.5 div) | 88 |
-| Kalandra's Touch (Ring) | 7,555 ex (21.9 div) | 554 |
-| Rite of Passage (Golden Charm) | 5,344 ex (15.5 div) | 2447 |
-| Bursting Decay (Unset Ring) | 4,708 ex (13.7 div) | 88 |
-| Rathpith Globe (Sacred Focus) | 4,342 ex (12.6 div) | 1956 |
-| The Adorned (Diamond) | 4,023 ex (11.7 div) | 490 |
-| Eshtera's Path (Ring) | 2,172 ex (6.3 div) | 275 |
-| The Ordained (Grand Spear) | 1,821 ex (5.3 div) | 4346 |
-| Hateforge (Moulded Mitts) | 1,670 ex (4.8 div) | 526 |
+| Temporalis (Silk Robe) | 1,363,845 ex (3747.5 div) | 29 |
+| Bluetongue (Shortsword) | 1,264,648 ex (3475.0 div) | 2 |
+| The Dancing Dervish (Scimitar) | 743,910 ex (2044.1 div) | 3 |
+| Mageblood (Utility Belt) | 209,081 ex (574.5 div) | 4188 |
+| Voices (Sapphire) | 184,490 ex (506.9 div) | 125 |
+| The Gnashing Sash (Wide Belt) | 137,102 ex (376.7 div) | 8 |
+| INCOMPLETE (Dull Hatchet) | 89,269 ex (245.3 div) | 73 |
+| Runeseeker's Call (Runic Fork) | 80,578 ex (221.4 div) | 110 |
+| Headhunter (Heavy Belt) | 76,549 ex (210.3 div) | 648 |
+| Redbeak (Shortsword) | 74,391 ex (204.4 div) | 4 |
+| Winter's Bite (Glass Shank) | 70,979 ex (195.0 div) | 9 |
+| Safrin's Resolve (Ring) | 9,481 ex (26.1 div) | 123 |
+| Kalandra's Touch (Ring) | 7,023 ex (19.3 div) | 745 |
+| Rite of Passage (Golden Charm) | 5,350 ex (14.7 div) | 2368 |
+| Rathpith Globe (Sacred Focus) | 4,623 ex (12.7 div) | 1460 |
+| Bursting Decay (Unset Ring) | 4,565 ex (12.5 div) | 88 |
+| The Adorned (Diamond) | 4,463 ex (12.3 div) | 485 |
+| Eshtera's Path (Ring) | 2,458 ex (6.8 div) | 288 |
+| The Ordained (Grand Spear) | 1,821 ex (5.0 div) | 4346 |
+| Hateforge (Moulded Mitts) | 1,783 ex (4.9 div) | 547 |

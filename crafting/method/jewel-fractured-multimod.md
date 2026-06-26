@@ -3,7 +3,7 @@
 ## Goal
 
 The high-investment counterpart to [jewel-crit-combo.md](jewel-crit-combo.md): lock a
-high-roll **Critical Damage Bonus** foundation with a Fracturing Orb, then essence/omen the
+high-roll **Critical Damage Bonus** foundation with a Fracturing Orb, then emotion/omen the
 remaining slots into an all-high-roll 4–5 mod jewel (optionally a Diamond base, optionally
 corrupted), producing a top-tier jewel that sells for 15–25+ div. More currency in, far
 higher ceiling, more variance.
@@ -22,7 +22,7 @@ higher ceiling, more variance.
 **Tier:** mid
 
 A serious attempt runs ~5–15 div: a Fracturing Orb (~5–6 div, see ../../data/economy/latest.md
-— snapshot ~1,960 ex) or a pre-fractured base, plus Greater/Perfect Essences, side-targeting
+— snapshot ~1,960 ex) or a pre-fractured base, plus a Liquid Emotion, side-targeting
 Omens, Exalted Orbs, and an optional Vaal Orb. The fracture is the gateway: it makes the
 foundation permanent so later Exalts/corruption cannot destroy it.
 
@@ -34,12 +34,18 @@ The crit pair are **suffixes** (Critical Hit Chance + Critical Damage Bonus); da
 1. Roll or buy a jewel that has a **high-roll Critical Damage Bonus** with few other mods.
 2. **Fracture it** (Fracturing Orb fractures a *random* existing mod — fewer mods = better odds
    it lands on the crit damage bonus; reroll/retry until the fracture lands on the foundation).
-3. With the foundation locked, use **Greater/Perfect Essence** to guarantee a second high-value
-   mod. Leave the open slot on the essence's side and use the **opposite-side Omen** (Sinistral
-   / Dextral) to delete known filler — the "isolation" trick for controlling prefix vs suffix
-   layout (see ../../knowledge/sources.md for the current omen list).
+3. With the foundation locked, craft a second high-value mod with a **Liquid Emotion** —
+   **not an essence** (essences do not work on jewels; the jewel analogue is the Liquid Emotion).
+   For the crit chance pair-mate use **Liquid Despair**. Note two constraints: the emotion
+   **removes a random mod first** (the fracture protects the foundation; other mods are at risk),
+   and **only ONE crafted mod is allowed per jewel** — so the emotion is a one-shot, the rest of
+   the build must be natural/Exalt rolls. The side-control "isolation" trick uses **Sinistral /
+   Dextral Exaltation/Annulment** omens; their jewel applicability is **inferred, not confirmed —
+   verify in-game** before relying on it (see ../../knowledge/sources.md and
+   [jewel-crit-combo.md](jewel-crit-combo.md) for the emotion mechanic).
 4. **Exalt** to fill to 4–5 mods, targeting Critical Hit Chance (suffix) + 1–2 build damage
-   prefixes (cold / spell for the ice meta).
+   prefixes (cold / spell for the ice meta). Exalt-added mods are not "crafted", so they don't
+   conflict with the one-crafted-mod limit the emotion already used.
 5. Once you hold **4+ excellent mods**, optionally **Vaal-corrupt** for a 5th/6th mod or a
    higher tier. The fracture protects the foundation, so a bad corrupt cannot brick the key mod
    — but corruption is still irreversible, so commit only at the end.
@@ -57,7 +63,8 @@ result.
 ## Inputs
 
 - 1 Fracturing Orb per fracture attempt (or buy a pre-fractured crit-damage base)
-- ~1–3 Greater / Perfect Essences for guaranteed mods
+- 1 **Liquid Emotion** (e.g. Liquid Despair for crit chance) for the one allowed crafted mod —
+  **not essences** (essences don't work on jewels)
 - ~2–4 Sinistral / Dextral Omens for side control (the isolation trick)
 - ~3–6 Exalted Orbs to fill slots
 - Optional: 1 Vaal Orb for the corruption finish
@@ -87,7 +94,7 @@ plus cross-archetype combos no single base can roll, which is why they top the m
 > - **Corrupted** crit-pair Sapphire (spell + chaos + crit pair, high roll) → **8 div**.
 > - 3 *maxed* mods (≥14% each) → **0 listings** — top tier sells on contact.
 >
-> Input: Fracturing Orb ~5–6 div + essences/omens/exalts ~2–5 div ≈ **~8–12 div / attempt**.
+> Input: Fracturing Orb ~5–6 div + emotion/omens/exalts ~2–5 div ≈ **~8–12 div / attempt**.
 > Expected sale: **15–25+ div** for an on-theme 4-mod high-roll; Diamonds and clean corrupts higher.
 > Margin: high but variance-driven — a premium hit clears ~10–15 div over input; misses cost the attempt.
 >
