@@ -11,6 +11,10 @@ build XML files, encoding/decoding build codes, and diffing metrics between buil
 src/
 ├── pob/
 │   └── evaluate.ts     # evaluateBuild(xmlPath), parseEvalOutput(raw) → BuildMetrics
+├── economy/            # live price + trade data (see economy/CONTEXT.md)
+├── crafting-sim/       # crafting EV simulators (see crafting-sim/CONTEXT.md)
+├── methods/            # crafting method board parser (see methods/CONTEXT.md)
+├── server/             # command-center JSON API (see server/CONTEXT.md)
 ├── analyze.ts          # diffMetrics(before, after) → delta object
 ├── build-io.ts         # readBuildXml(path), snapshotBuild(src, destDir), ONEDRIVE_BUILDS_DIR
 ├── build-code.ts       # decodeBuildCode(code), encodeBuildCode(xml)
