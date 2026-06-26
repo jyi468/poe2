@@ -35,6 +35,7 @@ poe2-assistant/
 | Read or snapshot a build XML | `src/` | `src/build-io.ts` | `pob/` |
 | Encode / decode a build code | `src/` | `src/build-code.ts` | `pob/` |
 | Run / debug the PoB2 bridge | `pob/` | `pob/eval.lua`, `pob/doctor.sh` | `src/`, `crafting/` |
+| Decide which craft to run (decision map) | `crafting/` | `crafting/crafting-flowchart.md` | `src/`, `pob/` |
 | Look up crafting method / cost | `crafting/` | `crafting/method/README.md`, `crafting/method/*.md` | `src/`, `pob/` |
 | Pull / read live economy prices | `src/economy/` | `src/economy/pull.ts`, `data/economy/latest.md` | `pob/`, `crafting/` |
 | Look up one category's full live prices | `src/economy/` | `src/economy/query.ts` (`pnpm prices <cat> [--grep] [--top]`) | `pob/`, `crafting/` |

@@ -1,5 +1,9 @@
 # Method index — profit board
 
+> **Start at the [crafting flowchart](../crafting-flowchart.md)** — the decision map (bankroll →
+> method, the universal craft loop, tool selector, and the verified-facts ledger) that ties every
+> method below together. This table is the per-method index it routes into.
+
 One row per crafting method. Sorted by approachability for a new crafter.
 Hard numbers live in each method's dated **Worked example**; the margin column
 here is a qualitative band so this index does not rot.

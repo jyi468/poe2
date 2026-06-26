@@ -11,12 +11,17 @@ economics), not a budget tier.
 
 ```
 crafting/
+├── crafting-flowchart.md   # ENTRY POINT — the living decision map (Mermaid) tying it all together
 ├── method/                 # PRIMARY — one file per crafting method
 │   ├── _template.md        # copyable skeleton for new methods
 │   ├── README.md           # index / "profit board": table of all methods
 │   └── <method-name>.md    # one method per file
 └── base/                   # reference — item bases & their mod pools
 ```
+
+`crafting-flowchart.md` is the top-level decision map: bankroll → method, the universal craft
+loop, the tool selector, and a dated **verified-facts ledger**. Update it whenever a finding is
+verified or a method changes (it has its own keep-updated protocol).
 
 `base/` is supporting reference data that methods link to. There is **no
 `budget/` directory** — "how much currency to start" lives in each method's
