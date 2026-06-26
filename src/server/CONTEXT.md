@@ -25,6 +25,7 @@ src/server/
 | `GET /api/methods` | `methods/parse` loadMethodBoard |
 | `GET /api/flowchart` | reads `crafting/crafting-flowchart.md` (raw markdown) |
 | `GET /api/desecration` | `crafting-sim/desecration-items` evaluateDesecItems (live omen prices) |
+| `GET /api/jewel` | `crafting-sim/jewel-plan` buildJewelPlan (live emotion prices) |
 | `GET /api/slots` | `crafting-sim/slots` scanSlots |
 | `POST /api/craft` | `crafting-sim/estimate` estimateCraft |
 | `POST /api/trade` | `economy/trade-core` searchTrade / findStats |

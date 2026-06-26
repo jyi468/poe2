@@ -13,6 +13,7 @@ import { loadModTiers, poolFor } from "../crafting-sim/pob-mods.js";
 import { estimateCraft } from "../crafting-sim/estimate.js";
 import { scanSlots, SLOT_DEFS } from "../crafting-sim/slots.js";
 import { evaluateDesecItems } from "../crafting-sim/desecration-items.js";
+import { buildJewelPlan } from "../crafting-sim/jewel-plan.js";
 import { loadMethodBoard } from "../methods/parse.js";
 
 export const getEconomy = async () => readLatestSnapshot();
@@ -33,6 +34,28 @@ export const refreshEconomy = async () => {
 export const getMethods = async () => loadMethodBoard();
 
 export const getSlots = async () => scanSlots(82);
+
+/**
+ * Jewel crit-pair (Liquid Emotion) plan: live emotion prices, EV scenarios by
+ * mod count, a flowchart, and "find natural-crit jewels" trade presets. The
+ * actual floor search runs on demand via POST /api/trade.
+ */
+export const getJewel = async () => {
+  const snap = await readLatestSnapshot().catch(() => null);
+  const divine = snap?.divinePriceExalted ?? 345;
+  const byName = new Map((snap?.currencies ?? []).map((c) => [c.name, c.priceExalted]));
+  const divOf = (name: string, fallbackEx: number) => (byName.get(name) ?? fallbackEx) / divine;
+  const plan = buildJewelPlan(divOf);
+  const recipes = plan.recipes.map((r) => ({ ...r, priceEx: byName.get(r.emotionName) ?? null }));
+  return {
+    pulledAt: snap?.pulledAt ?? null,
+    divine,
+    searchCategory: "jewel",
+    flowchart: plan.flowchart,
+    assumptions: plan.assumptions,
+    recipes,
+  };
+};
 
 /**
  * Per-item-type Desecration EV, built from live omen prices. Bone/base/reveal

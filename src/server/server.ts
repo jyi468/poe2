@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 
 import { readBody, sendJson, wrap, type Handler } from "./http.js";
 import {
-  getDesecration, getEconomy, getFlowchart, getMethods, getSlots, postCraft, postTrade, refreshEconomy,
+  getDesecration, getEconomy, getFlowchart, getJewel, getMethods, getSlots, postCraft, postTrade, refreshEconomy,
 } from "./routes.js";
 
 const PORT = Number(process.env.PORT ?? 5179);
@@ -21,6 +21,7 @@ const ROUTES: Record<string, Handler> = {
   "GET /api/methods": getMethods,
   "GET /api/flowchart": getFlowchart,
   "GET /api/desecration": getDesecration,
+  "GET /api/jewel": getJewel,
   "GET /api/slots": getSlots,
   "POST /api/craft": postCraft,
   "POST /api/trade": postTrade,

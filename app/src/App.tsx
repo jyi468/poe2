@@ -5,10 +5,12 @@ import CraftSimTab from "./tabs/CraftSimTab.js";
 import TradeTab from "./tabs/TradeTab.js";
 import FlowchartTab from "./tabs/FlowchartTab.js";
 import DesecrationTab from "./tabs/DesecrationTab.js";
+import JewelTab from "./tabs/JewelTab.js";
 
 const TABS = [
   { id: "flowchart", label: "Flowchart", el: <FlowchartTab /> },
   { id: "desecration", label: "Desecration", el: <DesecrationTab /> },
+  { id: "jewel", label: "Jewel", el: <JewelTab /> },
   { id: "economy", label: "Economy", el: <EconomyTab /> },
   { id: "methods", label: "Methods", el: <MethodsTab /> },
   { id: "craft", label: "Craft sim", el: <CraftSimTab /> },
