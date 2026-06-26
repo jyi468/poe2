@@ -40,6 +40,7 @@ poe2-assistant/
 | Research mechanics / meta | `knowledge/` | `knowledge/mechanics.md`, `knowledge/meta.md` | `src/`, `crafting/` |
 | Run the build-improvement loop | `knowledge/workflows/` | `knowledge/workflows/build-analysis.md` | `crafting/` |
 | First-time setup | `docs/` | `docs/pob-setup.md` | all others |
+| Run the crafting command center | `app/` + `src/server/` | `src/server/server.ts`, `app/src/App.tsx` | `pob/` |
 
 ## Naming Conventions
 
