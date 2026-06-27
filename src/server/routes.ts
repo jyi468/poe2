@@ -54,6 +54,7 @@ export const getJewel = async () => {
     flowchart: plan.flowchart,
     assumptions: plan.assumptions,
     recipes,
+    rubyVariant: plan.rubyVariant,
   };
 };
 

@@ -72,6 +72,30 @@ export interface JewelRecipe {
   readonly scenarios: readonly JewelScenario[];
 }
 
+export interface RubyVariant {
+  readonly label: string;
+  readonly pairLabel: string;
+  readonly note: string;
+  readonly searchType: string; // trade2 item type, e.g. "Ruby"
+  readonly searchStats: readonly SearchStat[];
+}
+
+// Ruby (Strength) jewels have NO crit pool, so the crit emotions don't apply.
+// The analog target is the phys + attack PREFIX pair — roll/Exalt toward it.
+const RUBY_VARIANT: RubyVariant = {
+  label: "Ruby (Strength) — phys + attack pair",
+  pairLabel: "% increased Global Physical Damage + % increased Attack Damage (both prefixes)",
+  note:
+    "Rubies have no crit pool, so the crit emotions (Despair/Fear, which add suffixes) don't help. " +
+    "Roll/Exalt toward the prefix pair; the 3rd/4th mods (life leech, stun threshold, % max life, " +
+    "attack speed with your weapon) decide ~1 ex vs ~1 div. The crit-emotion EV above does NOT apply here.",
+  searchType: "Ruby",
+  searchStats: [
+    { id: "explicit.stat_1310194496", label: "Global Physical Damage (cap ~15%)" },
+    { id: "explicit.stat_2843214518", label: "Attack Damage (cap ~14-15%)" },
+  ],
+};
+
 /** Generic jewel crit-pair flowchart (one diagram for the whole loop). */
 export function jewelFlowchart(): string {
   return [
@@ -86,7 +110,7 @@ export function jewelFlowchart(): string {
 }
 
 /** Build the full Jewel-tab plan from live emotion prices. */
-export function buildJewelPlan(divOf: DivOf): { flowchart: string; recipes: JewelRecipe[]; assumptions: { baseDiv: number; floorDiv: number; sellPair: WeightBand } } {
+export function buildJewelPlan(divOf: DivOf): { flowchart: string; recipes: JewelRecipe[]; rubyVariant: RubyVariant; assumptions: { baseDiv: number; floorDiv: number; sellPair: WeightBand } } {
   const recipes = RECIPES.map((r): JewelRecipe => {
     const priceDiv = divOf(r.emotionName, r.emotionFallbackEx);
     const scenarios = MOD_COUNTS.map((modCount): JewelScenario => {
@@ -116,5 +140,10 @@ export function buildJewelPlan(divOf: DivOf): { flowchart: string; recipes: Jewe
       scenarios,
     };
   });
-  return { flowchart: jewelFlowchart(), recipes, assumptions: { baseDiv: BASE_DIV, floorDiv: FLOOR_DIV, sellPair: SELL_PAIR } };
+  return {
+    flowchart: jewelFlowchart(),
+    recipes,
+    rubyVariant: RUBY_VARIANT,
+    assumptions: { baseDiv: BASE_DIV, floorDiv: FLOOR_DIV, sellPair: SELL_PAIR },
+  };
 }
