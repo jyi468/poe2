@@ -1,8 +1,11 @@
 // CLI for the official PoE2 trade2 API. Logic lives in trade-core.ts; this file
-// parses flags and prints. Usage unchanged:
+// parses flags and prints. Usage:
 //   pnpm trade --find "critical damage bonus"
 //   pnpm trade --category jewel --rarity nonunique --stat explicit.stat_x:8 --limit 8
 //   pnpm trade --batch path/to/queries.json
+// Listings default to status=securable (instant-buyout, actually purchasable) + collapsed
+// per-account — the REAL floor. Add --online (or --status any) to include price-fixer ghosts,
+// and --no-collapse to show every per-seller listing. Mods show {fractured}/{desecrated}/{crafted} tags.
 
 import { readFile } from "node:fs/promises";
 
@@ -37,6 +40,9 @@ function parseFlags(argv: string[]): QuerySpec & { find?: string; batch?: string
     else if (a === "--name") out.name = next();
     else if (a === "--type") out.type = next();
     else if (a === "--sort") out.sort = next() as "asc" | "desc";
+    else if (a === "--status") out.status = next() as "securable" | "online" | "any";
+    else if (a === "--online") out.status = "online"; // shortcut: include unbuyable listings
+    else if (a === "--no-collapse") out.collapse = false;
     else if (a === "--limit") out.limit = Number(next());
     else if (a === "--stat") {
       const [id, min, max] = next().split(":");

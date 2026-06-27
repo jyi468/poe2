@@ -24,6 +24,12 @@ export interface QuerySpec {
   limit?: number;
   corrupted?: boolean;
   qualityMin?: number;
+  /** Listing availability. "securable" = instant-buyout, actually purchasable (merchant/premium
+   * tabs with a buyout); the real floor. "online" includes price-fixer ghosts. Default securable. */
+  status?: "securable" | "online" | "any";
+  /** Collapse multiple listings from the same account into one (default true) — avoids one
+   * seller's spam dominating the floor. */
+  collapse?: boolean;
 }
 export interface TradeListing {
   priceAmount: number | null;
@@ -64,7 +70,7 @@ async function getJson<T>(url: string, attempt = 0): Promise<T> {
 }
 
 export function buildBody(spec: QuerySpec): unknown {
-  const query: Record<string, unknown> = { status: { option: "online" } };
+  const query: Record<string, unknown> = { status: { option: spec.status ?? "securable" } };
   if (spec.name) query.name = spec.name;
   if (spec.type) query.type = spec.type;
   if (spec.stats?.length) {
@@ -86,23 +92,43 @@ export function buildBody(spec: QuerySpec): unknown {
   const miscFilters: Record<string, unknown> = {};
   if (spec.corrupted != null) miscFilters.corrupted = { option: String(spec.corrupted) };
   if (spec.qualityMin != null) miscFilters.quality = { min: spec.qualityMin };
-  const filters: Record<string, unknown> = {};
+  const filters: Record<string, unknown> = {
+    trade_filters: { filters: { collapse: { option: String(spec.collapse ?? true) } } },
+  };
   if (Object.keys(typeFilters).length) filters.type_filters = { filters: typeFilters };
   if (Object.keys(miscFilters).length) filters.misc_filters = { filters: miscFilters };
-  if (Object.keys(filters).length) query.filters = filters;
+  query.filters = filters;
   return { query, sort: { price: spec.sort ?? "asc" } };
 }
 
 type ModEntry = string | { description?: string; mods?: { tier?: string }[] };
+interface RawItem {
+  typeLine?: string;
+  ilvl?: number;
+  explicitMods?: ModEntry[];
+  fracturedMods?: ModEntry[];
+  desecratedMods?: ModEntry[];
+  craftedMods?: ModEntry[];
+}
 interface RawListing {
   listing: { price: { amount: number; currency: string } | null };
-  item: { typeLine?: string; explicitMods?: ModEntry[]; ilvl?: number };
+  item: RawItem;
 }
 
-function modText(m: ModEntry): string {
+function modText(m: ModEntry, tag = ""): string {
   if (typeof m === "string") return m;
   const tier = m.mods?.[0]?.tier ? ` [${m.mods[0].tier}]` : "";
-  return `${m.description ?? JSON.stringify(m)}${tier}`;
+  return `${m.description ?? JSON.stringify(m)}${tier}${tag}`;
+}
+
+/** All mod groups in one list, tagging the special (non-explicit) sources that carry the value. */
+function allMods(item: RawItem): string[] {
+  return [
+    ...(item.explicitMods ?? []).map((m) => modText(m)),
+    ...(item.fracturedMods ?? []).map((m) => modText(m, " {fractured}")),
+    ...(item.desecratedMods ?? []).map((m) => modText(m, " {desecrated}")),
+    ...(item.craftedMods ?? []).map((m) => modText(m, " {crafted}")),
+  ];
 }
 
 export async function searchTrade(
@@ -132,7 +158,7 @@ export async function searchTrade(
       priceExalted: exalted == null ? null : Math.round(exalted),
       typeLine: r.item.typeLine ?? "?",
       ilvl: r.item.ilvl,
-      mods: (r.item.explicitMods ?? []).map(modText),
+      mods: allMods(r.item),
     });
   }
   await sleep(1500);
