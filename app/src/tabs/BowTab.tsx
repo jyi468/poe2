@@ -194,8 +194,9 @@ export default function BowTab() {
               annul-immune — that protects the suffix hunts).
             </li>
             <li>
-              <b>Attack speed first</b> — <b>plain Exalted Orb</b> + Omen of Dextral Exaltation. Take <i>any</i>{" "}
-              decent hit (don&apos;t tier-chase — ~8d), raw-annul junk. The side is isolated, so the annul is clean.
+              <b>Attack speed first</b> — <b>plain Exalted Orb</b> (NOT Greater) + Omen of Dextral Exaltation.
+              Keep <i>any</i> decent roll; don&apos;t tier-chase (~8d vs ~37d to force T1, for the least-important
+              mod). Raw-annul junk — the side is isolated, so the annul is clean.
             </li>
             <li>
               <b>Crit last</b> — <b>Greater Exalted Orb</b> + Dextral Exaltation until crit ≥T3 (3.6%/slam, ~28

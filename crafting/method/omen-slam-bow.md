@@ -43,8 +43,9 @@ Default to the **Greater build**: ~93 div mean, **~196 div bankroll**, EV **+77*
 Reserve the Perfect build for gambling on the ~460–630 T1 tier with a deep bankroll.
 
 1. **Buy** the fractured +Proj ilvl-81 base (~30d); strip to the bare (annul-immune) fracture.
-2. **Attack speed first** — **plain Exalted Orb** + Dextral Exaltation. Take *any* decent hit
-   (don't tier-chase — ~8d); raw-annul junk (clean, side is isolated).
+2. **Attack speed first** — **plain Exalted Orb** (NOT Greater) + Dextral Exaltation. Keep
+   *any* decent roll; don't tier-chase (~8d, vs ~37d to force T1 on the least-important mod).
+   Raw-annul junk (clean, side is isolated).
 3. **Crit last** — **Greater Exalted Orb** + Dextral Exaltation until crit ≥T3 (3.6%/slam,
    ~28 slams; Greater ≈ 0.01d). Raw-annul junk — only risks the cheap attack-speed keeper.
 4. **Prefixes** — 3 damage mods, **Greater Exalt** + Sinistral Exaltation (~86%). Clear a junk
