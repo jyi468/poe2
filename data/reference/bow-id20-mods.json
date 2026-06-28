@@ -1,0 +1,1660 @@
+{
+ "source": "craftofexile.com ?game=poe2&b=20 (Obliterator/Warmonger bow, id_base 20)",
+ "ilvl": 81,
+ "note": "mgroup-1 (normal) mods only; weight = spawn weight; ilvl = tier required level; values = [min,max] per stat",
+ "prefixes": [
+  {
+   "name": "#% increased Elemental Damage with Attacks",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 500,
+     "values": [
+      [
+       87,
+       100
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 500,
+     "values": [
+      [
+       73,
+       86
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 500,
+     "values": [
+      [
+       63,
+       72
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 500,
+     "values": [
+      [
+       53,
+       62
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 500,
+     "values": [
+      [
+       36,
+       52
+      ]
+     ]
+    },
+    {
+     "ilvl": 4,
+     "weight": 500,
+     "values": [
+      [
+       19,
+       35
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "#% increased Physical Damage",
+   "tiers": [
+    {
+     "ilvl": 82,
+     "weight": 25,
+     "values": [
+      [
+       170,
+       179
+      ]
+     ]
+    },
+    {
+     "ilvl": 75,
+     "weight": 50,
+     "values": [
+      [
+       155,
+       169
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 100,
+     "values": [
+      [
+       135,
+       154
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 200,
+     "values": [
+      [
+       110,
+       134
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 400,
+     "values": [
+      [
+       85,
+       109
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 1000,
+     "values": [
+      [
+       65,
+       84
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      [
+       50,
+       64
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1000,
+     "values": [
+      [
+       40,
+       49
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "#% increased Physical Damage, +# to Accuracy Rating",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 100,
+     "values": [
+      [
+       75,
+       79
+      ],
+      [
+       175,
+       200
+      ]
+     ]
+    },
+    {
+     "ilvl": 70,
+     "weight": 200,
+     "values": [
+      [
+       65,
+       74
+      ],
+      [
+       150,
+       174
+      ]
+     ]
+    },
+    {
+     "ilvl": 65,
+     "weight": 400,
+     "values": [
+      [
+       55,
+       64
+      ],
+      [
+       124,
+       149
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 600,
+     "values": [
+      [
+       45,
+       54
+      ],
+      [
+       98,
+       123
+      ]
+     ]
+    },
+    {
+     "ilvl": 38,
+     "weight": 1000,
+     "values": [
+      [
+       35,
+       44
+      ],
+      [
+       73,
+       97
+      ]
+     ]
+    },
+    {
+     "ilvl": 23,
+     "weight": 1000,
+     "values": [
+      [
+       25,
+       34
+      ],
+      [
+       47,
+       72
+      ]
+     ]
+    },
+    {
+     "ilvl": 14,
+     "weight": 1000,
+     "values": [
+      [
+       20,
+       24
+      ],
+      [
+       21,
+       46
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      [
+       15,
+       19
+      ],
+      [
+       16,
+       20
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+# to Accuracy Rating",
+   "tiers": [
+    {
+     "ilvl": 82,
+     "weight": 100,
+     "values": [
+      [
+       551,
+       650
+      ]
+     ]
+    },
+    {
+     "ilvl": 76,
+     "weight": 200,
+     "values": [
+      [
+       451,
+       550
+      ]
+     ]
+    },
+    {
+     "ilvl": 67,
+     "weight": 300,
+     "values": [
+      [
+       347,
+       450
+      ]
+     ]
+    },
+    {
+     "ilvl": 58,
+     "weight": 600,
+     "values": [
+      [
+       237,
+       346
+      ]
+     ]
+    },
+    {
+     "ilvl": 48,
+     "weight": 600,
+     "values": [
+      [
+       168,
+       236
+      ]
+     ]
+    },
+    {
+     "ilvl": 36,
+     "weight": 800,
+     "values": [
+      [
+       124,
+       167
+      ]
+     ]
+    },
+    {
+     "ilvl": 26,
+     "weight": 800,
+     "values": [
+      [
+       85,
+       123
+      ]
+     ]
+    },
+    {
+     "ilvl": 18,
+     "weight": 800,
+     "values": [
+      [
+       61,
+       84
+      ]
+     ]
+    },
+    {
+     "ilvl": 13,
+     "weight": 800,
+     "values": [
+      [
+       33,
+       60
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 800,
+     "values": [
+      [
+       11,
+       32
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Adds # to # Cold Damage",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 80,
+     "values": [
+      [
+       72,
+       81
+      ],
+      [
+       110,
+       123
+      ]
+     ]
+    },
+    {
+     "ilvl": 75,
+     "weight": 200,
+     "values": [
+      [
+       55,
+       69
+      ],
+      [
+       83,
+       106
+      ]
+     ]
+    },
+    {
+     "ilvl": 65,
+     "weight": 320,
+     "values": [
+      [
+       40,
+       53
+      ],
+      [
+       62,
+       80
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 480,
+     "values": [
+      [
+       31,
+       38
+      ],
+      [
+       47,
+       59
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 800,
+     "values": [
+      [
+       22,
+       29
+      ],
+      [
+       34,
+       44
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 800,
+     "values": [
+      [
+       17,
+       20
+      ],
+      [
+       26,
+       32
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 800,
+     "values": [
+      [
+       11,
+       15
+      ],
+      [
+       17,
+       24
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 800,
+     "values": [
+      [
+       6,
+       9
+      ],
+      [
+       10,
+       16
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 800,
+     "values": [
+      [
+       3,
+       5
+      ],
+      [
+       6,
+       9
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 800,
+     "values": [
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Adds # to # Fire Damage",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 80,
+     "values": [
+      [
+       88,
+       101
+      ],
+      [
+       133,
+       154
+      ]
+     ]
+    },
+    {
+     "ilvl": 75,
+     "weight": 200,
+     "values": [
+      [
+       62,
+       85
+      ],
+      [
+       101,
+       129
+      ]
+     ]
+    },
+    {
+     "ilvl": 65,
+     "weight": 320,
+     "values": [
+      [
+       47,
+       59
+      ],
+      [
+       74,
+       97
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 480,
+     "values": [
+      [
+       35,
+       44
+      ],
+      [
+       56,
+       71
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 800,
+     "values": [
+      [
+       25,
+       33
+      ],
+      [
+       38,
+       54
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 800,
+     "values": [
+      [
+       20,
+       24
+      ],
+      [
+       32,
+       37
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 800,
+     "values": [
+      [
+       13,
+       19
+      ],
+      [
+       21,
+       29
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 800,
+     "values": [
+      [
+       7,
+       11
+      ],
+      [
+       13,
+       19
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 800,
+     "values": [
+      [
+       4,
+       6
+      ],
+      [
+       7,
+       10
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 800,
+     "values": [
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Adds # to # Lightning Damage",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 120,
+     "values": [
+      [
+       1,
+       12
+      ],
+      [
+       202,
+       234
+      ]
+     ]
+    },
+    {
+     "ilvl": 75,
+     "weight": 300,
+     "values": [
+      [
+       1,
+       10
+      ],
+      [
+       157,
+       196
+      ]
+     ]
+    },
+    {
+     "ilvl": 65,
+     "weight": 480,
+     "values": [
+      [
+       1,
+       8
+      ],
+      [
+       111,
+       152
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 720,
+     "values": [
+      [
+       1,
+       6
+      ],
+      [
+       85,
+       107
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 1200,
+     "values": [
+      [
+       1,
+       4
+      ],
+      [
+       63,
+       82
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 1200,
+     "values": [
+      [
+       1,
+       3
+      ],
+      [
+       55,
+       60
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 1200,
+     "values": [
+      [
+       1,
+       2
+      ],
+      [
+       36,
+       52
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 1200,
+     "values": [
+      [
+       1,
+       2
+      ],
+      [
+       20,
+       30
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1200,
+     "values": [
+      1,
+      [
+       13,
+       19
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1200,
+     "values": [
+      1,
+      [
+       4,
+       6
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Adds # to # Physical Damage",
+   "tiers": [
+    {
+     "ilvl": 75,
+     "weight": 100,
+     "values": [
+      [
+       26,
+       39
+      ],
+      [
+       44,
+       66
+      ]
+     ]
+    },
+    {
+     "ilvl": 65,
+     "weight": 200,
+     "values": [
+      [
+       21,
+       31
+      ],
+      [
+       36,
+       53
+      ]
+     ]
+    },
+    {
+     "ilvl": 60,
+     "weight": 400,
+     "values": [
+      [
+       16,
+       24
+      ],
+      [
+       28,
+       42
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 600,
+     "values": [
+      [
+       13,
+       20
+      ],
+      [
+       23,
+       35
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 1000,
+     "values": [
+      [
+       10,
+       15
+      ],
+      [
+       18,
+       26
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 1000,
+     "values": [
+      [
+       8,
+       12
+      ],
+      [
+       14,
+       21
+      ]
+     ]
+    },
+    {
+     "ilvl": 16,
+     "weight": 1000,
+     "values": [
+      [
+       6,
+       9
+      ],
+      [
+       11,
+       16
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      [
+       4,
+       6
+      ],
+      [
+       7,
+       11
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1000,
+     "values": [
+      [
+       1,
+       2
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "suffixes": [
+  {
+   "name": "#% increased Attack Speed",
+   "tiers": [
+    {
+     "ilvl": 37,
+     "weight": 400,
+     "values": [
+      [
+       17,
+       19
+      ]
+     ]
+    },
+    {
+     "ilvl": 30,
+     "weight": 500,
+     "values": [
+      [
+       14,
+       16
+      ]
+     ]
+    },
+    {
+     "ilvl": 22,
+     "weight": 1000,
+     "values": [
+      [
+       11,
+       13
+      ]
+     ]
+    },
+    {
+     "ilvl": 11,
+     "weight": 1000,
+     "values": [
+      [
+       8,
+       10
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1000,
+     "values": [
+      [
+       5,
+       7
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "#% increased Light Radius, +# to Accuracy Rating",
+   "tiers": [
+    {
+     "ilvl": 30,
+     "weight": 1000,
+     "values": [
+      15,
+      [
+       41,
+       60
+      ]
+     ]
+    },
+    {
+     "ilvl": 15,
+     "weight": 1000,
+     "values": [
+      10,
+      [
+       21,
+       40
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      5,
+      [
+       10,
+       20
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "#% reduced Attribute Requirements",
+   "tiers": [
+    {
+     "ilvl": 60,
+     "weight": 1000,
+     "values": [
+      35
+     ]
+    },
+    {
+     "ilvl": 52,
+     "weight": 1000,
+     "values": [
+      30
+     ]
+    },
+    {
+     "ilvl": 40,
+     "weight": 1000,
+     "values": [
+      25
+     ]
+    },
+    {
+     "ilvl": 32,
+     "weight": 1000,
+     "values": [
+      20
+     ]
+    },
+    {
+     "ilvl": 24,
+     "weight": 1000,
+     "values": [
+      15
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+# to Dexterity",
+   "tiers": [
+    {
+     "ilvl": 74,
+     "weight": 1000,
+     "values": [
+      [
+       31,
+       33
+      ]
+     ]
+    },
+    {
+     "ilvl": 66,
+     "weight": 1000,
+     "values": [
+      [
+       28,
+       30
+      ]
+     ]
+    },
+    {
+     "ilvl": 55,
+     "weight": 1000,
+     "values": [
+      [
+       25,
+       27
+      ]
+     ]
+    },
+    {
+     "ilvl": 44,
+     "weight": 1000,
+     "values": [
+      [
+       21,
+       24
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 1000,
+     "values": [
+      [
+       17,
+       20
+      ]
+     ]
+    },
+    {
+     "ilvl": 22,
+     "weight": 1000,
+     "values": [
+      [
+       13,
+       16
+      ]
+     ]
+    },
+    {
+     "ilvl": 11,
+     "weight": 1000,
+     "values": [
+      [
+       9,
+       12
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1000,
+     "values": [
+      [
+       5,
+       8
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+# to Level of all Projectile Skills",
+   "tiers": [
+    {
+     "ilvl": 81,
+     "weight": 250,
+     "values": [
+      4
+     ]
+    },
+    {
+     "ilvl": 55,
+     "weight": 500,
+     "values": [
+      3
+     ]
+    },
+    {
+     "ilvl": 36,
+     "weight": 750,
+     "values": [
+      2
+     ]
+    },
+    {
+     "ilvl": 18,
+     "weight": 1000,
+     "values": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+#% Surpassing chance to fire an additional Arrow",
+   "tiers": [
+    {
+     "ilvl": 82,
+     "weight": 125,
+     "values": [
+      [
+       175,
+       200
+      ]
+     ]
+    },
+    {
+     "ilvl": 66,
+     "weight": 200,
+     "values": [
+      [
+       125,
+       150
+      ]
+     ]
+    },
+    {
+     "ilvl": 55,
+     "weight": 300,
+     "values": [
+      [
+       75,
+       100
+      ]
+     ]
+    },
+    {
+     "ilvl": 46,
+     "weight": 400,
+     "values": [
+      [
+       25,
+       50
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+#% to Critical Damage Bonus",
+   "tiers": [
+    {
+     "ilvl": 73,
+     "weight": 125,
+     "values": [
+      [
+       23,
+       25
+      ]
+     ]
+    },
+    {
+     "ilvl": 59,
+     "weight": 250,
+     "values": [
+      [
+       20,
+       22
+      ]
+     ]
+    },
+    {
+     "ilvl": 44,
+     "weight": 500,
+     "values": [
+      [
+       17,
+       19
+      ]
+     ]
+    },
+    {
+     "ilvl": 30,
+     "weight": 1000,
+     "values": [
+      [
+       14,
+       16
+      ]
+     ]
+    },
+    {
+     "ilvl": 21,
+     "weight": 1000,
+     "values": [
+      [
+       12,
+       13
+      ]
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      [
+       10,
+       11
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "+#% to Critical Hit Chance",
+   "tiers": [
+    {
+     "ilvl": 73,
+     "weight": 125,
+     "values": [
+      [
+       4.41,
+       5
+      ]
+     ]
+    },
+    {
+     "ilvl": 59,
+     "weight": 250,
+     "values": [
+      [
+       3.81,
+       4.4
+      ]
+     ]
+    },
+    {
+     "ilvl": 44,
+     "weight": 500,
+     "values": [
+      [
+       3.11,
+       3.8
+      ]
+     ]
+    },
+    {
+     "ilvl": 30,
+     "weight": 1000,
+     "values": [
+      [
+       2.11,
+       2.7
+      ]
+     ]
+    },
+    {
+     "ilvl": 20,
+     "weight": 1000,
+     "values": [
+      [
+       1.51,
+       2.1
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 1000,
+     "values": [
+      [
+       1.01,
+       1.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Gain # Life per enemy killed",
+   "tiers": [
+    {
+     "ilvl": 77,
+     "weight": 750,
+     "values": [
+      [
+       69,
+       84
+      ]
+     ]
+    },
+    {
+     "ilvl": 66,
+     "weight": 750,
+     "values": [
+      [
+       54,
+       68
+      ]
+     ]
+    },
+    {
+     "ilvl": 55,
+     "weight": 750,
+     "values": [
+      [
+       41,
+       53
+      ]
+     ]
+    },
+    {
+     "ilvl": 44,
+     "weight": 750,
+     "values": [
+      [
+       29,
+       40
+      ]
+     ]
+    },
+    {
+     "ilvl": 33,
+     "weight": 750,
+     "values": [
+      [
+       19,
+       28
+      ]
+     ]
+    },
+    {
+     "ilvl": 22,
+     "weight": 750,
+     "values": [
+      [
+       10,
+       18
+      ]
+     ]
+    },
+    {
+     "ilvl": 11,
+     "weight": 750,
+     "values": [
+      [
+       7,
+       9
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 750,
+     "values": [
+      [
+       4,
+       6
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Gain # Mana per enemy killed",
+   "tiers": [
+    {
+     "ilvl": 78,
+     "weight": 750,
+     "values": [
+      [
+       36,
+       45
+      ]
+     ]
+    },
+    {
+     "ilvl": 67,
+     "weight": 750,
+     "values": [
+      [
+       28,
+       35
+      ]
+     ]
+    },
+    {
+     "ilvl": 56,
+     "weight": 750,
+     "values": [
+      [
+       21,
+       27
+      ]
+     ]
+    },
+    {
+     "ilvl": 45,
+     "weight": 750,
+     "values": [
+      [
+       15,
+       20
+      ]
+     ]
+    },
+    {
+     "ilvl": 34,
+     "weight": 750,
+     "values": [
+      [
+       10,
+       14
+      ]
+     ]
+    },
+    {
+     "ilvl": 23,
+     "weight": 750,
+     "values": [
+      [
+       6,
+       9
+      ]
+     ]
+    },
+    {
+     "ilvl": 12,
+     "weight": 750,
+     "values": [
+      [
+       4,
+       5
+      ]
+     ]
+    },
+    {
+     "ilvl": 1,
+     "weight": 750,
+     "values": [
+      [
+       2,
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Grants # Life per Enemy Hit",
+   "tiers": [
+    {
+     "ilvl": 40,
+     "weight": 1000,
+     "values": [
+      5
+     ]
+    },
+    {
+     "ilvl": 30,
+     "weight": 1000,
+     "values": [
+      4
+     ]
+    },
+    {
+     "ilvl": 20,
+     "weight": 1000,
+     "values": [
+      3
+     ]
+    },
+    {
+     "ilvl": 8,
+     "weight": 1000,
+     "values": [
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Leeches #% of Physical Damage as Life",
+   "tiers": [
+    {
+     "ilvl": 65,
+     "weight": 1000,
+     "values": [
+      [
+       9,
+       9.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 1000,
+     "values": [
+      [
+       8,
+       8.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 38,
+     "weight": 1000,
+     "values": [
+      [
+       7,
+       7.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 21,
+     "weight": 1000,
+     "values": [
+      [
+       6,
+       6.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Leeches #% of Physical Damage as Mana",
+   "tiers": [
+    {
+     "ilvl": 65,
+     "weight": 1000,
+     "values": [
+      [
+       8,
+       8.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 54,
+     "weight": 1000,
+     "values": [
+      [
+       7,
+       7.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 38,
+     "weight": 1000,
+     "values": [
+      [
+       6,
+       6.9
+      ]
+     ]
+    },
+    {
+     "ilvl": 21,
+     "weight": 1000,
+     "values": [
+      [
+       5,
+       5.9
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

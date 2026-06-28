@@ -20,9 +20,11 @@ poe2-assistant/
 │   └── workflows/    # Repeatable analysis loops
 ├── crafting/         # Method-centric profit playbook
 │   ├── method/       # PRIMARY — one file per crafting method (+ README profit board)
+│   ├── reference/    # Exact omen/currency/essence/bone effects + affix weights (`pnpm reference`)
 │   └── base/         # item bases & mod pools (reference)
 ├── data/             # Generated artifacts (gitignored snapshots)
-│   └── economy/      # latest.{json,md} from `pnpm economy`
+│   ├── economy/      # latest.{json,md} from `pnpm economy`
+│   └── reference/    # bow-id20-mods.json snapshot (tracked — feeds bow-affix-weights.md)
 └── docs/             # Setup guides and specs
     └── superpowers/  # Plans, specs
 ```
@@ -37,6 +39,7 @@ poe2-assistant/
 | Run / debug the PoB2 bridge | `pob/` | `pob/eval.lua`, `pob/doctor.sh` | `src/`, `crafting/` |
 | Decide which craft to run (decision map) | `crafting/` | `crafting/crafting-flowchart.md` | `src/`, `pob/` |
 | Look up crafting method / cost | `crafting/` | `crafting/method/README.md`, `crafting/method/*.md` | `src/`, `pob/` |
+| Look up EXACT omen/currency/essence/bone effect or affix weights | `crafting/reference/` | `crafting/reference/*.md` (refresh: `pnpm reference`) | `pob/` |
 | Pull / read live economy prices | `src/economy/` | `src/economy/pull.ts`, `data/economy/latest.md` | `pob/`, `crafting/` |
 | Look up one category's full live prices | `src/economy/` | `src/economy/query.ts` (`pnpm prices <cat> [--grep] [--top]`) | `pob/`, `crafting/` |
 | Research mechanics / meta | `knowledge/` | `knowledge/mechanics.md`, `knowledge/meta.md` | `src/`, `crafting/` |
