@@ -8,3 +8,6 @@ builds/
 
 # Economy pulls: keep latest.{json,md} as the current reference; ignore dated snapshots.
 data/economy/snapshot-*.json
+
+# Locally-saved trade2 floors (cache-first store; regenerated on demand).
+data/economy/trade-cache.json

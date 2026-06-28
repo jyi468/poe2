@@ -44,7 +44,13 @@ function parseFlags(argv: string[]): QuerySpec & { find?: string; batch?: string
     else if (a === "--online") out.status = "online"; // shortcut: include unbuyable listings
     else if (a === "--no-collapse") out.collapse = false;
     else if (a === "--limit") out.limit = Number(next());
-    else if (a === "--stat") {
+    else if (a === "--dps" || a === "--pdps" || a === "--crit" || a === "--aps") {
+      const [min, max] = next().split(":");
+      const r: { min?: number; max?: number } = {};
+      if (min) r.min = Number(min);
+      if (max) r.max = Number(max);
+      out[a.slice(2) as "dps" | "pdps" | "crit" | "aps"] = r;
+    } else if (a === "--stat") {
       const [id, min, max] = next().split(":");
       out.stats!.push({ id, min: min ? Number(min) : undefined, max: max ? Number(max) : undefined });
     }

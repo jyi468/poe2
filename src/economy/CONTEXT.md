@@ -17,7 +17,8 @@ src/economy/
 ├── pull.ts            # CLI wrapper → `pnpm economy`
 ├── digest.ts          # builds the markdown digest (latest.md)
 ├── query.ts           # CLI: full price table for one category → `pnpm prices`
-├── trade-core.ts      # trade2 API: findStats, searchTrade, QuerySpec (logic)
+├── trade-core.ts      # trade2 API: findStats, searchTrade, QuerySpec + global throttle
+├── trade-cache.ts     # cache-first disk store for trade2 results (data/economy/trade-cache.json)
 ├── trade.ts           # CLI wrapper → `pnpm trade`
 └── *.test.ts          # co-located vitest
 ```
@@ -38,6 +39,11 @@ pnpm trade --find "critical damage"  # resolve a stat id, then search listings
 - **ESM imports**: always `.js` extension.
 - **Immutability**: normalize/sort helpers return new arrays; never mutate fetched payloads.
 - Snapshots are written under `data/economy/` only — never elsewhere.
+- **trade2 is throttled + cache-first**: every trade2 request goes through the single serial
+  queue in `trade-core.ts` (self-paces off the API's `X-Rate-Limit-Ip` policy; parks on 429
+  `Retry-After`). `routes.ts postTrade` serves saved results from `trade-cache.ts` with no API
+  call unless the request carries `refresh:true` (the UI's "↻ live" button). Don't add a code
+  path that hits trade2 outside this queue, and don't re-fetch when a cached value exists.
 
 ## What to Avoid
 

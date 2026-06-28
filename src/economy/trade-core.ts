@@ -13,6 +13,10 @@ export interface StatFilter {
   min?: number;
   max?: number;
 }
+export interface Range {
+  min?: number;
+  max?: number;
+}
 export interface QuerySpec {
   label?: string;
   category?: string;
@@ -20,6 +24,11 @@ export interface QuerySpec {
   name?: string;
   type?: string;
   stats?: StatFilter[];
+  /** Equipment (weapon-property) filters — the computed values, not mods. */
+  dps?: Range; // total damage per second
+  pdps?: Range; // physical DPS
+  crit?: Range; // critical hit chance %
+  aps?: Range; // attacks per second
   sort?: "asc" | "desc";
   limit?: number;
   corrupted?: boolean;
@@ -47,24 +56,54 @@ export interface TradeResult {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function postJson<T>(url: string, body: unknown, attempt = 0): Promise<T> {
-  const res = await fetch(url, { method: "POST", headers: HEADERS, body: JSON.stringify(body) });
-  if (res.status === 429 && attempt < 4) {
-    const wait = Number(res.headers.get("Retry-After") ?? 8) * 1000;
-    await sleep(wait);
-    return postJson<T>(url, body, attempt + 1);
+// --- Global throttle -------------------------------------------------------
+// Every trade2 request goes through one serial queue: at most one request is in
+// flight, and the next one is held until `nextAllowedAt`. Spacing is derived
+// from the API's own X-Rate-Limit-Ip policy (hits:period buckets) so we self-pace
+// to the server's limit instead of guessing — and a 429 parks the queue for the
+// full Retry-After. This is what stops the "too many attempts" bursts.
+
+let gate: Promise<unknown> = Promise.resolve();
+let nextAllowedAt = 0; // epoch ms; earliest the next request may fire
+
+/** Steady-state ms between requests implied by a "hits:period:restriction,..." policy. */
+function spacingFromPolicy(policy: string | null): number {
+  if (!policy) return 1500;
+  let ms = 0;
+  for (const bucket of policy.split(",")) {
+    const [hits, period] = bucket.split(":").map(Number);
+    if (hits > 0 && period > 0) ms = Math.max(ms, Math.ceil((period / hits) * 1000));
   }
+  return ms || 1500;
+}
+
+async function rateLimitedFetch(url: string, init: RequestInit, attempt = 0): Promise<Response> {
+  const run = gate.then(async () => {
+    const wait = nextAllowedAt - Date.now();
+    if (wait > 0) await sleep(wait);
+    const res = await fetch(url, init);
+    // Pace the *next* request off this response's IP policy bucket.
+    nextAllowedAt = Date.now() + spacingFromPolicy(res.headers.get("x-rate-limit-ip"));
+    return res;
+  });
+  gate = run.catch(() => {}); // keep the queue alive even if a request throws
+  const res = await run;
+  if (res.status === 429 && attempt < 4) {
+    const retry = Number(res.headers.get("retry-after") ?? 8);
+    nextAllowedAt = Date.now() + retry * 1000;
+    return rateLimitedFetch(url, init, attempt + 1);
+  }
+  return res;
+}
+
+async function postJson<T>(url: string, body: unknown): Promise<T> {
+  const res = await rateLimitedFetch(url, { method: "POST", headers: HEADERS, body: JSON.stringify(body) });
   if (!res.ok) throw new Error(`${url} -> ${res.status} ${res.statusText}`);
   return (await res.json()) as T;
 }
 
-async function getJson<T>(url: string, attempt = 0): Promise<T> {
-  const res = await fetch(url, { headers: HEADERS });
-  if (res.status === 429 && attempt < 4) {
-    const wait = Number(res.headers.get("Retry-After") ?? 8) * 1000;
-    await sleep(wait);
-    return getJson<T>(url, attempt + 1);
-  }
+async function getJson<T>(url: string): Promise<T> {
+  const res = await rateLimitedFetch(url, { headers: HEADERS });
   if (!res.ok) throw new Error(`${url} -> ${res.status} ${res.statusText}`);
   return (await res.json()) as T;
 }
@@ -92,11 +131,23 @@ export function buildBody(spec: QuerySpec): unknown {
   const miscFilters: Record<string, unknown> = {};
   if (spec.corrupted != null) miscFilters.corrupted = { option: String(spec.corrupted) };
   if (spec.qualityMin != null) miscFilters.quality = { min: spec.qualityMin };
+  const range = (r: Range) => {
+    const v: Record<string, number> = {};
+    if (r.min != null) v.min = r.min;
+    if (r.max != null) v.max = r.max;
+    return v;
+  };
+  const equipmentFilters: Record<string, unknown> = {};
+  if (spec.dps) equipmentFilters.damage = range(spec.dps);
+  if (spec.pdps) equipmentFilters.pdps = range(spec.pdps);
+  if (spec.crit) equipmentFilters.crit = range(spec.crit);
+  if (spec.aps) equipmentFilters.aps = range(spec.aps);
   const filters: Record<string, unknown> = {
     trade_filters: { filters: { collapse: { option: String(spec.collapse ?? true) } } },
   };
   if (Object.keys(typeFilters).length) filters.type_filters = { filters: typeFilters };
   if (Object.keys(miscFilters).length) filters.misc_filters = { filters: miscFilters };
+  if (Object.keys(equipmentFilters).length) filters.equipment_filters = { filters: equipmentFilters };
   query.filters = filters;
   return { query, sort: { price: spec.sort ?? "asc" } };
 }
@@ -161,7 +212,6 @@ export async function searchTrade(
       mods: allMods(r.item),
     });
   }
-  await sleep(1500);
   return { label, total: search.total, listings };
 }
 

@@ -68,9 +68,14 @@ const MODEL: SlamModel = {
   finishingDivines: 4,
 };
 
-// ---- market judgement (set to your live trade numbers) -----------------------
+// ---- market values (LIVE trade2 floors, equipment filters, 2026-06-28) -------
+// Pulled via: pnpm trade --category weapon.bow --crit <%> --pdps <n> [--stat +proj].
+//   proj : +4 Proj · crit>=8% · pDPS>=450 floor ~130 div; settled-typical ~200;
+//          T1 crit (>=9%) + pDPS>=600 tier ~460-630 div.
+//   crit : a crit+pDPS bow WITHOUT +levels floors at ~0.5 div (market is flooded) —
+//          so the Crit-fracture craft has no resale; BUY one instead of crafting.
 const BASE_DIV: Record<FracturePath, number> = { proj: 30, crit: 32 };
-const RESALE_DIV: Record<FracturePath, number> = { proj: 300, crit: 90 };
+const RESALE_DIV: Record<FracturePath, number> = { proj: 200, crit: 0.5 };
 
 interface Row {
   label: string;

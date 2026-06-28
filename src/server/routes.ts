@@ -8,7 +8,8 @@ import { fileURLToPath } from "node:url";
 
 import { getLeagues } from "../economy/client.js";
 import { pullEconomy, readLatestSnapshot, writeSnapshot } from "../economy/pull-core.js";
-import { findStats, searchTrade, type QuerySpec } from "../economy/trade-core.js";
+import { buildBody, findStats, searchTrade, type QuerySpec, type TradeResult } from "../economy/trade-core.js";
+import { cacheKey, getCached, setCached } from "../economy/trade-cache.js";
 import { loadModTiers, poolFor } from "../crafting-sim/pob-mods.js";
 import { estimateCraft } from "../crafting-sim/estimate.js";
 import { scanSlots, SLOT_DEFS } from "../crafting-sim/slots.js";
@@ -132,13 +133,53 @@ export const postCraft = async (_req: IncomingMessage, body: unknown) => {
   });
 };
 
-export const postTrade = async (_req: IncomingMessage, body: unknown) => {
-  const spec = body as QuerySpec & { find?: string };
+/**
+ * Resolve the current league + divine price, cache-first. This pings poe2scout,
+ * so we save it and reuse it; pass refresh to re-pull (e.g. after a new league or
+ * a big divine move).
+ */
+const LEAGUE_KEY = cacheKey("league", "poe2");
+async function currentLeague(refresh: boolean): Promise<{ league: string; divine: number; fetchedAt: string }> {
+  if (!refresh) {
+    const hit = await getCached<{ league: string; divine: number }>(LEAGUE_KEY);
+    if (hit) return { ...hit.value, fetchedAt: hit.fetchedAt };
+  }
   const leagues = await getLeagues("poe2");
   const current = leagues.find((l) => l.IsCurrent && !l.Value.startsWith("HC "));
   if (!current) throw new Error("no current league");
-  const divine = current.DivinePrice ?? 1;
-  if (spec.find) return { league: current.Value, stats: await findStats(spec.find) };
-  const result = await searchTrade(spec, current.Value, divine);
-  return { league: current.Value, divine, ...result };
+  const value = { league: current.Value, divine: current.DivinePrice ?? 1 };
+  const saved = await setCached(LEAGUE_KEY, value, new Date().toISOString());
+  return { ...value, fetchedAt: saved.fetchedAt };
+}
+
+/**
+ * Trade2 lookup, cache-first. A saved result for the exact query is returned with
+ * no API call (cached:true); `refresh:true` forces a live, throttled fetch and
+ * overwrites the cache. This is the on-demand-only path — nothing here runs unless
+ * a button is clicked, and identical clicks never re-hit the rate-limited API.
+ */
+export const postTrade = async (_req: IncomingMessage, body: unknown) => {
+  const spec = body as QuerySpec & { find?: string; refresh?: boolean };
+  const refresh = spec.refresh === true;
+  const { league, divine } = await currentLeague(refresh);
+
+  if (spec.find) {
+    const key = cacheKey("stats", spec.find.toLowerCase());
+    if (!refresh) {
+      const hit = await getCached<{ label: string; id: string; text: string }[]>(key);
+      if (hit) return { league, stats: hit.value, cached: true, fetchedAt: hit.fetchedAt };
+    }
+    const stats = await findStats(spec.find);
+    const saved = await setCached(key, stats, new Date().toISOString());
+    return { league, stats, cached: false, fetchedAt: saved.fetchedAt };
+  }
+
+  const key = cacheKey("search", { body: buildBody(spec), limit: spec.limit ?? 6, league });
+  if (!refresh) {
+    const hit = await getCached<TradeResult>(key);
+    if (hit) return { league, divine, ...hit.value, cached: true, fetchedAt: hit.fetchedAt };
+  }
+  const result = await searchTrade(spec, league, divine);
+  const saved = await setCached(key, result, new Date().toISOString());
+  return { league, divine, ...result, cached: false, fetchedAt: saved.fetchedAt };
 };

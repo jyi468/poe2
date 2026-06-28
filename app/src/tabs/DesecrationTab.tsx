@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { get, post } from "../api.js";
+import { freshness } from "../format.js";
 import ErrorBanner from "../components/ErrorBanner.js";
 import Mermaid from "../components/Mermaid.js";
 
@@ -45,6 +46,8 @@ interface TradeResult {
   divine: number;
   total: number;
   listings: TradeListing[];
+  cached?: boolean;
+  fetchedAt?: string;
 }
 
 const div = (n: number) => (n >= 0 ? "+" : "") + n.toFixed(2);
@@ -56,7 +59,7 @@ function FloorPuller({ item, divine }: { item: DesecItem; divine: number }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const pull = async () => {
+  const pull = async (refresh = false) => {
     setLoading(true);
     setError(null);
     try {
@@ -66,6 +69,7 @@ function FloorPuller({ item, divine }: { item: DesecItem; divine: number }) {
         stats: [{ id: modId }],
         sort: "asc",
         limit: 5,
+        refresh,
       });
       setResult(r);
     } catch (e: unknown) {
@@ -89,9 +93,13 @@ function FloorPuller({ item, divine }: { item: DesecItem; divine: number }) {
             </option>
           ))}
         </select>
-        <button className="act" onClick={pull} disabled={loading}>
-          {loading ? "pulling…" : "Pull live sale floor"}
+        <button className="act" onClick={() => pull(false)} disabled={loading}>
+          {loading ? "pulling…" : "Show sale floor"}
         </button>
+        <button className="act ghost" onClick={() => pull(true)} disabled={loading} title="Force a live, throttled re-fetch">
+          ↻ live
+        </button>
+        {result?.fetchedAt && <span className="muted">{freshness(result.fetchedAt, result.cached)}</span>}
       </div>
       <ErrorBanner error={error} />
       {result && (

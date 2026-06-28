@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { get, post } from "../api.js";
+import { freshness } from "../format.js";
 import ErrorBanner from "../components/ErrorBanner.js";
 import Mermaid from "../components/Mermaid.js";
 
@@ -29,6 +30,9 @@ interface RubyVariant {
   note: string;
   searchType: string;
   searchStats: SearchStat[];
+  goodSupports: string[];
+  junkMods: string[];
+  valueLadder: { tier: string; price: string }[];
 }
 interface JewelData {
   pulledAt: string | null;
@@ -48,6 +52,8 @@ interface TradeListing {
 interface TradeResult {
   total: number;
   listings: TradeListing[];
+  cached?: boolean;
+  fetchedAt?: string;
 }
 
 const div = (n: number) => (n >= 0 ? "+" : "") + n.toFixed(2);
@@ -58,12 +64,14 @@ function JewelFinder({
   category,
   type,
   searchStats,
+  combineStats,
   tip,
 }: {
   hint: string;
   category: string;
   type?: string;
   searchStats: SearchStat[];
+  combineStats?: boolean; // search ALL stats together (AND) instead of a dropdown pick
   tip: string;
 }) {
   const [statId, setStatId] = useState(searchStats[0].id);
@@ -71,16 +79,17 @@ function JewelFinder({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const find = async () => {
+  const find = async (refresh = false) => {
     setLoading(true);
     setError(null);
     try {
       const body: Record<string, unknown> = {
         category,
         rarity: "rare",
-        stats: [{ id: statId }],
+        stats: combineStats ? searchStats.map((s) => ({ id: s.id })) : [{ id: statId }],
         sort: "asc",
         limit: 6,
+        refresh,
       };
       if (type) body.type = type;
       const r = await post<TradeResult>("/api/trade", body);
@@ -96,16 +105,24 @@ function JewelFinder({
     <div className="floor">
       <div className="floor-controls">
         <span className="muted">{hint}</span>
-        <select value={statId} onChange={(e) => setStatId(e.target.value)}>
-          {searchStats.map((s) => (
-            <option key={s.id} value={s.id}>
-              {s.label}
-            </option>
-          ))}
-        </select>
-        <button className="act" onClick={find} disabled={loading}>
+        {combineStats ? (
+          <span className="muted">{searchStats.map((s) => s.label).join(" + ")}</span>
+        ) : (
+          <select value={statId} onChange={(e) => setStatId(e.target.value)}>
+            {searchStats.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+        )}
+        <button className="act" onClick={() => find(false)} disabled={loading}>
           {loading ? "searching…" : "Find jewels"}
         </button>
+        <button className="act ghost" onClick={() => find(true)} disabled={loading} title="Force a live, throttled re-fetch">
+          ↻ live
+        </button>
+        {result?.fetchedAt && <span className="muted">{freshness(result.fetchedAt, result.cached)}</span>}
       </div>
       <ErrorBanner error={error} />
       {result && (
@@ -187,12 +204,47 @@ function RubyCard({ variant, category }: { variant: RubyVariant; category: strin
         {variant.label} <span className="muted">· {variant.pairLabel}</span>
       </h3>
       <p className="muted">{variant.note}</p>
+      <div className="ruby-cols">
+        <div>
+          <b>Good supports (3rd/4th mod):</b>
+          <ul>
+            {variant.goodSupports.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <b className="neg">Junk that floors it at ~1 ex:</b>
+          <ul>
+            {variant.junkMods.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Result</th>
+            <th>Sells for</th>
+          </tr>
+        </thead>
+        <tbody>
+          {variant.valueLadder.map((r) => (
+            <tr key={r.tier}>
+              <td>{r.tier}</td>
+              <td>{r.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <JewelFinder
-        hint="Find cheap Ruby phys/attack jewels:"
+        hint="Find Ruby pair jewels:"
         category={category}
         type={variant.searchType}
         searchStats={variant.searchStats}
-        tip="Both mods are prefixes — pair + useful supports (leech / stun threshold / % life / attack speed) is what clears div-tier."
+        combineStats
+        tip="Both prefixes. Value is the SUPPORT quality, not the pair alone — eyeball the 3rd/4th mods against the lists above. Ignore 'hundreds of div' descending-sort listings (mirror/currency misread)."
       />
     </div>
   );

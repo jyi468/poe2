@@ -58,5 +58,6 @@ poe2-assistant/
 - **Immutability** — return new objects; never mutate inputs
 - **No hardcoded secrets** — OneDrive paths come from `ONEDRIVE_BUILDS_DIR` env var
 - **No code changes in `knowledge/` or `crafting/`** — those directories are docs only
+- **Always use a git worktree** — do any change (feature, fix, refactor, experiment) in a dedicated worktree on its own branch, never directly on the primary checkout. After the branch is merged to `main`, always remove the worktree (`git worktree remove <path>`) so none are left dangling.
 - Do not commit the `.superpowers/` scratch directory
 - **Keep docs current** — always update `CONTEXT.md` and `CLAUDE.md` whenever changes affect project structure, workflows, conventions, or routing; don't let them drift from the code

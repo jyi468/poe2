@@ -9,6 +9,8 @@ th, td { text-align: left; padding: .35rem .6rem; border-bottom: 1px solid #2a2f
 th { cursor: pointer; color: #9aa3af; }
 .err { background: #5a1d1d; color: #ffd7d7; padding: .6rem; border-radius: 6px; margin: .5rem 0; }
 button.act { background: #3a6ea5; color: #fff; border: 0; padding: .45rem .9rem; border-radius: 6px; cursor: pointer; }
+button.act.ghost { background: transparent; color: #9aa3af; border: 1px solid #3a6ea5; margin-left: .4rem; }
+button.act.ghost:hover { color: #fff; background: #2a4f78; }
 .muted { color: #9aa3af; }
 .stat { display: inline-block; margin-right: 1.5rem; }
 .stat b { display: block; font-size: 1.1rem; }
@@ -35,3 +37,6 @@ input, select { background: #20242b; color: #e6e6e6; border: 1px solid #2a2f37; 
 .floor-controls select { min-width: 22rem; max-width: 100%; }
 .pos { color: #7fd68a; }
 .neg { color: #e58b8b; }
+.ruby-cols { display: flex; gap: 2rem; flex-wrap: wrap; }
+.ruby-cols ul { margin: .3rem 0; padding-left: 1.1rem; }
+.ruby-cols li { font-size: 13px; color: #cfd3da; }

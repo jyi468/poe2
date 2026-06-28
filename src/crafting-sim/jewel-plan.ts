@@ -72,27 +72,58 @@ export interface JewelRecipe {
   readonly scenarios: readonly JewelScenario[];
 }
 
+export interface ValueRung {
+  readonly tier: string;
+  readonly price: string;
+}
+
 export interface RubyVariant {
   readonly label: string;
   readonly pairLabel: string;
   readonly note: string;
   readonly searchType: string; // trade2 item type, e.g. "Ruby"
-  readonly searchStats: readonly SearchStat[];
+  readonly searchStats: readonly SearchStat[]; // the pair, searched together
+  readonly goodSupports: readonly string[];
+  readonly junkMods: readonly string[];
+  readonly valueLadder: readonly ValueRung[];
 }
 
 // Ruby (Strength) jewels have NO crit pool, so the crit emotions don't apply.
 // The analog target is the phys + attack PREFIX pair — roll/Exalt toward it.
+// Value lives in the 3rd/4th SUPPORT mods, not the pair alone.
 const RUBY_VARIANT: RubyVariant = {
   label: "Ruby (Strength) — phys + attack pair",
-  pairLabel: "% increased Global Physical Damage + % increased Attack Damage (both prefixes)",
+  pairLabel:
+    "% increased Global Physical Damage + % increased Attack Damage (both prefixes; cap ~15% / ~14-15%)",
   note:
-    "Rubies have no crit pool, so the crit emotions (Despair/Fear, which add suffixes) don't help. " +
-    "Roll/Exalt toward the prefix pair; the 3rd/4th mods (life leech, stun threshold, % max life, " +
-    "attack speed with your weapon) decide ~1 ex vs ~1 div. The crit-emotion EV above does NOT apply here.",
+    "Rubies have no crit pool, so the crit emotions (Despair/Fear, suffix-crafters) don't help — " +
+    "roll/Exalt toward the prefix pair. The pair alone is ~1 ex; the 3rd/4th SUPPORT mods decide ~1 ex " +
+    "vs ~1 div. Demand is thinner than Sapphire/Emerald (cold/crit meta), so Rubies are mostly a 1-ex " +
+    "commodity with shallow liquidity — phys+attack is the only Ruby combo that reliably reaches div-tier.",
   searchType: "Ruby",
   searchStats: [
-    { id: "explicit.stat_1310194496", label: "Global Physical Damage (cap ~15%)" },
-    { id: "explicit.stat_2843214518", label: "Attack Damage (cap ~14-15%)" },
+    { id: "explicit.stat_1310194496", label: "Global Physical Damage" },
+    { id: "explicit.stat_2843214518", label: "Attack Damage" },
+  ],
+  goodSupports: [
+    "% of Life Leeched",
+    "Stun Threshold",
+    "Stun Buildup",
+    "Life Regen rate",
+    "Attack Speed with your weapon (Maces / Quarterstaves / Spears)",
+  ],
+  junkMods: [
+    "Banner / Glory generation",
+    "Gain Rage on / when Hit",
+    "Minion Physical Damage Reduction",
+    "Presence Area of Effect",
+    "% maximum Life — NOT in the Str pool (0 listings with the pair; don't aim for it)",
+  ],
+  valueLadder: [
+    { tier: "Pair + junk filler", price: "~1 ex" },
+    { tier: "Pair + one decent support (lower rolls)", price: "~25 ex" },
+    { tier: "High pair + 1–2 clean supports", price: "~1 div" },
+    { tier: "Near-max pair + two high supports (leech + regen)", price: "~5 div" },
   ],
 };
 
