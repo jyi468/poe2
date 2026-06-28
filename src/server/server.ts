@@ -15,6 +15,12 @@ import {
 const PORT = Number(process.env.PORT ?? 5179);
 const DIST = resolve(fileURLToPath(new URL(".", import.meta.url)), "../../app/dist");
 
+// Dev mode (set by `pnpm dev`): the live UI with HMR is served by Vite on VITE_PORT,
+// not from app/dist. So instead of serving a possibly-stale build, bounce browser
+// GETs to the Vite dev server — opening this port still lands you on the live app.
+const DEV = process.env.DEV === "1";
+const VITE_PORT = Number(process.env.VITE_PORT ?? 5180);
+
 const ROUTES: Record<string, Handler> = {
   "GET /api/economy": getEconomy,
   "POST /api/economy/refresh": refreshEconomy,
@@ -62,9 +68,22 @@ export function createServer() {
       const body = req.method === "POST" ? await readBody(req).catch(() => ({})) : {};
       return wrap(route)(req, res, body);
     }
-    if (req.method === "GET" && !url.startsWith("/api")) return serveStatic(url, res);
+    if (req.method === "GET" && !url.startsWith("/api")) {
+      if (DEV) {
+        res.statusCode = 302;
+        res.setHeader("Location", `http://localhost:${VITE_PORT}${req.url ?? "/"}`);
+        return res.end();
+      }
+      return serveStatic(url, res);
+    }
     sendJson(res, 404, { ok: false, error: `no route ${key}` });
   });
 }
 
-createServer().listen(PORT, () => console.log(`command-center API on http://localhost:${PORT}`));
+createServer().listen(PORT, () =>
+  console.log(
+    DEV
+      ? `command-center API on http://localhost:${PORT} — open the live UI at http://localhost:${VITE_PORT} (HMR, no rebuild)`
+      : `command-center API on http://localhost:${PORT}`,
+  ),
+);

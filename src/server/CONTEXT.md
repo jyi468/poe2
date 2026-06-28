@@ -10,7 +10,7 @@ production) serves the built Vite app from `app/dist`. The React app in `app/` i
 
 ```
 src/server/
-├── server.ts     # http server, ROUTE table, static fallback to app/dist
+├── server.ts     # http server, ROUTE table, static fallback to app/dist (dev: redirect to Vite)
 ├── routes.ts     # handlers — thin adapters over economy/ + crafting-sim/ + methods/
 ├── http.ts       # readBody, sendJson, wrap (envelope), Handler type
 └── http.test.ts  # vitest
@@ -26,20 +26,30 @@ src/server/
 | `GET /api/flowchart` | reads `crafting/crafting-flowchart.md` (raw markdown) |
 | `GET /api/desecration` | `crafting-sim/desecration-items` evaluateDesecItems (live omen prices) |
 | `GET /api/jewel` | `crafting-sim/jewel-plan` buildJewelPlan (live emotion prices) |
+| `GET /api/bow` | `crafting-sim/bow-plan` buildBowPlan (omen-slam EV, live prices) |
 | `GET /api/slots` | `crafting-sim/slots` scanSlots |
 | `POST /api/craft` | `crafting-sim/estimate` estimateCraft |
-| `POST /api/trade` | `economy/trade-core` searchTrade / findStats |
+| `POST /api/trade` | `economy/trade-core` searchTrade / findStats (cache-first + throttled) |
 
 ## Key Workflows
 
 ```bash
-pnpm app          # dev: api (tsx watch) + vite web, concurrently
+pnpm dev          # dev (use this): api (tsx watch) + vite web (HMR). Open http://localhost:5180.
+pnpm app          # alias of `pnpm dev`
 pnpm api          # api only, watch mode
 pnpm app:build    # build the frontend into app/dist
-pnpm app:serve    # serve built app + api from this server (prod-style)
+pnpm app:serve    # serve built app + api from this server (prod-style); rebuild to see changes
 ```
 
-`PORT` defaults to `5179` (override via env).
+**No rebuild loop in dev.** `pnpm dev` gives the React app HMR on **:5180** and auto-restarts the
+API (`tsx watch`) on **:5179** — edit and the page updates itself. The app server at :5179 *also*
+hosts the prebuilt `app/dist`, which would otherwise look stale during dev; so `pnpm dev` sets
+`DEV=1` and the server **302-redirects browser GETs from :5179 → :5180**, meaning either port lands
+you on the live HMR app. Only `app:build` + `app:serve` (prod, `DEV` unset) serve the static build
+and need a rebuild to reflect changes.
+
+`PORT` defaults to `5179`; in dev, `DEV=1` enables the Vite redirect and `VITE_PORT` (default `5180`)
+is its target. All overridable via env.
 
 ## Rules
 
