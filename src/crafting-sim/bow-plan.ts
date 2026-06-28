@@ -179,20 +179,26 @@ function modelFor(spec: BuildSpec, divOf: DivOf): SlamModel {
   };
 }
 
-function flowchart(orbName: string, floor: string, crit: string, resale: string): string {
+function flowchart(
+  orbName: string,
+  floor: string,
+  crit: string,
+  critTarget: string,
+  resale: string,
+): string {
   return [
     "flowchart TD",
-    `  A["1. Buy ilvl-81 fractured +Proj bow. The +Proj fracture is a<br/>suffix and is ANNUL-IMMUNE — that protects the suffix hunts."] --> B["2. Strip to the bare fracture"]`,
+    `  A["1. Buy ilvl-81 fractured +Proj bow. The +Proj fracture is a<br/>suffix and is ANNUL-IMMUNE — that protects the suffix hunts.<br/>Target: +4 Proj (max craftable, ilvl 81)"] --> B["2. Strip to the bare fracture"]`,
     `  B --> S1["3. Secure ATTACK SPEED first (cheap):<br/>Omen of Dextral Exaltation + plain Exalted Orb (~free), 14%.<br/>Suffix side empty, so a junk suffix is the ONLY removable one."]`,
-    "  S1 --> S2{Attack speed?}",
+    `  S1 --> S2{"Attack speed?<br/>keep any T3+ ≈ 11–19%<br/>(don't chase T1 — least-important mod)"}`,
     `  S2 -->|"No · junk"| SA["RAW Orb of Annulment (~0.6d) — clean:<br/>fracture is immune, junk is the only removable suffix"]`,
     "  SA --> S1",
     `  S2 -->|Yes · keep| C1["4. Hunt CRIT last: Omen of Dextral Exaltation + ${orbName}<br/>(${floor}). ${crit}"]`,
-    "  C1 --> C2{Crit chance?}",
+    `  C1 --> C2{"Crit chance?<br/>aim ${critTarget}"}`,
     `  C2 -->|"No · junk"| CA["RAW Orb of Annulment — only risks the CHEAP attack-speed<br/>keeper (re-add it later). Crit is placed last, so it is never<br/>annulled beside a junk."]`,
     "  CA --> C1",
     `  C2 -->|Yes| P1["5. PREFIXES last — 3 damage mods:<br/>Omen of Sinistral Exaltation + ${orbName}"]`,
-    "  P1 --> P2{Damage prefix?}",
+    `  P1 --> P2{"Damage prefix?<br/>top tier (${floor.includes("50") ? "ilvl ≥50" : "ilvl ≥35"})<br/>phys / elemental / hybrid"}`,
     `  P2 -->|"No · junk"| PA["TARGETED clear · Omen of SINISTRAL Annulment + Annul<br/>(confines the annul to PREFIXES so it cannot eat the<br/>crit/attack-speed suffixes). ~12d — but junk is rare here."]`,
     "  PA --> P1",
     "  P2 -->|Yes| P3{3 damage prefixes?}",
@@ -272,12 +278,24 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
       {
         key: "greater",
         label: "Greater build (recommended · T3 floor)",
-        chart: flowchart("Greater Exalted Orb", "min mod lvl 35 → crit T3/T2/T1", "Crit is 3.6% of suffixes — but Greater Exalt ≈ free, so just spam.", "~200d"),
+        chart: flowchart(
+          "Greater Exalted Orb",
+          "min mod lvl 35 → crit T3/T2/T1",
+          "Crit is 3.6% of suffixes — but Greater Exalt ≈ free, so just spam.",
+          "≥T3 · 3.11–5% mod → ~8–10% computed crit",
+          "~200d",
+        ),
       },
       {
         key: "perfect",
         label: "Perfect build (chase T1 · higher cost/variance)",
-        chart: flowchart("Perfect Exalted Orb", "min mod lvl 50 → crit T2/T1", "Crit is 2.4%; Perfect orbs ~2.4d each, so this hunt is the cost.", "~460–630d"),
+        chart: flowchart(
+          "Perfect Exalted Orb",
+          "min mod lvl 50 → crit T2/T1",
+          "Crit is 2.4%; Perfect orbs ~2.4d each, so this hunt is the cost.",
+          "≥T2 · 3.81–5% mod → ~9–10% computed crit",
+          "~460–630d",
+        ),
       },
     ],
   };
