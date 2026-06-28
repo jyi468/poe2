@@ -19,24 +19,35 @@ export interface SlamCosts {
   perfectExaltDiv: number;
   /** Sinistral/Dextral Exaltation omen — directs the slam to a prefix/suffix. */
   exaltOmenDiv: number;
-  /** Orb of Annulment — removes a junk modifier. */
+  /** Orb of Annulment — removes a junk modifier (the prefix REROLL step). */
   annulDiv: number;
-  /** Omen of Light — wipes a bad desecrated mod so you can re-desecrate. */
+  /** Omen of Light — wipes a bad desecrated mod so you can re-desecrate (the CLEAR step). */
   lightDiv: number;
   /** Preserved Jawbone + Dextral Necromancy omen — one desecrate (≈free). */
   jawboneDiv: number;
+  /** Omen of Abyssal Echoes — rerolls the 3 desecration options once (cheap multi-reveal). */
+  echoesDiv: number;
+  /** Greater Essence of Seeking — GUARANTEES crit chance on a martial weapon. */
+  essenceSeekingDiv: number;
   /** Divine Orb — finishing value rerolls. */
   divineDiv: number;
 }
 
+/** How crit is obtained on the +Proj path: guaranteed via Essence of Seeking, or hunted via desecration. */
+export type CritSource = "essence" | "desecrate";
+
 export interface SlamModel {
   /** P(a Perfect-Exalt+Sinistral prefix is a wanted damage mod). EXACT (weights). */
   pPrefix: number;
-  /** P(a desecrate reveals an acceptable crit-chance mod). MODELLED. Path "proj" only. */
+  /** Crit source for the +Proj path. "essence" = guaranteed (no hunt). */
+  critSource: CritSource;
+  /** Desecration options seen per cycle: 3 base, 6 with Abyssal Echoes (the cheap reroll). */
+  revealsPerCycle: number;
+  /** P(a single revealed desecration mod is acceptable crit). MODELLED. */
   pCrit: number;
-  /** P(a desecrate reveals an acceptable attack-speed mod). MODELLED. */
+  /** P(a single revealed desecration mod is acceptable attack speed). MODELLED. */
   pAttackSpeed: number;
-  /** P(a desecrate reveals an acceptable crit-damage mod). MODELLED. Path "crit" only. */
+  /** P(a single revealed desecration mod is acceptable crit damage). MODELLED. Path "crit" only. */
   pCritDamage: number;
   /** Damage prefixes to fill (normally 3). */
   prefixCount: number;
@@ -94,11 +105,21 @@ function prefixCost(rng: () => number, model: SlamModel, costs: SlamCosts): numb
   return cost;
 }
 
-/** Desecrate one suffix until an acceptable mod is revealed (Light+Annul to retry). */
-function desecCost(rng: () => number, p: number, costs: SlamCosts): number {
-  const tries = trialsToHit(rng, p);
-  // Each try costs a jawbone; every miss also costs a Light+Annul wipe before retry.
-  return tries * costs.jawboneDiv + (tries - 1) * (costs.lightDiv + costs.annulDiv);
+/**
+ * Desecrate one suffix until an acceptable mod is revealed. A cycle shows
+ * `revealsPerCycle` options (6 with Abyssal Echoes, 3 without) and hits if any is
+ * acceptable; a miss costs a Light+Annul CLEAR before re-desecrating.
+ */
+function desecCost(rng: () => number, w: number, model: SlamModel, costs: SlamCosts): number {
+  const reveals = Math.max(1, model.revealsPerCycle);
+  const cycleOmen = reveals > 1 ? costs.echoesDiv : 0; // Abyssal Echoes only when rerolling reveals
+  const pCycle = 1 - Math.pow(1 - w, reveals);
+  let cost = 0;
+  for (;;) {
+    cost += costs.jawboneDiv + cycleOmen;
+    if (rng() < pCycle) return cost;
+    cost += costs.lightDiv + costs.annulDiv; // CLEAR the bad desecrated mod, then retry
+  }
 }
 
 function suffixCost(
@@ -108,11 +129,16 @@ function suffixCost(
   costs: SlamCosts,
 ): number {
   if (path === "proj") {
-    // +Proj is fractured; desecrate the two open suffixes: crit + attack speed.
-    return desecCost(rng, model.pCrit, costs) + desecCost(rng, model.pAttackSpeed, costs);
+    // +Proj is fractured. Crit is either guaranteed (Essence of Seeking) or desecrated;
+    // attack speed is always desecrated.
+    const crit =
+      model.critSource === "essence"
+        ? costs.essenceSeekingDiv
+        : desecCost(rng, model.pCrit, model, costs);
+    return crit + desecCost(rng, model.pAttackSpeed, model, costs);
   }
   // Crit is fractured; desecrate attack speed + crit damage.
-  return desecCost(rng, model.pAttackSpeed, costs) + desecCost(rng, model.pCritDamage, costs);
+  return desecCost(rng, model.pAttackSpeed, model, costs) + desecCost(rng, model.pCritDamage, model, costs);
 }
 
 export interface SimOptions {

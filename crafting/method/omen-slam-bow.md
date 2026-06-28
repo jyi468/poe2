@@ -23,35 +23,54 @@ Fracturing Orb locks a *random* mod). Mod pool weights: craftofexile `?game=poe2
 
 ## Starting capital
 
-**Tier:** high
+**Tier:** mid
 
-You need to absorb a fat-tailed desecration hunt without getting stranded mid-craft.
-Bring **~185–220 div** (base + p85 consumables). Do not start the **+Proj** path with
-< ~150 div.
+With **Essence-Seeking crit + Abyssal-Echoes** desecration, the +Proj craft bankrolls at
+**~55 div** (base ~30 + p85 ~24) — not the ~217 div the old single-reveal/Light-clear loop
+implied. Bring **~70 div** if you must desecrate crit instead of essencing it. Only the
+worst-case Light-clear loop pushes toward ~200 div.
 
 ## Recipe
 
-**Setup.** Buy the fractured ilvl-81 base. Strip it down so only the fractured mod remains.
-The fractured mod is always a **suffix** (both `+Proj levels` and `crit chance` are
-suffixes), leaving **3 prefix slots + 2 open suffix slots**.
+Steps are laid out node-by-node (with the exact remove/reroll/clear points) in the
+flowchart on the Bow tab (`pnpm bow-sim` for the EV table).
 
-**Prefixes — 3 damage mods (both paths).** Per slot: **Omen of Sinistral Exaltation +
-Perfect Exalted Orb** → adds a top-tier prefix; you only gamble the *type*, never the tier.
-Keep phys / hybrid / elemental; **Orb of Annulment** any junk and re-slam. Allowing
-**elemental** (flat Lightning is the highest-weight prefix in the pool) takes the per-slam
-hit rate from 22.5% → **75.3%** and is equal-or-better total DPS.
+**1. Setup.** Buy the fractured ilvl-81 base. Strip it down so only the fractured mod
+remains. The fractured mod is always a **suffix** (both `+Proj levels` and `crit chance`),
+leaving **3 prefix slots + 2 open suffix slots**.
 
-**Suffixes — desecration.** Fill the 2 open suffixes from the Abyssal pool with
-**Preserved Jawbone + Omen of Dextral Necromancy** (desecrate a suffix); **Omen of Light +
-Orb of Annulment** wipes a bad reveal so you can re-desecrate.
+**2. Prefixes — 3 damage mods (both paths).** Per slot: **Omen of Sinistral Exaltation +
+Perfect Exalted Orb** → adds a *top-tier* prefix; you only gamble the *type*, never the tier.
+Keep phys / hybrid / elemental. **REROLL** a junk prefix with a plain **Orb of Annulment
+(~0.6 div)** *while it is the only/newest prefix* so the annul can't miss — far cheaper than
+re-buying the ~30 div base. Allowing **elemental** (flat Lightning is the highest-weight
+prefix) takes the per-slam hit from 22.5% → **75.3%** and is equal-or-better total DPS.
 
-- **Path A — `+Proj` fractured:** desecrate **crit chance** + **attack speed**. (Omen of
-  Leash Desecration can guarantee the attack-speed companion mod once crit is in.)
-- **Path B — `crit` fractured:** crit is already locked at ~T1; desecrate **attack speed**
-  + **crit damage**.
+**3. Crit (the decisive cost lever).** Two routes:
+- **Essence of Seeking → guaranteed crit (~0.02 div).** *Seeking* keys off `Martial Weapon`
+  (bows included) and writes the crit suffix into the **crafted slot** — no hunt, no
+  variance. This is the cheapest path; it needs the crafted-slot mod injected onto the
+  fractured *rare* (Runic/Imbued Alloy in 0.5) — confirm that in-game before relying on it.
+- **Desecrate crit** with **Preserved Jawbone + Omen of Dextral Necromancy**, and **Omen of
+  Abyssal Echoes** to reroll the 3 options once (≈6 looks/cycle, ~0.6 div). On a miss,
+  **CLEAR** with **Omen of Light + Orb of Annulment** and re-desecrate. Use this only if
+  essence-crit can't be slotted.
 
-**Finish.** ~4 Divine Orbs to roll the kept mods toward their high ends; optional
-Blacksmith's Infuser for >20% quality.
+**4. Remaining suffix.** Attack speed via a cheap **Abyssal-Echoes desecrate** (or **Essence
+of Haste**, guaranteed, if you spent the crafted slot on crit you instead desecrate it).
+Path B (`crit` fractured) desecrates **attack speed + crit damage** instead.
+
+**5. Trapped junk mod?** If a junk mod is stuck among keepers on one side (blind annul would
+risk a keeper), **TARGETED-REMOVE** with **Omen of Sinistral/Dextral Erasure** (next Chaos
+removes only that side) or **Sinistral/Dextral Annulment** (next Annul removes only that
+side). These cost ~4–7 div — insurance, not the default.
+
+**6. Finish.** ~4 Divine Orbs toward high rolls; optional Blacksmith's Infuser for >20%
+quality.
+
+> **Recombinator is gone in 0.5** (deleted) — it is not an option. **Essences write to one
+> crafted slot** (can't stack two), so a finished bow's deterministic anchors are: fracture
+> + one essence/alloy + one desecrated mod.
 
 ## Outcome odds
 
@@ -79,11 +98,17 @@ are sourced in-game (not poe2scout-tracked).
 
 ## Risk / variance
 
-The desecration crit hunt is the cost driver and **fat-tailed**: typical runs finish near
-the median but the p95 is ~2.5× the median. You can't brick the item (mods are
-add/remove, not destroy), but you can bleed Omen of Light chasing a stubborn crit tier — if
-a run blows past p85, **re-bone a fresh base instead of Light-chasing**. Phys-only prefixes
-roughly double prefix cost via annul churn; take the elemental branch.
+Variance is dominated by **how you source crit**:
+- **Essence-Seeking crit** → crit is guaranteed, so the tail nearly vanishes (~18 div mean,
+  p95 ~34). Cheapest and least swingy.
+- **Abyssal-Echoes desecrate** → still cheap (~25 div mean) because 6 looks/cycle means few
+  Light clears.
+- **Single-reveal + Light-clear-per-miss** (the old pessimistic model) → fat-tailed, ~113
+  div mean, p95 ~2.5× the median. If you're stuck on this loop and a run blows past p85,
+  re-bone rather than Light-chasing.
+
+You can't brick the item (mods add/remove, never destroy). Phys-only prefixes roughly
+double prefix churn for equal DPS — take the elemental branch.
 
 ## Fracture decision — which base to buy
 
@@ -117,24 +142,26 @@ three damage prefixes high. At the floor you roughly break even vs just buying.
 ## Worked example
 
 > Runes of Aldur, patch 0.5, 2026-06-26 (live `data/economy/latest.json`, 1 div ≈ 364 ex).
-> Consumables only (base NOT included), from `pnpm bow-sim` (40k trials):
+> Consumables only (base NOT included), from `pnpm bow-sim` (20k trials). Crit source is
+> the lever:
 >
-> | Scenario | mean | p50 | p85 | p95 |
+> | Scenario (all +Proj, elemental prefixes) | mean | p50 | p85 | p95 |
 > |---|---|---|---|---|
-> | A · +Proj · ele prefixes · crit ≥T3 | 113 | 95 | 187 | 264 |
-> | A · +Proj · ele · chase crit T1 | 175 | 141 | 298 | 437 |
-> | A · +Proj · phys-only prefixes | 141 | 124 | 219 | 297 |
-> | **B · Crit · ele prefixes** | **93** | **79** | **153** | **215** |
-> | B · Crit · phys-only prefixes | 121 | 109 | 186 | 245 |
+> | **Essence-Seeking crit (guaranteed)** + Echoes AS | **18** | **15** | **24** | **34** |
+> | desecrate crit via Abyssal Echoes + Echoes AS | 26 | 21 | 40 | 51 |
+> | desecrate crit · Light-clear per miss (pessimistic) | 113 | 95 | 187 | 264 |
+> | phys-only prefixes (Echoes crit) | 53 | 49 | 78 | 99 |
+> | B · Crit-fractured (buy don't craft) | 22 | 21 | 33 | 44 |
 >
 > Bankroll & ROI at **live trade2 resale** (2026-06-28):
-> - **A `+Proj`:** base ~30 + p85 187 → **bring ~217 div**; typical all-in ~143; resale
->   floor ~130 → roughly **break-even at the floor**, **EV ≈ +57 div** at a settled ~200,
->   and **+300 to +480 div** if you reach the T1-crit / pDPS≥600 tier (~460–630 resale).
-> - **B `Crit`:** all-in ~125; resale ~0.5 → **EV ≈ −125 div**. Do not craft — **buy** the
->   ~0.5 div bow instead.
+> - **A `+Proj`, Essence-Seeking crit:** base ~30 + p85 24 → **bring ~55 div**; typical
+>   all-in ~48; resale floor ~130, settled ~200 → **EV ≈ +150 div**, T1-crit/pDPS≥600 tier
+>   ~460–630. The cheap, low-variance default.
+> - **A `+Proj`, Echoes desecrate crit:** **bring ~70 div** if essence-crit can't be slotted.
+> - **B `Crit`:** resale ~0.5 → **negative regardless**. Do not craft — **buy** the ~0.5 div
+>   bow.
 >
-> Path A is the only +EV craft, and its profit is the **right tail**: at the floor you tie
-> with buying, the money is in chasing **T1 crit (≥9% computed)** + high pDPS. Allow
-> elemental prefixes (DPS is in the phys/ele, not the levels). Re-run `pnpm bow-sim` as
-> prices move; tune the modelled desecration odds against real reveal data.
+> The earlier ~217 div bankroll was the **single-reveal / Light-clear** worst case. With
+> Essence-Seeking crit + Abyssal Echoes the same bow bankrolls at **~55 div**, ~4× cheaper
+> and far less swingy. Re-run `pnpm bow-sim` as prices move; tune the modelled desecration
+> odds against real reveal data.

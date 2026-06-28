@@ -79,8 +79,9 @@ const PROJ_STAT = "explicit.stat_1202301673"; // +# to Level of all Projectile S
 const P_PREFIX_ELE = 0.753;
 const P_PREFIX_PHYS = 0.225;
 
-// MODELLED desecration reveal odds (Abyssal pool — calibrated to the source video).
-const BASE_MODEL: Omit<SlamModel, "pPrefix"> = {
+// MODELLED desecration reveal odds (per single revealed mod; Abyssal pool — calibrated
+// to the source video). Each path overrides critSource / revealsPerCycle.
+const BASE_MODEL: Omit<SlamModel, "pPrefix" | "critSource" | "revealsPerCycle"> = {
   pCrit: 0.13,
   pAttackSpeed: 0.2,
   pCritDamage: 0.18,
@@ -101,7 +102,8 @@ interface PathSpec {
   label: string;
   fracture: FracturePath;
   prefixMode: "elemental" | "physical";
-  pCrit?: number;
+  critSource: "essence" | "desecrate";
+  revealsPerCycle: number;
   baseDiv: number;
   resaleDiv: number;
   verdict: string;
@@ -109,38 +111,45 @@ interface PathSpec {
 
 const PATH_SPECS: PathSpec[] = [
   {
-    key: "proj-ele-t3",
-    label: "+Proj · elemental prefixes · crit ≥T3",
+    key: "proj-essence",
+    label: "+Proj · Essence-Seeking crit (guaranteed) · Echoes attack speed",
     fracture: "proj",
     prefixMode: "elemental",
+    critSource: "essence",
+    revealsPerCycle: 6,
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Only +EV craft. Break-even at floor; profit is the high-crit tail.",
+    verdict: "Cheapest + lowest variance — crit guaranteed via Essence of Seeking. Needs crafted-slot injection on the fractured rare (confirm in-game).",
   },
   {
-    key: "proj-ele-t1",
-    label: "+Proj · elemental · chase crit T1 (≥9%)",
+    key: "proj-echoes",
+    label: "+Proj · desecrate crit via Abyssal Echoes · Echoes attack speed",
     fracture: "proj",
     prefixMode: "elemental",
-    pCrit: 0.07,
-    baseDiv: 30,
-    resaleDiv: RESALE.projTop,
-    verdict: "Pricier hunt, but lands the ~460–630 div tier.",
-  },
-  {
-    key: "proj-phys",
-    label: "+Proj · physical-only prefixes · crit ≥T3",
-    fracture: "proj",
-    prefixMode: "physical",
+    critSource: "desecrate",
+    revealsPerCycle: 6,
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Phys-only doubles prefix churn for ~equal DPS — prefer elemental.",
+    verdict: "Fallback if essence-crit can't be slotted. Cheap 6-reveal desecrate, not Light-per-miss.",
+  },
+  {
+    key: "proj-conservative",
+    label: "+Proj · desecrate crit · Light-clear per miss (pessimistic)",
+    fracture: "proj",
+    prefixMode: "elemental",
+    critSource: "desecrate",
+    revealsPerCycle: 1,
+    baseDiv: 30,
+    resaleDiv: RESALE.projTypical,
+    verdict: "Original conservative model — single reveal, Omen-of-Light clears. Upper-bound cost.",
   },
   {
     key: "crit-ele",
     label: "Crit-fractured · elemental prefixes",
     fracture: "crit",
     prefixMode: "elemental",
+    critSource: "desecrate",
+    revealsPerCycle: 6,
     baseDiv: 32,
     resaleDiv: RESALE.crit,
     verdict: "Negative — no +levels means ~0.5 div resale. Buy one, don't craft.",
@@ -154,6 +163,8 @@ function costsFrom(divOf: DivOf): SlamCosts {
     annulDiv: divOf("Orb of Annulment", 212),
     lightDiv: divOf("Omen of Light", 3149),
     jawboneDiv: 0.02, // Preserved Jawbone + Dextral Necromancy — sourced in-game
+    echoesDiv: divOf("Omen of Abyssal Echoes", 210),
+    essenceSeekingDiv: divOf("Greater Essence of Seeking", 6),
     divineDiv: 1.0,
   };
 }
@@ -167,7 +178,8 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     const model: SlamModel = {
       ...BASE_MODEL,
       pPrefix: s.prefixMode === "elemental" ? P_PREFIX_ELE : P_PREFIX_PHYS,
-      pCrit: s.pCrit ?? BASE_MODEL.pCrit,
+      critSource: s.critSource,
+      revealsPerCycle: s.revealsPerCycle,
     };
     const { stats } = simulateBowSlam(s.fracture, model, costs, { trials: 20000, seed: 42 });
     const bankroll = s.baseDiv + stats.p85;
@@ -226,9 +238,11 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     ],
     costInputsDiv: {
       "Perfect Exalted Orb": costs.perfectExaltDiv,
-      "Omen of Sinistral Exaltation": costs.exaltOmenDiv,
-      "Orb of Annulment": costs.annulDiv,
-      "Omen of Light": costs.lightDiv,
+      "Sinistral Exaltation omen": costs.exaltOmenDiv,
+      "Orb of Annulment (reroll)": costs.annulDiv,
+      "Omen of Light (clear)": costs.lightDiv,
+      "Omen of Abyssal Echoes": costs.echoesDiv,
+      "Greater Essence of Seeking (crit)": costs.essenceSeekingDiv,
       "Preserved Jawbone (in-game)": costs.jawboneDiv,
     },
     paths,
@@ -279,16 +293,29 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     ],
     flowchart: [
       "flowchart TD",
-      "  A[Buy ilvl-81 fractured bow] --> B{Which fracture?}",
-      '  B -->|"+Proj levels"| C[Path A · +EV]',
-      '  B -->|"Crit chance"| Z["Path B · ~0.5 div resale<br/>buy instead, do not craft"]',
-      "  C --> D[Fill 3 dmg prefixes<br/>Perfect Exalt + Sinistral · allow elemental]",
-      "  D --> E[Desecrate suffixes<br/>crit + attack speed · Omen of Light to re-roll]",
-      "  E --> F{Crit tier?}",
-      '  F -->|"≥T3 (~8%)"| G[Floor ~130 div · settle]',
-      '  F -->|"T1 (≥9%)"| H[Tail ~460–630 div · chase]',
-      "  G --> I[Finish: ~4 Divine rolls + quality]",
-      "  H --> I",
+      '  A["1. Buy ilvl-81 fractured +Proj bow (rare)"] --> B["2. Strip to the bare fracture<br/>(annul extra mods down)"]',
+      '  B --> P1["3. Add a prefix:<br/>Omen of Sinistral Exaltation + Perfect Exalted Orb"]',
+      "  P1 --> P2{Damage prefix?<br/>phys or elemental}",
+      '  P2 -->|"No · junk"| PA["REROLL · Orb of Annulment<br/>remove the junk prefix while it is the only/newest one"]',
+      "  PA --> P1",
+      "  P2 -->|Yes · keep| P3{3 damage prefixes yet?}",
+      "  P3 -->|No| P1",
+      "  P3 -->|Yes| C0{Crit source}",
+      '  C0 -->|"Essence-Seeking (crafted slot)"| C1["4a. Crit GUARANTEED ~0.02 div"]',
+      '  C0 -->|"Desecrate"| D1["4b. Desecrate a suffix + Omen of Abyssal Echoes<br/>(3 options, reroll once)"]',
+      "  D1 --> D2{Crit revealed?}",
+      '  D2 -->|"No"| DC["CLEAR · Omen of Light + Orb of Annulment<br/>strip the bad desecrated mod, then re-desecrate"]',
+      "  DC --> D1",
+      "  D2 -->|Yes| C1",
+      '  C1 --> S1["5. Attack speed:<br/>desecrate + Abyssal Echoes (or Essence of Haste)"]',
+      "  S1 --> S2{Attack speed revealed?}",
+      '  S2 -->|"No"| SC["CLEAR · Omen of Light + Annul → re-desecrate"]',
+      "  SC --> S1",
+      "  S2 -->|Yes| T0{Junk mod trapped<br/>among keepers on one side?}",
+      '  T0 -->|"Yes"| TE["TARGETED REMOVE · Omen of Sinistral/Dextral Erasure<br/>(chaos removes only that side) · or Sinistral/Dextral Annulment"]',
+      "  TE --> F1",
+      "  T0 -->|No| F1",
+      '  F1["6. Finish · ~4 Divine Orb rolls toward high values + quality"]',
     ].join("\n"),
   };
 }

@@ -7,11 +7,15 @@ const COSTS: SlamCosts = {
   annulDiv: 0.58,
   lightDiv: 8.65,
   jawboneDiv: 0.02,
+  echoesDiv: 0.25,
+  essenceSeekingDiv: 0.02,
   divineDiv: 1.0,
 };
 
 const MODEL: SlamModel = {
   pPrefix: 0.753, // phys OR elemental, top tier (EXACT from craftofexile weights)
+  critSource: "desecrate",
+  revealsPerCycle: 1,
   pCrit: 0.13,
   pAttackSpeed: 0.2,
   pCritDamage: 0.18,
@@ -52,5 +56,23 @@ describe("simulateBowSlam", () => {
   it("reports a fat right tail (p95 well above the median)", () => {
     const r = simulateBowSlam("proj", MODEL, COSTS, { trials: 20000, seed: 9 });
     expect(r.stats.p95).toBeGreaterThan(r.stats.p50 * 1.5);
+  });
+
+  it("Abyssal Echoes (6 reveals) is cheaper than single-reveal Light clears", () => {
+    const light = simulateBowSlam("proj", { ...MODEL, revealsPerCycle: 1 }, COSTS, { trials: 20000, seed: 4 });
+    const echoes = simulateBowSlam("proj", { ...MODEL, revealsPerCycle: 6 }, COSTS, { trials: 20000, seed: 4 });
+    expect(echoes.stats.mean).toBeLessThan(light.stats.mean);
+  });
+
+  it("Essence-Seeking crit (guaranteed) beats hunting crit, and kills the tail", () => {
+    const hunt = simulateBowSlam("proj", { ...MODEL, revealsPerCycle: 6 }, COSTS, { trials: 20000, seed: 6 });
+    const essence = simulateBowSlam(
+      "proj",
+      { ...MODEL, revealsPerCycle: 6, critSource: "essence" },
+      COSTS,
+      { trials: 20000, seed: 6 },
+    );
+    expect(essence.stats.mean).toBeLessThan(hunt.stats.mean);
+    expect(essence.stats.p95).toBeLessThan(hunt.stats.p95);
   });
 });

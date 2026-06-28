@@ -51,6 +51,8 @@ const costs: SlamCosts = {
   annulDiv: divOf("Orb of Annulment", 212),
   lightDiv: divOf("Omen of Light", 3149),
   jawboneDiv: 0.02, // Preserved Jawbone + Dextral Necromancy — sourced in-game, assumption
+  echoesDiv: divOf("Omen of Abyssal Echoes", 210),
+  essenceSeekingDiv: divOf("Greater Essence of Seeking", 6),
   divineDiv: divOf("Divine Orb", div),
 };
 
@@ -58,10 +60,12 @@ const costs: SlamCosts = {
 const P_PREFIX_ELE = 0.753; // phys OR elemental damage prefix, top tier
 const P_PREFIX_PHYS = 0.225; // flat-or-% physical only, top tier
 
-// ---- MODELLED desecration odds (edit with real Abyssal-pool reveal data) -----
+// ---- MODELLED desecration odds (per single revealed mod; edit with real data) -
 const MODEL: SlamModel = {
   pPrefix: P_PREFIX_ELE,
-  pCrit: 0.13, // acceptable crit-chance (>=T3) per desecrate — Path "proj"
+  critSource: "desecrate",
+  revealsPerCycle: 6, // Abyssal Echoes (3 options + 1 reroll)
+  pCrit: 0.13, // acceptable crit-chance (>=T3) per revealed mod
   pAttackSpeed: 0.2,
   pCritDamage: 0.18,
   prefixCount: 3,
@@ -84,23 +88,27 @@ interface Row {
 }
 
 const rows: Row[] = [
-  { label: "A · frac +Proj · ELE prefixes · crit >=T3", path: "proj", model: MODEL },
   {
-    label: "A · frac +Proj · ELE prefixes · chase crit T1",
+    label: "A · +Proj · Essence-Seeking crit (guaranteed) · Echoes AS",
     path: "proj",
-    model: { ...MODEL, pCrit: 0.07 },
+    model: { ...MODEL, critSource: "essence" },
   },
   {
-    label: "A · frac +Proj · PHYS-only prefixes",
+    label: "A · +Proj · desecrate crit (Abyssal Echoes) · Echoes AS",
+    path: "proj",
+    model: MODEL,
+  },
+  {
+    label: "A · +Proj · desecrate crit · Light-clear per miss (pessimistic)",
+    path: "proj",
+    model: { ...MODEL, revealsPerCycle: 1 },
+  },
+  {
+    label: "A · +Proj · PHYS-only prefixes (Echoes crit)",
     path: "proj",
     model: { ...MODEL, pPrefix: P_PREFIX_PHYS },
   },
-  { label: "B · frac Crit · ELE prefixes", path: "crit", model: MODEL },
-  {
-    label: "B · frac Crit · PHYS-only prefixes",
-    path: "crit",
-    model: { ...MODEL, pPrefix: P_PREFIX_PHYS },
-  },
+  { label: "B · frac Crit · ELE prefixes (buy don't craft)", path: "crit", model: MODEL },
 ];
 
 const d1 = (n: number) => n.toFixed(0);
