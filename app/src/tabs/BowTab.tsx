@@ -13,15 +13,20 @@ interface BowBase {
   note: string;
 }
 interface OddsRow {
+  target: string;
+  exalted: string;
+  greater: string;
+  perfect: string;
+}
+interface BowFlowchart {
+  key: string;
   label: string;
-  chaos: string;
-  perfectExalt: string;
+  chart: string;
 }
 interface BowPath {
   key: string;
   label: string;
   fracture: "proj" | "crit";
-  prefixMode: string;
   baseDiv: number;
   consumablesDiv: { mean: number; p50: number; p85: number; p95: number };
   bankrollDiv: number;
@@ -49,7 +54,7 @@ interface BowPlan {
   paths: BowPath[];
   resale: ResaleRow[];
   tradePresets: TradePreset[];
-  flowchart: string;
+  flowcharts: BowFlowchart[];
 }
 interface TradeListing {
   priceAmount: number | null;
@@ -165,10 +170,11 @@ export default function BowTab() {
       <ErrorBanner error={error} />
       <h2>Bow Crafting — omen-slam fractured base</h2>
       <p className="muted">
-        Lock one premium mod with a fractured ilvl-81 base, then fill the 3 prefixes{" "}
-        <b>and</b> the 2 open suffixes with <b>Perfect Exalt + Sinistral/Dextral Exaltation</b>{" "}
-        (top tier free — roll only the type). Crit is ~7% of the suffix pool but lands T1;
-        Perfect-Exalting it beats desecration. Prices live
+        Lock <b>+Proj</b> with a fractured ilvl-81 base, then fill prefixes + suffixes with{" "}
+        <b>Exalt + Sinistral/Dextral Exaltation</b>. Exalts gate the <i>minimum mod level</i>{" "}
+        (Greater = 35, Perfect = 50) — they set the tier, not "top tier". Secure cheap attack
+        speed first, hunt crit last. Two builds below: <b>Greater</b> (cheap, T3 floor) vs{" "}
+        <b>Perfect</b> (chase T1). Prices live
         {data?.pulledAt ? ` (${data.pulledAt.slice(0, 10)}, 1 div ≈ ${Math.round(data.divine)} ex)` : ""}.
       </p>
       {!data && !error && <p className="muted">Loading…</p>}
@@ -207,23 +213,29 @@ export default function BowTab() {
             </tbody>
           </table>
 
-          <h3>Per-slam odds (exact — craftofexile weight shares, ilvl 81)</h3>
+          <h3>Per-slam odds by exalt floor (exact — craftofexile weights, ilvl 81)</h3>
+          <p className="muted">
+            A higher exalt floor raises the <i>tier</i> of the added mod but shrinks the pool, so crit's
+            share <i>falls</i>. Greater Exalt (min 35) is the sweet spot for usable crit ≥T3.
+          </p>
           <table>
             <thead>
               <tr>
-                <th>Target mod (prefix via Sinistral, suffix via Dextral)</th>
-                <th>Chaos-spam (random tier)</th>
-                <th>Perfect Exalt + Exaltation (top tier)</th>
+                <th>Target mod</th>
+                <th>Exalted (min 1)</th>
+                <th>Greater (min 35)</th>
+                <th>Perfect (min 50)</th>
               </tr>
             </thead>
             <tbody>
               {data.exactOdds.map((o) => (
-                <tr key={o.label}>
-                  <td>{o.label}</td>
-                  <td className="muted">{o.chaos}</td>
+                <tr key={o.target}>
+                  <td>{o.target}</td>
+                  <td className="muted">{o.exalted}</td>
                   <td>
-                    <b>{o.perfectExalt}</b>
+                    <b>{o.greater}</b>
                   </td>
+                  <td>{o.perfect}</td>
                 </tr>
               ))}
             </tbody>
@@ -270,8 +282,13 @@ export default function BowTab() {
             </tbody>
           </table>
 
-          <h3>Decision flow</h3>
-          <Mermaid chart={data.flowchart} />
+          <h3>Decision flow — two builds</h3>
+          {data.flowcharts.map((f) => (
+            <div key={f.key}>
+              <h4>{f.label}</h4>
+              <Mermaid chart={f.chart} />
+            </div>
+          ))}
 
           <h3>Output value — live floor check (equipment filters)</h3>
           <table>

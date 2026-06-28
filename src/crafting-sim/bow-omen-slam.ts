@@ -1,54 +1,59 @@
 // Pure Monte-Carlo EV core for the omen-slam bow craft (crafting/method/omen-slam-bow.md).
-// +Proj is fractured (a suffix, annul-immune). The 3 prefixes and the 2 open suffixes are
-// filled with Perfect Exalt steered by Sinistral/Dextral Exaltation omens — each adds a
-// TOP-tier mod, so you only gamble the mod TYPE, never the tier (crit lands at T1).
 //
-// Real-weight finding: crit is only ~7% of the suffix pool, so Perfect-Exalt slamming it
-// (T1 guaranteed, cheap annul misses) beats DESECRATION (same ~7% type rarity, but you may
-// only hold one desecrated mod and each miss costs an ~8.6-div Omen-of-Light clear). The
-// "desecrate" critSource is kept only to show that it is the more expensive option.
+// Mechanics (verified in crafting/reference/): exalts add ONE random mod with a minimum
+// modifier level — Exalted = none, Greater = 35, Perfect = 50. The floor restricts the
+// TIER of the added mod (and so shrinks the pool / lowers the per-slam type odds); it does
+// NOT guarantee the top tier. Sinistral/Dextral Exaltation omens steer the slam to a
+// prefix/suffix. The +Proj fracture is a suffix and is ANNUL-IMMUNE.
 //
-// EXACT: prefix + suffix odds are craftofexile spawn-weight shares (id_base 20, ilvl 81),
-//   assuming exalt/desecrate sample the normal suffix pool by weight. Prices are live.
-// MODELLED: only the desecration reveal count (Abyssal Echoes) and the choice to annul-in-
-//   place vs buy a fresh base.
+// Cost model is ordering-aware, because targeted annul omens are expensive (Dextral ~6.5d,
+// Sinistral ~11.6d) while raw annul is ~0.6d, and crit can be expensive to re-make:
+//   1. Secure the CHEAP suffix (attack speed, ~14% via a near-free plain Exalt) first, on
+//      the otherwise-empty suffix side — junk is the only non-immune suffix, so raw annul
+//      clears it cleanly.
+//   2. Hunt CRIT last. Each junk now sits beside the cheap attack-speed keeper, so a raw
+//      annul only ever risks THAT (cheap to redo) — crit is placed last and is therefore
+//      never annulled beside a junk. This protects the expensive (esp. Perfect-built) crit.
+//   3. PREFIXES last of all, while suffix keepers exist: a junk prefix must be cleared with
+//      a Sinistral Annulment omen to confine the annul to prefixes and protect the suffixes.
+//
+// EXACT: per-slam type odds are craftofexile weight shares at the build's level floor
+//   (crafting/reference/bow-affix-weights.md). Prices are live.
 
 export interface SlamCosts {
-  /** Perfect Exalted Orb — adds one top-tier modifier. */
-  perfectExaltDiv: number;
-  /** Sinistral/Dextral Exaltation omen — directs the slam to a prefix/suffix. */
+  /** Sinistral/Dextral Exaltation omen (steer the slam to prefix/suffix). */
   exaltOmenDiv: number;
-  /** Orb of Annulment — removes a junk modifier (the REROLL step). */
+  /** Raw Orb of Annulment (removes a random non-immune mod). */
   annulDiv: number;
-  /** Omen of Light — strips a bad desecrated mod (the CLEAR step). Desecrate path only. */
-  lightDiv: number;
-  /** Ancient Jawbone — one desecrate (min mod level 40). Desecrate path only. */
-  boneDiv: number;
-  /** Omen of Abyssal Echoes — rerolls the 3 desecration options once. Desecrate path only. */
-  echoesDiv: number;
+  /** Sinistral Annulment omen — confines the next annul to prefixes (protect suffixes). */
+  sinistralAnnulDiv: number;
   /** Divine Orb — finishing value rerolls. */
   divineDiv: number;
+  /** Desecration alternative (kept for comparison): bone / Light clear / Echoes. */
+  boneDiv: number;
+  lightDiv: number;
+  echoesDiv: number;
 }
 
-/** Crit source: "exalt" (Perfect Exalt + Dextral, T1) or "desecrate" (Ancient bone). */
 export type CritSource = "exalt" | "desecrate";
 
 export interface SlamModel {
-  /** P(a Perfect-Exalt+Sinistral prefix is a wanted damage mod). EXACT (weights). */
+  /** Price of the exalt orb this build uses (Greater ≈ 0.01, Perfect ≈ 2.4). */
+  orbDiv: number;
+  /** P(a steered prefix slam is a wanted damage mod) at this build's floor. */
   pPrefix: number;
-  critSource: CritSource;
-  /** P(a Perfect-Exalt+Dextral suffix is crit chance) — lands T1. EXACT (weight share). */
-  pCritSuffix: number;
-  /** P(a Perfect-Exalt+Dextral suffix is attack-speed OR crit-damage). EXACT (weight share). */
-  pSecondSuffix: number;
-  /** P(a single desecration reveal is acceptable crit) — bone-filtered. Desecrate path. */
-  pCritDesecReveal: number;
-  /** Desecration options seen per cycle: 3 base, 6 with Abyssal Echoes. */
-  revealsPerCycle: number;
-  /** Damage prefixes to fill (normally 3). */
+  /** P(a steered suffix slam is acceptable crit) at this build's floor. */
+  pCrit: number;
+  /** P(a steered suffix slam is attack-speed/crit-damage). 2nd suffix uses a cheap plain Exalt. */
+  pSecond: number;
+  /** Orb price for the 2nd (non-crit) suffix — a plain Exalted Orb is ~free, tier doesn't matter. */
+  secondOrbDiv: number;
   prefixCount: number;
-  /** Finishing Divine rerolls once the item is assembled. */
   finishingDivines: number;
+  critSource: CritSource;
+  /** Desecration alternative. */
+  pCritDesecReveal: number;
+  revealsPerCycle: number;
 }
 
 export type FracturePath = "proj" | "crit";
@@ -59,15 +64,12 @@ export interface SlamStats {
   p85: number;
   p95: number;
 }
-
 export interface SlamResult {
   path: FracturePath;
   trials: number;
-  /** Consumable cost only (base item NOT included), in divines. */
   stats: SlamStats;
 }
 
-/** Deterministic PRNG (mulberry32) so the sim is reproducible across runs/tests. */
 function mulberry32(seed: number): () => number {
   let a = seed >>> 0;
   return () => {
@@ -79,23 +81,54 @@ function mulberry32(seed: number): () => number {
   };
 }
 
-/** Fill `n` mod slots via Perfect Exalt + Exaltation omen; junk is annulled and re-slammed. */
-function fillByExalt(rng: () => number, p: number, n: number, costs: SlamCosts): number {
+const randInt = (rng: () => number, n: number) => Math.floor(rng() * n);
+
+/** Suffix side: secure the cheap attack-speed mod first, then hunt crit last (protected). */
+function suffixCostExalt(rng: () => number, m: SlamModel, costs: SlamCosts): number {
   let cost = 0;
-  let got = 0;
-  while (got < n) {
-    cost += costs.perfectExaltDiv + costs.exaltOmenDiv;
-    if (rng() < p) got++;
-    else cost += costs.annulDiv; // junk mod — annul (while isolated) and re-slam
+  // slots holds non-fracture suffixes; fracture is implicit + immune. Capacity 2.
+  let slots: Array<"crit" | "second" | "junk"> = [];
+  const has = (x: string) => slots.includes(x as never);
+  while (!(has("crit") && has("second"))) {
+    if (has("junk")) {
+      // clear a junk; raw annul picks uniformly among non-immune suffixes (keepers + junk)
+      cost += costs.annulDiv;
+      slots.splice(randInt(rng, slots.length), 1);
+    } else if (slots.length < 2) {
+      // attack speed first (cheap orb), crit last so it's the final mod placed and never contested
+      const wantSecond = !has("second");
+      const orb = wantSecond ? m.secondOrbDiv : m.orbDiv;
+      const p = wantSecond ? m.pSecond : m.pCrit;
+      cost += orb + costs.exaltOmenDiv;
+      slots.push(rng() < p ? (wantSecond ? "second" : "crit") : "junk");
+    } else break; // full of two keepers but not the pair we want — impossible by construction
   }
   return cost;
 }
 
-/** One desecrated crit, with Abyssal-Echoes reveals and a Light+Annul CLEAR per miss. */
-function desecCrit(rng: () => number, model: SlamModel, costs: SlamCosts): number {
-  const reveals = Math.max(1, model.revealsPerCycle);
+/** Prefix side, done last: suffix keepers exist, so junk prefixes need a Sinistral annul. */
+function prefixCostExalt(rng: () => number, m: SlamModel, costs: SlamCosts): number {
+  let cost = 0;
+  let slots: Array<"dmg" | "junk"> = [];
+  const dmg = () => slots.filter((s) => s === "dmg").length;
+  while (dmg() < m.prefixCount) {
+    if (slots.includes("junk")) {
+      // confine the annul to prefixes (protect the suffix keepers): Sinistral Annulment omen
+      cost += costs.annulDiv + costs.sinistralAnnulDiv;
+      slots.splice(randInt(rng, slots.length), 1);
+    } else if (slots.length < 3) {
+      cost += m.orbDiv + costs.exaltOmenDiv;
+      slots.push(rng() < m.pPrefix ? "dmg" : "junk");
+    } else break;
+  }
+  return cost;
+}
+
+/** Desecration alternative for crit (one desecrated mod, re-rolled via Light clears). */
+function desecCrit(rng: () => number, m: SlamModel, costs: SlamCosts): number {
+  const reveals = Math.max(1, m.revealsPerCycle);
   const cycleOmen = reveals > 1 ? costs.echoesDiv : 0;
-  const pCycle = 1 - Math.pow(1 - model.pCritDesecReveal, reveals);
+  const pCycle = 1 - Math.pow(1 - m.pCritDesecReveal, reveals);
   let cost = 0;
   for (;;) {
     cost += costs.boneDiv + cycleOmen;
@@ -104,21 +137,11 @@ function desecCrit(rng: () => number, model: SlamModel, costs: SlamCosts): numbe
   }
 }
 
-function suffixCost(rng: () => number, model: SlamModel, costs: SlamCosts): number {
-  const crit =
-    model.critSource === "desecrate"
-      ? desecCrit(rng, model, costs)
-      : fillByExalt(rng, model.pCritSuffix, 1, costs);
-  // The other open suffix (attack speed or crit damage) is always a normal exalt slam.
-  return crit + fillByExalt(rng, model.pSecondSuffix, 1, costs);
-}
-
 export interface SimOptions {
   trials?: number;
   seed?: number;
 }
 
-/** Monte-Carlo the consumable cost (div) to assemble the bow. */
 export function simulateBowSlam(
   path: FracturePath,
   model: SlamModel,
@@ -129,13 +152,32 @@ export function simulateBowSlam(
   const rng = mulberry32(opts.seed ?? 42);
   const totals = new Array<number>(trials);
   for (let i = 0; i < trials; i++) {
-    totals[i] =
-      fillByExalt(rng, model.pPrefix, model.prefixCount, costs) +
-      suffixCost(rng, model, costs) +
-      model.finishingDivines * costs.divineDiv;
+    const suffix =
+      model.critSource === "desecrate"
+        ? desecCrit(rng, model, costs) + secondOnly(rng, model, costs)
+        : suffixCostExalt(rng, model, costs);
+    totals[i] = suffix + prefixCostExalt(rng, model, costs) + model.finishingDivines * costs.divineDiv;
   }
   totals.sort((x, y) => x - y);
   const at = (q: number) => totals[Math.min(trials - 1, Math.floor(q * trials))];
   const mean = totals.reduce((s, v) => s + v, 0) / trials;
   return { path, trials, stats: { mean, p50: at(0.5), p85: at(0.85), p95: at(0.95) } };
+}
+
+/** For the desecrate variant: crit is desecrated, the 2nd suffix is still an exalt slam. */
+function secondOnly(rng: () => number, m: SlamModel, costs: SlamCosts): number {
+  let cost = 0;
+  // crit already present (desecrated) → the 2nd suffix is contested from the start.
+  let slots: Array<"crit" | "second" | "junk"> = ["crit"];
+  const has = (x: string) => slots.includes(x as never);
+  while (!has("second")) {
+    if (has("junk")) {
+      cost += costs.annulDiv;
+      slots.splice(randInt(rng, slots.length), 1);
+    } else if (slots.length < 2) {
+      cost += m.secondOrbDiv + costs.exaltOmenDiv;
+      slots.push(rng() < m.pSecond ? "second" : "junk");
+    } else break;
+  }
+  return cost;
 }

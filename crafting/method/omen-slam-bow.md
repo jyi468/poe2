@@ -1,170 +1,111 @@
 # Omen-Slam Bow (fractured-base endgame craft)
 
-> Method: lock one premium mod with a **fractured base**, then fill the 3 prefixes **and**
-> the 2 open suffixes with **Perfect Exalt + Sinistral/Dextral Exaltation** (each adds a
-> *top-tier* mod — you only roll the *type*, never the tier). Same toolkit works on
-> quarterstaves; this file is the bow build. EV is driven by `pnpm bow-sim`.
+> Method: lock **+Proj** with a fractured base, then fill the 3 prefixes and 2 open suffixes
+> with **Exalt + Sinistral/Dextral Exaltation**. Exalts add one random mod with a **minimum
+> modifier level** (Exalted = none, Greater = 35, Perfect = 50) — they set the *tier* and
+> shrink the pool, they do **not** guarantee the top tier. Two builds: **Greater** (cheap,
+> T3 floor) and **Perfect** (chase T1). EV from `pnpm bow-sim`. Exact mechanics:
+> `crafting/reference/` (regenerate with `pnpm reference`).
 
 ## Goal
 
-Craft a ~700+ pDPS endgame crit bow (Obliterator / Warmonger) for a projectile-attack
-build, or to sell. The high-value version carries **+4 to Level of all Projectile Skills**;
-the budget version locks **crit chance** instead.
+Craft a ~700+ pDPS endgame crit bow (Obliterator / Warmonger) carrying **+4 to Level of all
+Projectile Skills**, for a projectile-attack build or to sell.
 
 ## Target base(s)
 
 - **Obliterator Bow** (ilvl 78 base, phys 62–115, 5.00% crit, atk time 909, **−50% proj range**)
 - **Warmonger Bow** (ilvl 77 base, phys 56–84, 5.00% crit, atk time 833, no downside)
 
-Both are **craftofexile `id_base 20`** → **identical craftable mod pool**. Obliterator has
-the higher pDPS ceiling (more base phys); Warmonger attacks ~9% faster with no range
-penalty. Buy the base **already fractured** at ilvl 81 (don't fracture yourself — the
-Fracturing Orb locks a *random* mod). Mod pool weights: craftofexile `?game=poe2&b=20`.
+Both are **craftofexile `id_base 20`** → identical craftable mod pool (weights in
+`crafting/reference/bow-affix-weights.md`). Buy the base **already fractured** at ilvl 81 —
+don't fracture yourself (the Fracturing Orb locks a *random* mod).
 
-## Starting capital
+## The key mechanic — exalts are level-floor filters, not "top tier"
 
-**Tier:** mid
+`crafting/reference/currency.md`: **Greater Exalted Orb = min mod level 35**, **Perfect
+Exalted Orb = min 50**. The floor restricts which *tiers* can roll, which also shrinks the
+pool — so a target's per-slam share *changes* with the orb. Crit is the lever:
 
-The +Proj craft (all Perfect-Exalt, real weights) bankrolls at **~150 div** (base ~30 + p85
-~118). Typical all-in ~107 div, EV ≈ **+90 div**. The cost is dominated by the **crit
-suffix**: crit is only ~7% of the suffix pool, so it takes ~14 Perfect-Exalt slams to land
-(but it lands at **T1** when it does).
+| Per-slam target | Exalted (min 1) | **Greater (min 35)** | Perfect (min 50) |
+|---|---|---|---|
+| damage prefix (phys/ele/hybrid) | 87.2% | 86.4% | 90.4% |
+| **crit chance ≥T3** | 1.6% | **3.6%** ✓ | 2.4% (T2+) |
+| attack-speed / crit-dmg | 14.1% | 5.2% | 2.4% |
 
-## Recipe
+**Greater Exalt is the best crit tool** (3.6% ≥T3) and costs ~**0.01 div** — essentially
+free to spam. **Perfect Exalt** forces crit T2+ and top prefixes but costs ~**2.4 div** each,
+which is the whole reason the Perfect build is ~2.5× pricier.
 
-Steps are laid out node-by-node (with the exact remove/reroll points) in the flowchart on
-the Bow tab (`pnpm bow-sim` for the EV table).
+## Recipe (order matters — protect the expensive crit)
 
-**1. Setup.** Buy the fractured ilvl-81 base. Strip it so only the fractured mod remains.
-The fractured mod is always a **suffix** (both `+Proj levels` and `crit chance`), leaving
-**3 prefix slots + 2 open suffix slots**. The fractured mod is **annul-immune**, which makes
-the reroll steps below safe.
+Two flowcharts (Greater build, Perfect build) on the Bow tab. The ordering is the same:
 
-**2. Prefixes — 3 damage mods.** Per slot: **Omen of Sinistral Exaltation + Perfect Exalted
-Orb** → adds a *top-tier* prefix; you only gamble the *type*, never the tier. Keep phys /
-hybrid / elemental. **REROLL** a junk prefix with a plain **Orb of Annulment (~0.6 div)**
-*while it is the only/newest prefix*. Allowing **elemental** (flat Lightning is the
-highest-weight prefix) takes the per-slam hit from 22.5% → **75.3%** and is equal-or-better
-total DPS.
+**1. Setup.** Buy the fractured ilvl-81 base; strip to the bare fracture. The **+Proj
+fracture is a suffix and is annul-IMMUNE** — that is what makes the suffix hunts safe.
 
-**3. Crit — Perfect-Exalt it (the decisive cost lever).** **Omen of Dextral Exaltation +
-Perfect Exalted Orb** into a suffix slot. Crit is only **7.0%** of the suffix pool, so
-expect ~14 slams — but because the Exalt is *Perfect*, every crit that lands is **T1
-(4.41–5.0%)**, the tier the market pays for. **REROLL** a junk suffix with a plain **Orb of
-Annulment**: the fracture is annul-immune, so the annul can only take the junk suffix.
+**2. Attack speed first (cheap).** **Omen of Dextral Exaltation + a plain Exalted Orb**
+(~free, 14%). The suffix side is otherwise empty, so a junk suffix is the *only* removable
+suffix (fracture immune) → a **RAW Orb of Annulment (~0.6 div) clears it cleanly**.
 
-> **Do NOT desecrate crit.** It is the same ~7% type-rarity, but (a) you may hold only **one
-> desecrated mod at a time**, (b) each miss costs an **~8.6-div Omen-of-Light clear** (vs a
-> ~0.6-div annul), and (c) the bone tier-filter helps the *tier*, not the binding constraint
-> (type). `pnpm bow-sim`: desecrating crit runs **~112 div mean vs ~77** for Perfect-Exalt.
-> **Essence of Seeking is also impossible** — essences only upgrade a **Magic** base to Rare
-> and a +Proj base is bought already **fractured (rare)**.
+**3. Crit last.** **Omen of Dextral Exaltation + Greater Exalted Orb** (Greater build, 3.6%)
+or **Perfect Exalted Orb** (Perfect build, 2.4%). On a junk, **RAW annul** — it can only hit
+the *cheap attack-speed keeper* (re-add it later). Because crit is the **last** mod placed,
+it is never annulled beside a junk, so the expensive crit is protected.
 
-**4. Second suffix.** **Dextral Exaltation + Perfect Exalt** until **attack speed OR crit
-damage** lands (**14.1%** combined, ~7 slams), annulling junk between slams. Path B (`crit`
-fractured) fills both open suffixes with attack speed + crit damage the same way.
+**4. Prefixes last — 3 damage mods.** **Omen of Sinistral Exaltation + the build's exalt.**
+A junk prefix must be cleared with **Omen of Sinistral Annulment + Orb of Annulment** — this
+**confines the annul to prefixes** so it can't eat the crit / attack-speed suffixes. It costs
+~12 div, but damage prefixes hit ~87–90%, so junk is rare here.
 
-**5. Trapped junk mod?** If a junk mod is stuck among keepers on one side (a blind annul
-would risk a keeper), **TARGETED-REMOVE** with **Omen of Sinistral/Dextral Erasure** (next
-Chaos removes only that side) or **Sinistral/Dextral Annulment** (next Annul removes only
-that side). ~4–7 div — insurance, not the default.
+**5. Finish.** ~4 Divine Orbs toward high rolls; optional Blacksmith's Infuser for >20% quality.
 
-**6. Finish.** ~4 Divine Orbs toward high rolls; optional Blacksmith's Infuser for >20%
-quality.
+> **Why raw annul is dangerous (and where targeted annul earns its cost).** Raw Orb of
+> Annulment removes a *random* mod, so once keepers exist it can delete one. The fix is
+> ordering + the immune fracture (so most removals are clean raw annuls on an isolated side),
+> and a **Sinistral/Dextral Annulment omen** only at the moment a junk is trapped beside
+> keepers on the *other* side. Targeted annul is *expensive* (Sinistral ~12d, Dextral ~6.5d),
+> so you use it sparingly, not on every miss.
 
-> **Recombinator is gone in 0.5** (deleted). **Essences write to one crafted slot** and need
-> a Magic base. **Desecration adds one mod at a time** and re-desecrating requires clearing
-> the previous one (Omen of Light + Annul) — which is exactly why it loses to Perfect-Exalt
-> here.
-
-## Outcome odds
-
-EXACT, from craftofexile spawn-weight shares (id_base 20, **ilvl 81**), assuming the slam
-samples the normal pool by weight:
-
-| Per-slam target | Chaos-spam (random tier) | **Perfect Exalt + Exaltation** (top tier) |
-|---|---|---|
-| PREFIX · phys OR elemental | 1 in 22 | **1 in 1.3** (75.3%) |
-| PREFIX · flat-or-% physical, ≥T3 | 1 in 117 (0.85%) | 1 in 4.4 (22.5%) |
-| SUFFIX · **crit chance** (lands T1) | — | **1 in 14** (7.04%) |
-| SUFFIX · attack speed OR crit damage | — | 1 in 7 (14.1%) |
-
-Crit-chance tiers: T1 = 4.41–5.0%, T2 = 3.81–4.4%, T3 = 3.11–3.8%. A Perfect Exalt always
-adds the top tier, so a landed crit is **T1**. The craftable `+Proj` mod caps at **+4**
-(ilvl 81); +5 needs a corruption.
-
-> **Why not desecrate?** Bone math, for the record: a Preserved bone reveals crit at all
-> tiers (only 22.6% of crit reveals are ≥T3); an **Ancient** bone (min mod level 40) makes
-> 100% of crit reveals ≥T3 — but it also **locks out attack speed entirely** (AS tops out at
-> ilvl 37 < 40). Either way desecration fights the same ~7% crit *type* odds with expensive
-> Light clears, so Perfect-Exalt wins. Bone choice only matters if you desecrate at all,
-> which you shouldn't here.
-
-## Inputs
-
-Per finished bow (central estimate): ~4 Perfect Exalted Orbs + ~4 Sinistral Exaltation omens
-+ ~1 Annul for the prefixes; **~14 Perfect Exalt + Dextral Exaltation** (+ annuls) for the
-crit suffix; **~7 more** for the second suffix; ~4 Divine Orbs to finish.
-
-## Risk / variance
-
-Variance is dominated by the **crit suffix hunt** (~7% per slam). The misses are cheap
-(~0.6-div annuls), so the tail is moderate: `pnpm bow-sim` gives p95 ≈ 1.4× the median.
-If a run blows well past p85 on the crit suffix, keep slamming — annul misses are cheap, so
-there's no "re-buy the base" decision the way the old desecration loop forced.
-
-You can't brick the item (mods add/remove, never destroy). Phys-only prefixes roughly double
-prefix churn for equal DPS — take the elemental branch.
+> **Don't desecrate crit, and don't essence it.** Desecration fights the same crit-type
+> rarity with ~8.6-div Omen-of-Light clears (one desecrated mod at a time) — `pnpm bow-sim`
+> has it ~level with the near-free Greater slam, so there's no reason. **Essence-Seeking is
+> impossible**: essences upgrade a **Magic** base to Rare, and a +Proj base is already a
+> fractured **rare**. Recombinator is removed in 0.5.
 
 ## Fracture decision — which base to buy
 
-The fracture's value = how hard the locked mod is to get **any other way**:
-
-- **`+Proj` is NOT obtainable by slam or desecration** → fracture is the only clean way to
-  get the +4 levels, and **+levels is what the market pays for** (it isn't in weapon DPS —
-  it's a separate skill multiplier and a scarce mod). This is the **only version worth
-  crafting**.
-- **`crit` is just a normal suffix** → a crit-fractured bow with NO +levels is a flooded
-  item: even crit≈8% / pDPS≥450 rolls **floor at ~0.5 div** (live trade2, 2026-06-28).
-  Crafting one costs ~110 div of consumables to make a sub-1-div item — **never; just buy.**
-
-Rule of thumb: **buy `+Proj` fractured and craft that.** If you only want a personal
-crit/phys bow with no levels, **buy the finished bow (~0.5 div), don't craft it.**
+- **`+Proj` is the only version worth crafting.** It isn't slammable or desecratable, and
+  +levels is what the market pays for (a separate skill multiplier, scarce).
+- **`crit`-fractured with no +levels is a flooded item** — crit≈8% / pDPS≥450 rolls **floor
+  at ~0.5 div** (live trade2, 2026-06-28). Crafting one costs ~90 div to make a sub-1-div
+  item — **buy it, don't craft.**
 
 ## Output value (live trade2, equipment filters, 2026-06-28)
 
-Valued by the stats that actually price a bow — **+Proj levels, crit %, physical DPS,
-total DPS** (computed weapon properties, not individual mods):
-
 | Finished bow | Real floor |
 |---|---|
-| crit ≥8% · pDPS ≥450 · **no +levels** | **~0.5 div** (6000+ listings — worthless) |
-| **+4 Proj** · crit ≥8% (T3) · pDPS ≥450 | **~130 div** |
-| **+4 Proj** · crit ≥9% (T1, ~max 10%) · pDPS ≥600 | **~460–630 div** |
-
-The price ladder inside the +Proj tier is driven by **crit chance** (T3 → ~130; T1 → ~500)
-and **pDPS**. Perfect-Exalting crit lands it at **T1 directly**, so the craft naturally
-targets the high tier; profit then lives in pushing the three damage prefixes high.
+| crit ≥8% · pDPS ≥450 · **no +levels** | **~0.5 div** (flooded — worthless) |
+| **+4 Proj** · crit ≥8% (T3) · pDPS ≥450 | **~130 div** (Greater-build target) |
+| **+4 Proj** · crit ≥9% (T1) · pDPS ≥600 | **~460–630 div** (Perfect-build target) |
 
 ## Worked example
 
 > Runes of Aldur, patch 0.5, 2026-06-28 (live `data/economy/latest.json`, 1 div ≈ 364 ex).
-> Consumables only (base NOT included), from `pnpm bow-sim` (40k trials):
+> Consumables only (base NOT included), `pnpm bow-sim` (30k trials):
 >
-> | Scenario (all +Proj, elemental prefixes) | mean | p50 | p85 | p95 |
-> |---|---|---|---|---|
-> | **Perfect-Exalt crit (T1) + attack speed** ✅ | **77** | **67** | **118** | **166** |
-> | desecrate crit (Ancient bone) + exalt AS | 112 | 90 | 183 | 268 |
-> | phys-only prefixes (exalt crit) | 105 | 94 | 154 | 199 |
-> | B · Crit-fractured (buy don't craft) | 77 | 67 | 118 | 166 |
+> | Build (all +Proj, elemental prefixes) | mean | p50 | p85 | p95 | bankroll | EV |
+> |---|---|---|---|---|---|---|
+> | **Greater (min 35) · crit T3+** ✅ | **93** | 70 | 166 | 253 | ~196d | **+77d** |
+> | Perfect (min 50) · crit T2+ · chase T1 | 235 | 170 | 431 | 658 | ~461d | +195d |
+> | Greater build, but desecrate crit | 94 | 73 | 167 | 247 | ~197d | +75d |
 >
-> Bankroll & ROI at **live trade2 resale** (2026-06-28):
-> - **A `+Proj` (Perfect-Exalt crit):** base ~30 + p85 118 → **bring ~150 div**; typical
->   all-in ~107; resale floor ~130, settled ~200 → **EV ≈ +90 div**, T1-crit/pDPS≥600 tier
->   ~460–630. This is the recommended path.
-> - **B `Crit`:** resale ~0.5 → **negative regardless**. Do not craft — **buy** the ~0.5 div
->   bow.
+> - **Greater build (recommended):** Greater Exalt ≈ free, so spamming crit at 3.6% is cheap.
+>   Bring **~150–200 div**, expect ~123 all-in, resale ~130 (floor) to ~200 (settled) → **EV
+>   ≈ +77 div**. Lowest cost and variance; lands crit T3/T2/T1.
+> - **Perfect build (chase T1):** forces crit T2+ and top-tier prefixes for the ~460–630 tier,
+>   but Perfect orbs (~2.4d) drive cost to ~235 mean and a **fat tail (p95 ~658 > resale)** —
+>   only run it with a deep bankroll and tolerance for variance.
+> - **Crit-fractured:** resale ~0.5 → strongly negative. Buy, don't craft.
 >
-> The earlier desecration-centred numbers (~41 div with a modelled 25% crit-reveal rate) were
-> wrong: real craftofexile weights put crit at **7% of the suffix pool**, which Perfect-Exalt
-> handles more cheaply than desecration. Re-run `pnpm bow-sim` as prices move.
+> Re-run `pnpm bow-sim` as prices move; refresh mechanics/weights with `pnpm reference`.
