@@ -17,7 +17,7 @@ the bottom; this file is the source of truth other crafting docs point back to.
 flowchart TD
   Start(["Craft for profit"]) --> Q1{"Bankroll?"}
   Q1 -->|"ssf / a few div"| SSF["Lead: Greater-essence resist armour<br/>Scale into: weapon flip"]
-  Q1 -->|"low ~5-15 div"| LOW["Lead: weapon-flip reps<br/>Then: first Desecration attempts<br/>Avoid: Breach Ring"]
+  Q1 -->|"low ~5-15 div"| LOW["Lead: weapon-flip reps<br/>Then: Void Flux multi-chaos · first Desecration attempts<br/>Avoid: Breach Ring"]
   Q1 -->|"mid ~15-40 div"| MID["Lead: Desecration Lich (main earner)<br/>Floor: essence armour for cash flow"]
   Q1 -->|"high ~40+ div"| HIGH{"League age?"}
   HIGH -->|"weeks 1-3"| HEARLY["Desecration at volume<br/>+ Genesis Breach Ring"]
@@ -41,6 +41,7 @@ can run any method at or below its tier. Full table + worked 50-div allocation:
 | Movement-speed boots | low | thin/volume | low | any | [link](method/movement-speed-boots.md) |
 | Transmute-augment-regal weapon flip | low | low | low | any | [link](method/transmute-augment-regal-weapon.md) |
 | Jewel crit-combo roll | low | med (volume) | low | any | [link](method/jewel-crit-combo.md) |
+| Void Flux multi-chaos-res | low | med–high (low volume) | low–med | any (flux cheaper late) | [link](method/void-flux-chaos-res.md) |
 | Jewel fractured multi-mod | mid | high | high | any | [link](method/jewel-fractured-multimod.md) |
 | Desecration Lich modifier | mid | high (selective) | medium | any (inputs cheaper late) | [link](method/desecration-lich-modifier.md) |
 | Genesis Breach Ring | high | high wk1-3 / **loss late** | high | **weeks 1–3 only** | [link](method/genesis-breach-ring.md) |
@@ -94,6 +95,8 @@ for a base whose clean output clears several div. Re-price: `pnpm prices currenc
 | **Remove the lowest-ilvl mod (Chaos)** | Chaos + **Omen of Whittling** | Whittling ~6.6 div — **EV-negative on sub-6-div items** |
 | **Remove a chosen side (Chaos)** | Chaos + **Sinistral/Dextral Erasure** | expensive; rarely worth it |
 | **Add an exclusive Lich-only mod** | Desecration (Necromancy + Lich omens + bone) | the mid-tier earner; **never Light-clear** (see §4) |
+| **Guarantee a mod on a JEWEL** | Liquid Emotion (remove-1/add-1 on a *rare* jewel) | jewels take **no essences/Crystallisation**; Despair=crit chance ~6.7 ex, Conc. Fear=crit damage ~26 ex; **one crafted mod only** — see §4 |
+| **Make multi-chaos-res from ele-res** | Void Flux | ~27 ex; converts each ele-res mod → chaos-res (low tiers boosted); only route to 2–3 chaos mods — see §4 |
 | **Guarantee one high tier on the final slot** | Perfect Exalted Orb | ~2.4 div — **only on a 6+ div base**, once, at the end |
 
 ---
@@ -114,6 +117,14 @@ Each is checked against live trade/economy on the date shown. Re-verify with the
   buy a guaranteed tier (small spread). *(2026-06-26 · [`method/essence-value-map.md`](method/essence-value-map.md))*
 - **Desecration: never Omen-of-Light clear.** Light is ~8.9 div/clear — re-boning a fresh cheap base
   (~3–6× cheaper) always wins. +EV only on sub-0.5-div bases + few cycles. *(2026-06-26 · `pnpm desecration-sim`)*
+- **Jewels take no essences/Crystallisation — use Liquid Emotions.** Emotion = remove-1/add-1 on a
+  *rare* jewel, **one crafted mod max**. Crit pair = 1 natural + 1 crafted (Despair=chance, Conc.
+  Fear=damage). Buy a **3–4-mod** natural-crit jewel so the random removal eats junk (keep=(N−1)/N);
+  a 1-mod jewel is a guaranteed brick. ~+1 div/attempt at 4 mods. *(2026-06-26 · `pnpm jewel-sim`)*
+- **Void Flux beats desecration on current EV.** ~27 ex flux + a ~1–5 ex multi-ele-res ring/belt → a
+  multi-chaos-res piece worth ~1–2 div. Deterministic conversion (no brick), the *only* route to 2–3
+  chaos-res mods; capped by thin chaos-res demand (low volume). Use a Greater Essence, not flux, for a
+  *single* chaos res. Don't flux "+all elemental res" bases (ignored). *(2026-06-26 · `pnpm prices expedition` + `pnpm trade --stat explicit.stat_2923486259`)*
 - **Movement boots lean path ≈ +0.18 div/craft;** +Perfect Exalt ≈ −2.11 div. Volume game, catch the
   ~8% premium tail. *(2026-06-26 · `pnpm boots-sim`)*
 - **Genesis Breach Ring is underwater late-league** (~10–20 div input vs ~1–2 div floor). Weeks 1–3 only. *(2026-06-23 · [`method/genesis-breach-ring.md`](method/genesis-breach-ring.md))*

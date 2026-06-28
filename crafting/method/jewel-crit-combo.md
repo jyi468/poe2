@@ -42,7 +42,8 @@ Any rare-able jewel base. Pick the base whose mod pool biases toward your target
 
 - **Sapphire** (Int) — spell/cold/crit stats; the dominant base for crit + cold (ice meta).
 - **Emerald** (Dex) — attack/projectile, weapon-specific attack speed (bow/quarterstaff).
-- **Ruby** (Str) — physical/bleed/ignite.
+- **Ruby** (Str) — physical/attack/fire/warrior stats. **No crit pool** — the target pair is
+  **Global Physical Damage + Attack Damage** instead (see *Strength / Ruby variant* below).
 - **Diamond** — combined pool of all three (rare; via Reforging one of each base — verify
   current mechanic on poe2db/codex, see ../../knowledge/sources.md).
 
@@ -149,3 +150,39 @@ type because the exact 4-mod combination is rare on trade.
 >
 > Note: asking floors run above real sold prices; the crit pair are suffixes and damage mods
 > prefixes, so target 2 suffix + 2 prefix. Re-pull with `pnpm trade` before pricing.
+
+## Strength / Ruby variant — the phys + attack pair
+
+Rubies have **no crit pool**, so the crit emotion engine above does not apply. The Ruby analog
+of the crit pair is **% increased Global Physical Damage + % increased Attack Damage** (both
+**prefixes**, P1; cap ≈ 15% phys / ≈ 14–15% attack). It scales most Strength attack builds
+(maces/warrior, spears). Because the pair are *prefixes*, the suffix-crafting crit emotions
+(Despair/Fear) don't help here — roll/Exalt toward the pair, and check `pnpm prices delirium`
+for a phys/attack Liquid Emotion before assuming one exists.
+
+As with crit jewels, **the 3rd/4th mods decide whether it's 1 ex or 1 div** — the pair alone is
+cheap; the pair + *useful supports* is the package buyers pay for:
+
+- **good supports:** % of Life Leeched · Stun Threshold · Stun Buildup · Life Regen rate ·
+  Attack Speed *with your weapon* (Maces / Quarterstaves / Spears)
+- **junk that floors it at ~1 ex:** Banner/Glory generation · "Gain Rage on/when Hit" ·
+  Minion Physical Damage Reduction · Presence Area of Effect
+- **not in the Str pool:** % maximum Life returns **0 listings** with the pair — don't aim for it on Ruby.
+
+> **Live value ladder — Ruby phys+attack pair (Runes of Aldur, 2026-06-26; verified listings,
+> 1 div ≈ 374–415 ex — divine rate was volatile this day, treat ex loosely).** Re-pull:
+> `pnpm trade --category jewel --type Ruby --stat explicit.stat_1310194496:13 --stat explicit.stat_2843214518:12 --stat <support>`
+> - Pair + **junk filler** (Rage-on-hit, Banner) → **~1 ex** — *even with high Life Leech, a single junk 4th mod floors it.*
+> - Pair + **one decent support, lower rolls** → **~25 ex**
+> - **High/near-max pair + 1–2 clean useful supports → ~1 div** (verified: gphys15+attack12+stun-threshold13; gphys13+attack12+stun-buildup20+leech8)
+> - **Near-max pair + two high supports** (leech 13 + regen) → **~5 div**
+>
+> Smoking gun: the *same* pair + Life Leech 11 sells at **1 ex** with a junk Rage 4th mod but
+> **1 div** with clean warrior supports — value is in the support quality, not the pair alone.
+> Demand is thinner than Sapphire/Emerald (cold/crit meta), so Rubies are mostly a 1-ex
+> commodity and liquidity is shallow. **Ignore the descending-sort "hundreds of div" listings** —
+> that's the trade-tool mirror/other-currency misread (see crafting-flowchart §4), not a real price.
+
+Other Ruby angles (lower demand, **~1 ex floor**): Fire Damage + Attack (fire-attack / ignite)
+and Damage with Maces + Attack/Stun Buildup (mace-warrior). The **phys + attack pair is the only
+Ruby combo that reliably reaches div-tier.**

@@ -15,8 +15,10 @@ here is a qualitative band so this index does not rot.
 | Essence value map (cross-method ref) | any | reference † | — | any | [essence-value-map.md](essence-value-map.md) |
 | Transmute-augment-regal weapon flip | low | low † | low | any | [transmute-augment-regal-weapon.md](transmute-augment-regal-weapon.md) |
 | Jewel crit-combo roll | low | medium (volume) † | low | any | [jewel-crit-combo.md](jewel-crit-combo.md) |
+| Void Flux multi-chaos-res | low | medium–high (low volume) † | low–medium | any (flux cheaper late) | [void-flux-chaos-res.md](void-flux-chaos-res.md) |
 | Jewel fractured multi-mod | mid | high † | high | any | [jewel-fractured-multimod.md](jewel-fractured-multimod.md) |
 | Desecration Lich modifier | mid | high (selective) † | medium | any (inputs cheaper late) | [desecration-lich-modifier.md](desecration-lich-modifier.md) |
+| Omen-slam bow (fractured base) | high | high (+Proj) / self-use (Crit) † | high | any | [omen-slam-bow.md](omen-slam-bow.md) |
 | Genesis Breach Ring | high | high wk1–3 / **loss late** † | high | weeks 1–3 only | [genesis-breach-ring.md](genesis-breach-ring.md) |
 
 > Capital tiers: ssf / low / mid / high. See `_template.md` for the entry shape
@@ -49,9 +51,9 @@ time. A bankroll can run any method at or below its tier.
 | Bankroll | Lead with | Then / scale into | Avoid |
 |----------|-----------|-------------------|-------|
 | **ssf / a few div** | Greater-essence resist armour | Transmute-augment-regal weapon flip | high-variance slams |
-| **low (~5–15 div)** | Weapon flip for reps | First Desecration Lich attempts | Breach Ring (can't absorb variance) |
+| **low (~5–15 div)** | Weapon flip for reps | Void Flux multi-chaos (scarce output) · first Desecration Lich attempts | Breach Ring (can't absorb variance) |
 | **mid (~15–40 div)** | Desecration Lich (main earner) | Essence armour as a cash-flow floor | committing all-in on one craft |
-| **high (~40+ div)** | Desecration Lich at volume | Genesis Breach Ring (week-1–3 only) | pure-ES targets (low demand this patch) |
+| **high (~40+ div)** | Desecration Lich at volume | Omen-slam bow (+Proj, ~200 div bankroll) · Genesis Breach Ring (week-1–3 only) | pure-ES targets (low demand this patch) |
 
 **Worked allocation — ~50 div, mid/late league, learn-as-you-go** (the canonical
 high-tier ask). Stage from cheap → expensive so early reps fund later variance:
