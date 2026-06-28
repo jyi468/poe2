@@ -41,3 +41,5 @@ input, select { background: #20242b; color: #e6e6e6; border: 1px solid #2a2f37; 
 .ruby-cols ul { margin: .3rem 0; padding-left: 1.1rem; }
 .ruby-cols li { font-size: 13px; color: #cfd3da; }
 .callout { background: #1b2630; border-left: 3px solid #3a6ea5; padding: .7rem .9rem; border-radius: 6px; margin: .8rem 0; color: #cfd3da; }
+.recipe { line-height: 1.5; padding-left: 1.3rem; }
+.recipe li { margin: .35rem 0; }

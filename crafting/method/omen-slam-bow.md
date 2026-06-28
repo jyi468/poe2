@@ -37,6 +37,26 @@ pool — so a target's per-slam share *changes* with the orb. Crit is the lever:
 free to spam. **Perfect Exalt** forces crit T2+ and top prefixes but costs ~**2.4 div** each,
 which is the whole reason the Perfect build is ~2.5× pricier.
 
+## TL;DR — recommended run (Greater build)
+
+Default to the **Greater build**: ~93 div mean, **~196 div bankroll**, EV **+77**, low variance.
+Reserve the Perfect build for gambling on the ~460–630 T1 tier with a deep bankroll.
+
+1. **Buy** the fractured +Proj ilvl-81 base (~30d); strip to the bare (annul-immune) fracture.
+2. **Attack speed first** — **plain Exalted Orb** + Dextral Exaltation. Take *any* decent hit
+   (don't tier-chase — ~8d); raw-annul junk (clean, side is isolated).
+3. **Crit last** — **Greater Exalted Orb** + Dextral Exaltation until crit ≥T3 (3.6%/slam,
+   ~28 slams; Greater ≈ 0.01d). Raw-annul junk — only risks the cheap attack-speed keeper.
+4. **Prefixes** — 3 damage mods, **Greater Exalt** + Sinistral Exaltation (~86%). Clear a junk
+   prefix with an **Omen of Sinistral Annulment** (protect the suffixes).
+5. **Finish** — ~4 Divine Orbs. Bring **~150–200 div**.
+
+**Shopping list:** fractured +Proj base · stack of **Greater Exalted Orbs** (crit + prefixes)
+· a few **plain Exalted Orbs** (attack speed) · **Orbs of Annulment** (~0.58d each — the real
+cost) · 1–2 **Sinistral Annulment omens** · Dextral/Sinistral Exaltation omens · ~4 Divine
+Orbs. **Greater Exalt for crit + prefixes, plain Exalt for attack speed** (its tiers are all
+low-ilvl, so a level floor only makes it rarer for no benefit).
+
 ## Recipe (order matters — protect the expensive crit)
 
 Two flowcharts (Greater build, Perfect build) on the Bow tab. The ordering is the same:

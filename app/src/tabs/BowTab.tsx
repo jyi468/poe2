@@ -182,10 +182,40 @@ export default function BowTab() {
       {data && (
         <>
           <div className="callout">
-            <b>Bottom line:</b> only the <b>+Proj</b> fracture is +EV — its profit is the T1-crit / high-pDPS
-            tail (~460–630 div). A crit-fractured bow with no +levels resells for ~0.5 div, so <b>buy that, don't
-            craft it.</b>
+            <b>Bottom line:</b> craft the <b>+Proj</b> fracture, <b>Greater build</b> (≈196 div bankroll, EV
+            +77, low variance). Perfect build only to gamble on the ~460–630 T1 tier with a deep bankroll. A
+            crit-fractured bow with no +levels resells for ~0.5 div — <b>buy that, don't craft it.</b>
           </div>
+
+          <h3>Recommended run — Greater build</h3>
+          <ol className="recipe">
+            <li>
+              <b>Buy</b> the fractured +Proj ilvl-81 base (~30d) and strip to the bare fracture (it's
+              annul-immune — that protects the suffix hunts).
+            </li>
+            <li>
+              <b>Attack speed first</b> — <b>plain Exalted Orb</b> + Omen of Dextral Exaltation. Take <i>any</i>{" "}
+              decent hit (don&apos;t tier-chase — ~8d), raw-annul junk. The side is isolated, so the annul is clean.
+            </li>
+            <li>
+              <b>Crit last</b> — <b>Greater Exalted Orb</b> + Dextral Exaltation until crit ≥T3 (3.6%/slam, ~28
+              slams; Greater ≈ 0.01d). Raw-annul junk — only risks the cheap attack-speed keeper, never the crit.
+            </li>
+            <li>
+              <b>Prefixes</b> — 3 damage mods, <b>Greater Exalt</b> + Sinistral Exaltation (~86%). Clear a junk
+              prefix with an <b>Omen of Sinistral Annulment</b> to protect the suffixes.
+            </li>
+            <li>
+              <b>Finish</b> — ~4 Divine Orbs. Bring <b>~150–200 div</b> (covers ~85%).
+            </li>
+          </ol>
+          <p className="muted">
+            <b>Shopping list:</b> 1× fractured +Proj base · a stack of <b>Greater Exalted Orbs</b> (crit + 3
+            prefixes) · a few <b>plain Exalted Orbs</b> (attack speed) · <b>Orbs of Annulment</b> (the real cost,
+            ~0.58d each) · 1–2 <b>Sinistral Annulment omens</b> · Dextral/Sinistral Exaltation omens (cheap) · ~4
+            Divine Orbs. Use <b>Greater Exalt for crit + prefixes, plain Exalt for attack speed</b> (its tiers are
+            all low-ilvl, so a level floor only makes it rarer).
+          </p>
 
           <h3>Bases — identical mod pool (id_base 20)</h3>
           <table>
