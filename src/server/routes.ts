@@ -15,6 +15,7 @@ import { estimateCraft } from "../crafting-sim/estimate.js";
 import { scanSlots, SLOT_DEFS } from "../crafting-sim/slots.js";
 import { evaluateDesecItems } from "../crafting-sim/desecration-items.js";
 import { buildJewelPlan } from "../crafting-sim/jewel-plan.js";
+import { buildBowPlan } from "../crafting-sim/bow-plan.js";
 import { loadMethodBoard } from "../methods/parse.js";
 
 export const getEconomy = async () => readLatestSnapshot();
@@ -57,6 +58,19 @@ export const getJewel = async () => {
     recipes,
     rubyVariant: plan.rubyVariant,
   };
+};
+
+/**
+ * Omen-slam bow craft: both fracture paths with live-priced EV (Monte Carlo),
+ * exact prefix odds, real trade2 resale reference, and equipment-filter trade
+ * presets. Output floors are re-checkable on demand via POST /api/trade.
+ */
+export const getBow = async () => {
+  const snap = await readLatestSnapshot().catch(() => null);
+  const divine = snap?.divinePriceExalted ?? 345;
+  const byName = new Map((snap?.currencies ?? []).map((c) => [c.name, c.priceExalted]));
+  const divOf = (name: string, fallbackEx: number) => (byName.get(name) ?? fallbackEx) / divine;
+  return buildBowPlan(divOf, divine, snap?.pulledAt ?? null);
 };
 
 /**
