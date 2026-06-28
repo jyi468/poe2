@@ -50,9 +50,9 @@ const costs: SlamCosts = {
   exaltOmenDiv: divOf("Omen of Sinistral Exaltation", 14),
   annulDiv: divOf("Orb of Annulment", 212),
   lightDiv: divOf("Omen of Light", 3149),
-  jawboneDiv: 0.02, // Preserved Jawbone + Dextral Necromancy — sourced in-game, assumption
+  jawboneDiv: divOf("Ancient Jawbone", 3505), // min mod lvl 40 → only crit T3/T2/T1 reveal
   echoesDiv: divOf("Omen of Abyssal Echoes", 210),
-  essenceSeekingDiv: divOf("Greater Essence of Seeking", 6),
+  essenceSeekingDiv: divOf("Greater Essence of Seeking", 6), // unused for +Proj; kept for the model
   divineDiv: divOf("Divine Orb", div),
 };
 
@@ -60,14 +60,14 @@ const costs: SlamCosts = {
 const P_PREFIX_ELE = 0.753; // phys OR elemental damage prefix, top tier
 const P_PREFIX_PHYS = 0.225; // flat-or-% physical only, top tier
 
-// ---- MODELLED desecration odds (per single revealed mod; edit with real data) -
+// ---- MODELLED desecration odds (per single revealed mod; Ancient bone, T3+ only) -
 const MODEL: SlamModel = {
   pPrefix: P_PREFIX_ELE,
   critSource: "desecrate",
   revealsPerCycle: 6, // Abyssal Echoes (3 options + 1 reroll)
-  pCrit: 0.13, // acceptable crit-chance (>=T3) per revealed mod
-  pAttackSpeed: 0.2,
-  pCritDamage: 0.18,
+  pCrit: 0.25, // acceptable crit-chance per revealed mod (Ancient bone filters to T3+)
+  pAttackSpeed: 0.3,
+  pCritDamage: 0.28,
   prefixCount: 3,
   finishingDivines: 4,
 };
@@ -87,12 +87,9 @@ interface Row {
   model: SlamModel;
 }
 
+// Essence-Seeking crit is NOT usable here: essences upgrade a MAGIC base to Rare, and a
+// +Proj base is bought already fractured (rare). Crit must be desecrated.
 const rows: Row[] = [
-  {
-    label: "A · +Proj · Essence-Seeking crit (guaranteed) · Echoes AS",
-    path: "proj",
-    model: { ...MODEL, critSource: "essence" },
-  },
   {
     label: "A · +Proj · desecrate crit (Abyssal Echoes) · Echoes AS",
     path: "proj",

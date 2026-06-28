@@ -52,7 +52,7 @@ time. A bankroll can run any method at or below its tier.
 |----------|-----------|-------------------|-------|
 | **ssf / a few div** | Greater-essence resist armour | Transmute-augment-regal weapon flip | high-variance slams |
 | **low (~5–15 div)** | Weapon flip for reps | Void Flux multi-chaos (scarce output) · first Desecration Lich attempts | Breach Ring (can't absorb variance) |
-| **mid (~15–40 div)** | Desecration Lich (main earner) | Omen-slam bow (+Proj, ~55 div w/ Essence-Seeking crit) · Essence armour as a cash-flow floor | committing all-in on one craft |
+| **mid (~15–40 div)** | Desecration Lich (main earner) | Omen-slam bow (+Proj, ~85 div w/ Ancient-bone Echoes crit) · Essence armour as a cash-flow floor | committing all-in on one craft |
 | **high (~40+ div)** | Desecration Lich at volume | Genesis Breach Ring (week-1–3 only) | pure-ES targets (low demand this patch) |
 
 **Worked allocation — ~50 div, mid/late league, learn-as-you-go** (the canonical

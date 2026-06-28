@@ -79,12 +79,14 @@ const PROJ_STAT = "explicit.stat_1202301673"; // +# to Level of all Projectile S
 const P_PREFIX_ELE = 0.753;
 const P_PREFIX_PHYS = 0.225;
 
-// MODELLED desecration reveal odds (per single revealed mod; Abyssal pool — calibrated
-// to the source video). Each path overrides critSource / revealsPerCycle.
+// MODELLED desecration reveal odds (per single revealed mod), calibrated for an
+// ANCIENT Jawbone (min modifier level 40 → only crit T3/T2/T1 appear, no junk tiers),
+// which is why these are higher than a Preserved-bone hunt. Each path overrides
+// critSource / revealsPerCycle.
 const BASE_MODEL: Omit<SlamModel, "pPrefix" | "critSource" | "revealsPerCycle"> = {
-  pCrit: 0.13,
-  pAttackSpeed: 0.2,
-  pCritDamage: 0.18,
+  pCrit: 0.25,
+  pAttackSpeed: 0.3,
+  pCritDamage: 0.28,
   prefixCount: 3,
   finishingDivines: 4,
 };
@@ -109,18 +111,10 @@ interface PathSpec {
   verdict: string;
 }
 
+// NOTE: Essence of Seeking would guarantee crit, but essences only upgrade a MAGIC
+// base to Rare and a +Proj base is bought already fractured (rare) — so essence-crit
+// is NOT usable here. Crit on the +Proj bow must be desecrated.
 const PATH_SPECS: PathSpec[] = [
-  {
-    key: "proj-essence",
-    label: "+Proj · Essence-Seeking crit (guaranteed) · Echoes attack speed",
-    fracture: "proj",
-    prefixMode: "elemental",
-    critSource: "essence",
-    revealsPerCycle: 6,
-    baseDiv: 30,
-    resaleDiv: RESALE.projTypical,
-    verdict: "Cheapest + lowest variance — crit guaranteed via Essence of Seeking. Needs crafted-slot injection on the fractured rare (confirm in-game).",
-  },
   {
     key: "proj-echoes",
     label: "+Proj · desecrate crit via Abyssal Echoes · Echoes attack speed",
@@ -130,7 +124,7 @@ const PATH_SPECS: PathSpec[] = [
     revealsPerCycle: 6,
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Fallback if essence-crit can't be slotted. Cheap 6-reveal desecrate, not Light-per-miss.",
+    verdict: "Cheapest valid +Proj craft. 6-reveal desecrate (Abyssal Echoes), not Light-per-miss.",
   },
   {
     key: "proj-conservative",
@@ -141,7 +135,18 @@ const PATH_SPECS: PathSpec[] = [
     revealsPerCycle: 1,
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Original conservative model — single reveal, Omen-of-Light clears. Upper-bound cost.",
+    verdict: "Upper-bound cost — single reveal, Omen-of-Light clears. Use Abyssal Echoes instead.",
+  },
+  {
+    key: "proj-phys",
+    label: "+Proj · physical-only prefixes · Echoes crit",
+    fracture: "proj",
+    prefixMode: "physical",
+    critSource: "desecrate",
+    revealsPerCycle: 6,
+    baseDiv: 30,
+    resaleDiv: RESALE.projTypical,
+    verdict: "Phys-only doubles prefix churn for ~equal DPS — prefer elemental.",
   },
   {
     key: "crit-ele",
@@ -162,9 +167,9 @@ function costsFrom(divOf: DivOf): SlamCosts {
     exaltOmenDiv: divOf("Omen of Sinistral Exaltation", 14),
     annulDiv: divOf("Orb of Annulment", 212),
     lightDiv: divOf("Omen of Light", 3149),
-    jawboneDiv: 0.02, // Preserved Jawbone + Dextral Necromancy — sourced in-game
+    jawboneDiv: divOf("Ancient Jawbone", 3505), // min mod level 40 → only crit T3/T2/T1 reveals
     echoesDiv: divOf("Omen of Abyssal Echoes", 210),
-    essenceSeekingDiv: divOf("Greater Essence of Seeking", 6),
+    essenceSeekingDiv: divOf("Greater Essence of Seeking", 6), // unused for +Proj (rare base); kept for the cost model
     divineDiv: 1.0,
   };
 }
@@ -209,8 +214,9 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     pulledAt,
     assumptions: [
       "Base ilvl 81. Prefix odds EXACT from craftofexile weights (bow id_base 20).",
-      "Desecration reveal odds (crit/attack-speed/crit-damage) are MODELLED — tune vs real reveals.",
-      "Consumable prices live from the economy snapshot; jawbones sourced in-game (assumption).",
+      "Crit on a +Proj bow is DESECRATED (not essenced — essences need a Magic base; this one is a fractured rare).",
+      "Bone = Ancient Jawbone (min mod level 40 → only crit T3/T2/T1 reveal). Gnawed caps ilvl 64 (skip); Preserved reveals junk tiers.",
+      "Desecration reveal odds are MODELLED for an Ancient bone — tune vs real reveals.",
       "Resale = live trade2 floors via equipment filters (crit %, pDPS, +Proj) — re-check below.",
     ],
     bases: [
@@ -242,8 +248,7 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
       "Orb of Annulment (reroll)": costs.annulDiv,
       "Omen of Light (clear)": costs.lightDiv,
       "Omen of Abyssal Echoes": costs.echoesDiv,
-      "Greater Essence of Seeking (crit)": costs.essenceSeekingDiv,
-      "Preserved Jawbone (in-game)": costs.jawboneDiv,
+      "Ancient Jawbone (min mod lvl 40)": costs.jawboneDiv,
     },
     paths,
     resale: [
@@ -300,14 +305,11 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
       "  PA --> P1",
       "  P2 -->|Yes · keep| P3{3 damage prefixes yet?}",
       "  P3 -->|No| P1",
-      "  P3 -->|Yes| C0{Crit source}",
-      '  C0 -->|"Essence-Seeking (crafted slot)"| C1["4a. Crit GUARANTEED ~0.02 div"]',
-      '  C0 -->|"Desecrate"| D1["4b. Desecrate a suffix + Omen of Abyssal Echoes<br/>(3 options, reroll once)"]',
+      '  P3 -->|Yes| D1["4. Crit = DESECRATE a suffix · Ancient Jawbone (min mod lvl 40, only T3+)<br/>+ Omen of Abyssal Echoes (3 options, reroll once).<br/>Essence can NOT be used — base is a fractured rare."]',
       "  D1 --> D2{Crit revealed?}",
       '  D2 -->|"No"| DC["CLEAR · Omen of Light + Orb of Annulment<br/>strip the bad desecrated mod, then re-desecrate"]',
       "  DC --> D1",
-      "  D2 -->|Yes| C1",
-      '  C1 --> S1["5. Attack speed:<br/>desecrate + Abyssal Echoes (or Essence of Haste)"]',
+      '  D2 -->|Yes| S1["5. Attack speed:<br/>desecrate + Abyssal Echoes"]',
       "  S1 --> S2{Attack speed revealed?}",
       '  S2 -->|"No"| SC["CLEAR · Omen of Light + Annul → re-desecrate"]',
       "  SC --> S1",

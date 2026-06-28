@@ -11,3 +11,6 @@ data/economy/snapshot-*.json
 
 # Locally-saved trade2 floors (cache-first store; regenerated on demand).
 data/economy/trade-cache.json
+
+# Local Claude Code config + any injected tooling skills (not project content).
+.claude/

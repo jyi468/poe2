@@ -25,10 +25,9 @@ Fracturing Orb locks a *random* mod). Mod pool weights: craftofexile `?game=poe2
 
 **Tier:** mid
 
-With **Essence-Seeking crit + Abyssal-Echoes** desecration, the +Proj craft bankrolls at
-**~55 div** (base ~30 + p85 ~24) — not the ~217 div the old single-reveal/Light-clear loop
-implied. Bring **~70 div** if you must desecrate crit instead of essencing it. Only the
-worst-case Light-clear loop pushes toward ~200 div.
+With an **Ancient Jawbone** (only T3+ reveals) + **Abyssal Echoes**, the +Proj craft
+bankrolls at **~85 div** (base ~30 + p85 ~53) — not the ~217 div the old single-reveal /
+Preserved-bone / Light-clear loop implied.
 
 ## Recipe
 
@@ -46,15 +45,28 @@ Keep phys / hybrid / elemental. **REROLL** a junk prefix with a plain **Orb of A
 re-buying the ~30 div base. Allowing **elemental** (flat Lightning is the highest-weight
 prefix) takes the per-slam hit from 22.5% → **75.3%** and is equal-or-better total DPS.
 
-**3. Crit (the decisive cost lever).** Two routes:
-- **Essence of Seeking → guaranteed crit (~0.02 div).** *Seeking* keys off `Martial Weapon`
-  (bows included) and writes the crit suffix into the **crafted slot** — no hunt, no
-  variance. This is the cheapest path; it needs the crafted-slot mod injected onto the
-  fractured *rare* (Runic/Imbued Alloy in 0.5) — confirm that in-game before relying on it.
-- **Desecrate crit** with **Preserved Jawbone + Omen of Dextral Necromancy**, and **Omen of
-  Abyssal Echoes** to reroll the 3 options once (≈6 looks/cycle, ~0.6 div). On a miss,
-  **CLEAR** with **Omen of Light + Orb of Annulment** and re-desecrate. Use this only if
-  essence-crit can't be slotted.
+**3. Crit (the decisive cost lever) — desecrate it.** On a +Proj bow crit comes from
+**desecration**: **Ancient Jawbone + Omen of Dextral Necromancy**, with **Omen of Abyssal
+Echoes** to reroll the 3 revealed options once (≈6 looks/cycle). On a miss, **CLEAR** with
+**Omen of Light + Orb of Annulment** and re-desecrate.
+
+**Which bone? Ancient.** Bones set the floor of what can be revealed:
+- **Gnawed** caps at **ilvl 64** → locks you out of the top tiers. Never use it here.
+- **Preserved** (~0.005 div): no minimum mod level → reveals junk-tier crit (T6 = 1.0%) too,
+  so most reveals are wasted and you pay an ~8.6-div Omen-of-Light **CLEAR** on each miss.
+- **Ancient** (~9.6 div): **minimum mod level 40** → for crit that's **only T3/T2/T1**
+  (ilvl 44/59/73); T4–T6 can't appear. Every crit reveal is already acceptable, so you hit
+  in ~1 cycle and almost never pay the expensive CLEAR.
+
+EV: the cost driver is the **Omen of Light clears (~8.6 div each)**, not the bone. Ancient's
+min-level-40 filter cuts the clears to near-zero, so it's **net cheaper *and* lower-variance**
+than Preserved despite the ~9.6-div bone — and it's the only sane choice if you're chasing
+**T1 crit** (Preserved would bury T1 under junk reveals).
+
+> **Essence of Seeking can NOT be used here.** Essences only upgrade a **Magic** base to
+> Rare (one essence per item), and a +Proj base is bought already **fractured (rare)** — so
+> there's no way to essence crit onto it. Essence-Seeking crit only applies to a from-scratch
+> *non-*+Proj bow, which is the flooded ~0.5 div item you wouldn't craft anyway.
 
 **4. Remaining suffix.** Attack speed via a cheap **Abyssal-Echoes desecrate** (or **Essence
 of Haste**, guaranteed, if you spent the crafted slot on crit you instead desecrate it).
@@ -145,23 +157,22 @@ three damage prefixes high. At the floor you roughly break even vs just buying.
 > Consumables only (base NOT included), from `pnpm bow-sim` (20k trials). Crit source is
 > the lever:
 >
-> | Scenario (all +Proj, elemental prefixes) | mean | p50 | p85 | p95 |
+> | Scenario (all +Proj, elemental prefixes; Ancient bone) | mean | p50 | p85 | p95 |
 > |---|---|---|---|---|
-> | **Essence-Seeking crit (guaranteed)** + Echoes AS | **18** | **15** | **24** | **34** |
-> | desecrate crit via Abyssal Echoes + Echoes AS | 26 | 21 | 40 | 51 |
-> | desecrate crit · Light-clear per miss (pessimistic) | 113 | 95 | 187 | 264 |
-> | phys-only prefixes (Echoes crit) | 53 | 49 | 78 | 99 |
-> | B · Crit-fractured (buy don't craft) | 22 | 21 | 33 | 44 |
+> | **desecrate crit · Ancient Jawbone + Abyssal Echoes** | **41** | **34** | **53** | **69** |
+> | desecrate crit · Light-clear per miss (pessimistic) | 134 | 112 | 219 | 298 |
+> | phys-only prefixes (Echoes crit) | 69 | 64 | 92 | 113 |
+> | B · Crit-fractured (buy don't craft) | 40 | 34 | 53 | 62 |
 >
 > Bankroll & ROI at **live trade2 resale** (2026-06-28):
-> - **A `+Proj`, Essence-Seeking crit:** base ~30 + p85 24 → **bring ~55 div**; typical
->   all-in ~48; resale floor ~130, settled ~200 → **EV ≈ +150 div**, T1-crit/pDPS≥600 tier
->   ~460–630. The cheap, low-variance default.
-> - **A `+Proj`, Echoes desecrate crit:** **bring ~70 div** if essence-crit can't be slotted.
+> - **A `+Proj` (Ancient-bone + Abyssal-Echoes desecrate crit):** base ~30 + p85 53 →
+>   **bring ~85 div**; typical all-in ~71; resale floor ~130, settled ~200 → **EV ≈ +130
+>   div**, T1-crit/pDPS≥600 tier ~460–630. The cheap default (Essence-Seeking crit is not
+>   usable — see Recipe).
 > - **B `Crit`:** resale ~0.5 → **negative regardless**. Do not craft — **buy** the ~0.5 div
 >   bow.
 >
-> The earlier ~217 div bankroll was the **single-reveal / Light-clear** worst case. With
-> Essence-Seeking crit + Abyssal Echoes the same bow bankrolls at **~55 div**, ~4× cheaper
-> and far less swingy. Re-run `pnpm bow-sim` as prices move; tune the modelled desecration
-> odds against real reveal data.
+> The earlier ~217 div bankroll was the **single-reveal / Preserved-bone / Light-clear**
+> worst case. With an **Ancient Jawbone** (only T3+ reveals) + **Abyssal Echoes** the same bow
+> bankrolls at **~85 div**. Re-run `pnpm bow-sim` as prices move; tune the modelled
+> desecration odds against real reveal data.
