@@ -14,6 +14,7 @@
     "boots-sim": "tsx src/crafting-sim/boots-craft.ts",
     "desecration-sim": "tsx src/crafting-sim/desecration-craft.ts",
     "jewel-sim": "tsx src/crafting-sim/jewel-craft.ts",
+    "bow-sim": "tsx src/crafting-sim/bow-omen-slam-craft.ts",
     "api": "tsx watch src/server/server.ts",
     "app": "concurrently -n api,web -c blue,green \"pnpm api\" \"vite --config app/vite.config.ts\"",
     "app:build": "vite --config app/vite.config.ts build",

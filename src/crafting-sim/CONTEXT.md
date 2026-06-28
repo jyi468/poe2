@@ -17,6 +17,7 @@ src/crafting-sim/
 ├── magic-craft.ts       # CLI → `pnpm craft-sim` (two-mod magic craft)
 ├── boots.ts / boots-craft.ts            # boots sim core + CLI → `pnpm boots-sim`
 ├── desecration.ts / desecration-craft.ts # desecration sim core + CLI → `pnpm desecration-sim`
+├── bow-omen-slam.ts / bow-omen-slam-craft.ts # omen-slam bow EV (Monte Carlo) → `pnpm bow-sim`
 └── *.test.ts            # co-located vitest
 ```
 
@@ -36,7 +37,13 @@ Every sim should keep this distinction visible in its output and comments.
 pnpm craft-sim         # magic two-mod craft EV
 pnpm boots-sim         # movement-speed boots EV
 pnpm desecration-sim   # desecration / lich-modifier EV
+pnpm bow-sim           # omen-slam bow EV — fracture-path bankroll & ROI (Monte Carlo)
 ```
+
+> `bow-omen-slam.ts` is a Monte-Carlo core (seeded PRNG, no I/O) rather than a closed-form
+> EV like `estimate.ts` — the craft is a chain of geometric hunts with a fat right tail, so
+> the CLI reports p50/p85/p95, not just a mean. Prefix odds are EXACT (craftofexile
+> weights); the desecration odds are MODELLED inputs.
 
 ## Rules
 
