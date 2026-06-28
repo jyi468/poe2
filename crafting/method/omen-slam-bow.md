@@ -89,17 +89,30 @@ roughly double prefix cost via annul churn; take the elemental branch.
 
 The fracture's value = how hard the locked mod is to get **any other way**:
 
-- **`crit` is desecratable** → locking it with a fracture is partly redundant, but it
-  *guarantees* a near-max crit and deletes the whole crit hunt. Cheapest, most
-  deterministic; **self-use** (output lacks the +levels premium, so flip ROI is thin).
 - **`+Proj` is NOT in the desecration pool** → fracture is the only clean way to get the
-  +4 levels, which carries most of the resale value. **Profit play** (and a damage
-  multiplier), at the cost of the crit desecration hunt.
+  +4 levels, and **+levels is what the market pays for** (it isn't even in weapon DPS — it's
+  a separate skill multiplier and a scarce mod). This is the **only version worth crafting**.
+- **`crit` is desecratable** → a crit-fractured bow with NO +levels is a flooded item:
+  even crit≈8% / pDPS≥450 rolls **floor at ~0.5 div** (live trade2, 2026-06-28). Crafting
+  one costs ~120 div of consumables to make a sub-1-div item — **never do it; just buy one.**
 
-Rule of thumb: want to **sell / scale gem levels → buy `+Proj` fractured**; want a
-**cheap reliable personal bow → buy `crit` fractured**. If a 4.8% crit-fractured base
-(already T1) costs ~the same as a +4 base and you don't need levels, the crit base is the
-cheaper *finish*.
+Rule of thumb: **buy `+Proj` fractured and craft that.** If you only want a personal
+crit/phys bow with no levels, **buy the finished bow (~0.5 div), don't craft it.**
+
+## Output value (live trade2, equipment filters, 2026-06-28)
+
+Valued by the stats that actually price a bow — **+Proj levels, crit %, physical DPS,
+total DPS** (computed weapon properties, not individual mods):
+
+| Finished bow | Real floor |
+|---|---|
+| crit ≥8% · pDPS ≥450 · **no +levels** | **~0.5 div** (6000+ listings — worthless) |
+| **+4 Proj** · crit ≥8% (T3) · pDPS ≥450 | **~130 div** |
+| **+4 Proj** · crit ≥9% (T1, ~max 10%) · pDPS ≥600 | **~460–630 div** |
+
+The price ladder inside the +Proj tier is driven by **crit chance** (T3 → ~130; T1 → ~500)
+and **pDPS** — so the craft's profit lives in pushing crit to **T1 (≥9% computed)** and the
+three damage prefixes high. At the floor you roughly break even vs just buying.
 
 ## Worked example
 
@@ -114,12 +127,14 @@ cheaper *finish*.
 > | **B · Crit · ele prefixes** | **93** | **79** | **153** | **215** |
 > | B · Crit · phys-only prefixes | 121 | 109 | 186 | 245 |
 >
-> Bankroll & ROI at example trade prices (base/resale are market inputs — edit in the CLI):
+> Bankroll & ROI at **live trade2 resale** (2026-06-28):
 > - **A `+Proj`:** base ~30 + p85 187 → **bring ~217 div**; typical all-in ~143; resale
->   ~300 → **EV ≈ +157 div** (profit).
-> - **B `Crit`:** base ~32 + p85 153 → **bring ~185 div**; typical all-in ~125; resale
->   ~90 → **EV ≈ −35 div** (make to use, not to flip).
+>   floor ~130 → roughly **break-even at the floor**, **EV ≈ +57 div** at a settled ~200,
+>   and **+300 to +480 div** if you reach the T1-crit / pDPS≥600 tier (~460–630 resale).
+> - **B `Crit`:** all-in ~125; resale ~0.5 → **EV ≈ −125 div**. Do not craft — **buy** the
+>   ~0.5 div bow instead.
 >
-> Take the **elemental-allowed prefix branch** and **settle for ≥T3 crit** rather than
-> chasing T1. Re-run `pnpm bow-sim` as omen prices move; tune the modelled desecration
-> odds (`pCrit`/`pAttackSpeed`/`pCritDamage`) against real reveal data.
+> Path A is the only +EV craft, and its profit is the **right tail**: at the floor you tie
+> with buying, the money is in chasing **T1 crit (≥9% computed)** + high pDPS. Allow
+> elemental prefixes (DPS is in the phys/ele, not the levels). Re-run `pnpm bow-sim` as
+> prices move; tune the modelled desecration odds against real reveal data.
