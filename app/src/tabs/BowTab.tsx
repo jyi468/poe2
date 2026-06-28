@@ -165,9 +165,10 @@ export default function BowTab() {
       <ErrorBanner error={error} />
       <h2>Bow Crafting — omen-slam fractured base</h2>
       <p className="muted">
-        Lock one premium mod with a fractured ilvl-81 base, fill 3 damage prefixes with{" "}
-        <b>Perfect Exalt + Sinistral Exaltation</b> (top tier free — roll only the type), then{" "}
-        <b>desecrate</b> the crit / attack-speed suffixes. Prices live
+        Lock one premium mod with a fractured ilvl-81 base, then fill the 3 prefixes{" "}
+        <b>and</b> the 2 open suffixes with <b>Perfect Exalt + Sinistral/Dextral Exaltation</b>{" "}
+        (top tier free — roll only the type). Crit is ~7% of the suffix pool but lands T1;
+        Perfect-Exalting it beats desecration. Prices live
         {data?.pulledAt ? ` (${data.pulledAt.slice(0, 10)}, 1 div ≈ ${Math.round(data.divine)} ex)` : ""}.
       </p>
       {!data && !error && <p className="muted">Loading…</p>}
@@ -230,8 +231,8 @@ export default function BowTab() {
 
           <h3>Expected cost &amp; EV by path</h3>
           <p className="muted">
-            Consumables only (base shown separately). p85 = bring-this-much bankroll; the desecration crit hunt is
-            fat-tailed, so p95 ≫ p50. Resale = live trade2 floor reference.
+            Consumables only (base shown separately). p85 = bring-this-much bankroll; the ~7% crit-suffix hunt
+            drives the tail, so p95 &gt; p50. Resale = live trade2 floor reference.
           </p>
           <table>
             <thead>

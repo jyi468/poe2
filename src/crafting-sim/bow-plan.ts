@@ -75,18 +75,18 @@ export interface BowPlan {
 
 const PROJ_STAT = "explicit.stat_1202301673"; // +# to Level of all Projectile Skills
 
-// EXACT per-slam prefix odds (craftofexile weights, id_base 20, ilvl 81).
-const P_PREFIX_ELE = 0.753;
-const P_PREFIX_PHYS = 0.225;
+// EXACT weight shares (craftofexile, bow id_base 20, ilvl 81).
+const P_PREFIX_ELE = 0.753; // a top-tier prefix is phys OR elemental
+const P_PREFIX_PHYS = 0.225; // phys-only
+const P_CRIT_SUFFIX = 3875 / 55050; // 7.04% — a Perfect-Exalt suffix is crit (lands T1)
+const P_SECOND_SUFFIX = (3900 + 3875) / 55050; // 14.1% — attack speed OR crit damage
+const P_CRIT_DESEC_ANCIENT = 875 / 21400; // 4.09% — crit ≥T3 per reveal under an Ancient bone
 
-// MODELLED desecration reveal odds (per single revealed mod), calibrated for an
-// ANCIENT Jawbone (min modifier level 40 → only crit T3/T2/T1 appear, no junk tiers),
-// which is why these are higher than a Preserved-bone hunt. Each path overrides
-// critSource / revealsPerCycle.
-const BASE_MODEL: Omit<SlamModel, "pPrefix" | "critSource" | "revealsPerCycle"> = {
-  pCrit: 0.25,
-  pAttackSpeed: 0.3,
-  pCritDamage: 0.28,
+const BASE_MODEL: Omit<SlamModel, "pPrefix" | "critSource"> = {
+  pCritSuffix: P_CRIT_SUFFIX,
+  pSecondSuffix: P_SECOND_SUFFIX,
+  pCritDesecReveal: P_CRIT_DESEC_ANCIENT,
+  revealsPerCycle: 6, // Abyssal Echoes
   prefixCount: 3,
   finishingDivines: 4,
 };
@@ -104,46 +104,43 @@ interface PathSpec {
   label: string;
   fracture: FracturePath;
   prefixMode: "elemental" | "physical";
-  critSource: "essence" | "desecrate";
-  revealsPerCycle: number;
+  critSource: "exalt" | "desecrate";
   baseDiv: number;
   resaleDiv: number;
   verdict: string;
 }
 
-// NOTE: Essence of Seeking would guarantee crit, but essences only upgrade a MAGIC
-// base to Rare and a +Proj base is bought already fractured (rare) — so essence-crit
-// is NOT usable here. Crit on the +Proj bow must be desecrated.
+// Real weights show crit is only ~7% of the suffix pool, so Perfect-Exalt slamming crit
+// (lands T1, cheap annul misses) beats DESECRATING it (same type-rarity, one mod at a time,
+// ~8.6-div Light clears). Essence-Seeking is impossible (essences need a Magic base; this
+// one is a fractured rare). Recombinator is removed in 0.5.
 const PATH_SPECS: PathSpec[] = [
   {
-    key: "proj-echoes",
-    label: "+Proj · desecrate crit via Abyssal Echoes · Echoes attack speed",
+    key: "proj-exalt",
+    label: "+Proj · Perfect-Exalt crit (lands T1) + attack speed · elemental prefixes",
     fracture: "proj",
     prefixMode: "elemental",
-    critSource: "desecrate",
-    revealsPerCycle: 6,
+    critSource: "exalt",
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Cheapest valid +Proj craft. 6-reveal desecrate (Abyssal Echoes), not Light-per-miss.",
+    verdict: "RECOMMENDED. Crit at ~7%/slam but T1 free; annul misses cheap. The +EV craft.",
   },
   {
-    key: "proj-conservative",
-    label: "+Proj · desecrate crit · Light-clear per miss (pessimistic)",
+    key: "proj-desecrate",
+    label: "+Proj · desecrate crit (Ancient bone) + exalt attack speed · elemental",
     fracture: "proj",
     prefixMode: "elemental",
     critSource: "desecrate",
-    revealsPerCycle: 1,
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
-    verdict: "Upper-bound cost — single reveal, Omen-of-Light clears. Use Abyssal Echoes instead.",
+    verdict: "More expensive — desecration fights the same ~7% crit-type rarity with ~8.6-div Light clears. Don't.",
   },
   {
     key: "proj-phys",
-    label: "+Proj · physical-only prefixes · Echoes crit",
+    label: "+Proj · Perfect-Exalt crit · physical-only prefixes",
     fracture: "proj",
     prefixMode: "physical",
-    critSource: "desecrate",
-    revealsPerCycle: 6,
+    critSource: "exalt",
     baseDiv: 30,
     resaleDiv: RESALE.projTypical,
     verdict: "Phys-only doubles prefix churn for ~equal DPS — prefer elemental.",
@@ -153,8 +150,7 @@ const PATH_SPECS: PathSpec[] = [
     label: "Crit-fractured · elemental prefixes",
     fracture: "crit",
     prefixMode: "elemental",
-    critSource: "desecrate",
-    revealsPerCycle: 6,
+    critSource: "exalt",
     baseDiv: 32,
     resaleDiv: RESALE.crit,
     verdict: "Negative — no +levels means ~0.5 div resale. Buy one, don't craft.",
@@ -166,10 +162,9 @@ function costsFrom(divOf: DivOf): SlamCosts {
     perfectExaltDiv: divOf("Perfect Exalted Orb", 865),
     exaltOmenDiv: divOf("Omen of Sinistral Exaltation", 14),
     annulDiv: divOf("Orb of Annulment", 212),
-    lightDiv: divOf("Omen of Light", 3149),
-    jawboneDiv: divOf("Ancient Jawbone", 3505), // min mod level 40 → only crit T3/T2/T1 reveals
-    echoesDiv: divOf("Omen of Abyssal Echoes", 210),
-    essenceSeekingDiv: divOf("Greater Essence of Seeking", 6), // unused for +Proj (rare base); kept for the cost model
+    lightDiv: divOf("Omen of Light", 3149), // desecrate alternative only
+    boneDiv: divOf("Ancient Jawbone", 3505), // desecrate alternative only
+    echoesDiv: divOf("Omen of Abyssal Echoes", 210), // desecrate alternative only
     divineDiv: 1.0,
   };
 }
@@ -184,7 +179,6 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
       ...BASE_MODEL,
       pPrefix: s.prefixMode === "elemental" ? P_PREFIX_ELE : P_PREFIX_PHYS,
       critSource: s.critSource,
-      revealsPerCycle: s.revealsPerCycle,
     };
     const { stats } = simulateBowSlam(s.fracture, model, costs, { trials: 20000, seed: 42 });
     const bankroll = s.baseDiv + stats.p85;
@@ -213,10 +207,9 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     divine,
     pulledAt,
     assumptions: [
-      "Base ilvl 81. Prefix odds EXACT from craftofexile weights (bow id_base 20).",
-      "Crit on a +Proj bow is DESECRATED (not essenced — essences need a Magic base; this one is a fractured rare).",
-      "Bone = Ancient Jawbone (min mod level 40 → only crit T3/T2/T1 reveal). Gnawed caps ilvl 64 (skip); Preserved reveals junk tiers.",
-      "Desecration reveal odds are MODELLED for an Ancient bone — tune vs real reveals.",
+      "Base ilvl 81. Prefix + suffix odds are EXACT craftofexile weight shares (bow id_base 20).",
+      "Suffixes filled with Perfect Exalt + Dextral Exaltation (top tier): crit is 7.04% of the pool but lands T1; attack-speed-or-crit-damage is 14.1%. Junk is annulled in place (~0.6 div), not re-bought.",
+      "Crit by EXALT beats DESECRATION: you may hold one desecrated mod at a time, crit is ~7% either way, and desec misses cost ~8.6-div Omen-of-Light clears. Essence-Seeking is impossible (needs a Magic base; this is a fractured rare).",
       "Resale = live trade2 floors via equipment filters (crit %, pDPS, +Proj) — re-check below.",
     ],
     bases: [
@@ -238,17 +231,18 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
       },
     ],
     exactOdds: [
-      { label: "flat-or-% physical, ≥T3", chaos: "1 in 117 (0.85%)", perfectExalt: "1 in 4.4 (22.5%)" },
-      { label: "phys incl. hybrid+acc", chaos: "1 in 64", perfectExalt: "1 in 2.9" },
-      { label: "phys OR elemental", chaos: "1 in 22", perfectExalt: "1 in 1.3 (75.3%)" },
+      { label: "PREFIX · phys OR elemental (per Perfect Exalt)", chaos: "1 in 22", perfectExalt: "1 in 1.3 (75.3%)" },
+      { label: "PREFIX · flat-or-% physical, ≥T3", chaos: "1 in 117", perfectExalt: "1 in 4.4 (22.5%)" },
+      { label: "SUFFIX · crit chance (Perfect Exalt → T1)", chaos: "—", perfectExalt: "1 in 14 (7.0%)" },
+      { label: "SUFFIX · attack speed OR crit damage", chaos: "—", perfectExalt: "1 in 7 (14.1%)" },
     ],
     costInputsDiv: {
       "Perfect Exalted Orb": costs.perfectExaltDiv,
-      "Sinistral Exaltation omen": costs.exaltOmenDiv,
+      "Sinistral/Dextral Exaltation omen": costs.exaltOmenDiv,
       "Orb of Annulment (reroll)": costs.annulDiv,
-      "Omen of Light (clear)": costs.lightDiv,
-      "Omen of Abyssal Echoes": costs.echoesDiv,
-      "Ancient Jawbone (min mod lvl 40)": costs.jawboneDiv,
+      "Omen of Light (desec-only clear)": costs.lightDiv,
+      "Ancient Jawbone (desec-only)": costs.boneDiv,
+      "Omen of Abyssal Echoes (desec-only)": costs.echoesDiv,
     },
     paths,
     resale: [
@@ -298,26 +292,25 @@ export function buildBowPlan(divOf: DivOf, divine: number, pulledAt: string | nu
     ],
     flowchart: [
       "flowchart TD",
-      '  A["1. Buy ilvl-81 fractured +Proj bow (rare)"] --> B["2. Strip to the bare fracture<br/>(annul extra mods down)"]',
-      '  B --> P1["3. Add a prefix:<br/>Omen of Sinistral Exaltation + Perfect Exalted Orb"]',
+      '  A["1. Buy ilvl-81 fractured +Proj bow (rare).<br/>Fracture is a suffix and is annul-IMMUNE."] --> B["2. Strip to the bare fracture<br/>(annul the extra mods down)"]',
+      '  B --> P1["3. Add a PREFIX:<br/>Omen of Sinistral Exaltation + Perfect Exalted Orb (top tier)"]',
       "  P1 --> P2{Damage prefix?<br/>phys or elemental}",
-      '  P2 -->|"No · junk"| PA["REROLL · Orb of Annulment<br/>remove the junk prefix while it is the only/newest one"]',
+      '  P2 -->|"No · junk"| PA["REROLL · Orb of Annulment (~0.6 div)<br/>remove the junk prefix while it is the only/newest one"]',
       "  PA --> P1",
       "  P2 -->|Yes · keep| P3{3 damage prefixes yet?}",
       "  P3 -->|No| P1",
-      '  P3 -->|Yes| D1["4. Crit = DESECRATE a suffix · Ancient Jawbone (min mod lvl 40, only T3+)<br/>+ Omen of Abyssal Echoes (3 options, reroll once).<br/>Essence can NOT be used — base is a fractured rare."]',
-      "  D1 --> D2{Crit revealed?}",
-      '  D2 -->|"No"| DC["CLEAR · Omen of Light + Orb of Annulment<br/>strip the bad desecrated mod, then re-desecrate"]',
-      "  DC --> D1",
-      '  D2 -->|Yes| S1["5. Attack speed:<br/>desecrate + Abyssal Echoes"]',
-      "  S1 --> S2{Attack speed revealed?}",
-      '  S2 -->|"No"| SC["CLEAR · Omen of Light + Annul → re-desecrate"]',
-      "  SC --> S1",
-      "  S2 -->|Yes| T0{Junk mod trapped<br/>among keepers on one side?}",
-      '  T0 -->|"Yes"| TE["TARGETED REMOVE · Omen of Sinistral/Dextral Erasure<br/>(chaos removes only that side) · or Sinistral/Dextral Annulment"]',
-      "  TE --> F1",
-      "  T0 -->|No| F1",
+      '  P3 -->|Yes| S1["4. CRIT = a SUFFIX slam:<br/>Omen of Dextral Exaltation + Perfect Exalted Orb.<br/>Crit is ~7% of the pool but lands T1 when it hits."]',
+      "  S1 --> S2{Crit chance?}",
+      '  S2 -->|"No · junk suffix"| SA["REROLL · Orb of Annulment<br/>(fracture is immune, so annul takes the junk suffix)"]',
+      "  SA --> S1",
+      '  S2 -->|Yes · keep| S3["5. Other suffix · Dextral Exaltation + Perfect Exalt<br/>until attack speed OR crit damage (14%)"]',
+      "  S3 --> S4{Got it?}",
+      "  S4 -->|No · junk| SA2[REROLL · Orb of Annulment]",
+      "  SA2 --> S3",
+      "  S4 -->|Yes| F1",
       '  F1["6. Finish · ~4 Divine Orb rolls toward high values + quality"]',
+      '  ALT["ALT — more expensive, NOT recommended:<br/>desecrate crit instead (Ancient Jawbone + Abyssal Echoes,<br/>CLEAR misses with Omen of Light + Annul). Same ~7% crit-type<br/>rarity but ~8.6-div clears, one desecrated mod at a time.<br/>Essence-Seeking impossible — needs a Magic base."]',
+      "  S1 -.-> ALT",
     ].join("\n"),
   };
 }

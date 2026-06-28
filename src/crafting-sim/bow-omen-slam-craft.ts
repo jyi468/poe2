@@ -1,15 +1,13 @@
 // CLI: bankroll + ROI for the omen-slam bow craft (crafting/method/omen-slam-bow.md).
-// Compares the two fracture paths (+Proj vs Crit) and the prefix strategy
-// (elemental-allowed vs phys-only).
+// Shows the recommended all-Perfect-Exalt path vs the (worse) desecrate-crit path,
+// and the prefix strategy (elemental-allowed vs phys-only).
 //
 // Run: pnpm bow-sim   (or: pnpm tsx src/crafting-sim/bow-omen-slam-craft.ts)
 //
-// EXACT: consumable prices (live, data/economy/latest.json) and per-slam PREFIX odds
-//   (craftofexile spawn weights, bow id_base 20, ilvl 81).
-// MODELLED: per-desecrate crit/attack-speed/crit-damage chances (Abyssal pool, not in
-//   the craftofexile dump) — calibrated to the source video's "~10 Omen of Lights"
-//   budget. Edit MODEL below to taste. Base-item prices and resale values are market
-//   judgement — set BASE_DIV / RESALE_DIV to your live trade numbers.
+// EXACT: consumable prices (live, data/economy/latest.json) and per-slam PREFIX + SUFFIX
+//   odds (craftofexile spawn-weight shares, bow id_base 20, ilvl 81), assuming the slam/
+//   desecrate samples the normal suffix pool by weight.
+// Base-item prices and resale values are market judgement — set BASE_DIV / RESALE_DIV.
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -49,35 +47,31 @@ const costs: SlamCosts = {
   perfectExaltDiv: divOf("Perfect Exalted Orb", 865),
   exaltOmenDiv: divOf("Omen of Sinistral Exaltation", 14),
   annulDiv: divOf("Orb of Annulment", 212),
-  lightDiv: divOf("Omen of Light", 3149),
-  jawboneDiv: divOf("Ancient Jawbone", 3505), // min mod lvl 40 → only crit T3/T2/T1 reveal
-  echoesDiv: divOf("Omen of Abyssal Echoes", 210),
-  essenceSeekingDiv: divOf("Greater Essence of Seeking", 6), // unused for +Proj; kept for the model
+  lightDiv: divOf("Omen of Light", 3149), // desecrate alternative only
+  boneDiv: divOf("Ancient Jawbone", 3505), // desecrate alternative only (in-game)
+  echoesDiv: divOf("Omen of Abyssal Echoes", 210), // desecrate alternative only
   divineDiv: divOf("Divine Orb", div),
 };
 
-// ---- EXACT prefix odds (craftofexile weights, bow id_base 20, ilvl 81) -------
-const P_PREFIX_ELE = 0.753; // phys OR elemental damage prefix, top tier
+// ---- EXACT weight shares (craftofexile, bow id_base 20, ilvl 81) -------------
+const P_PREFIX_ELE = 0.753; // phys OR elemental prefix, top tier
 const P_PREFIX_PHYS = 0.225; // flat-or-% physical only, top tier
+const P_CRIT_SUFFIX = 3875 / 55050; // 7.04% — crit chance share of the suffix pool
+const P_SECOND_SUFFIX = (3900 + 3875) / 55050; // 14.1% — attack speed OR crit damage
+const P_CRIT_DESEC_ANCIENT = 875 / 21400; // 4.09% — crit ≥T3 per reveal, Ancient bone
 
-// ---- MODELLED desecration odds (per single revealed mod; Ancient bone, T3+ only) -
 const MODEL: SlamModel = {
   pPrefix: P_PREFIX_ELE,
-  critSource: "desecrate",
-  revealsPerCycle: 6, // Abyssal Echoes (3 options + 1 reroll)
-  pCrit: 0.25, // acceptable crit-chance per revealed mod (Ancient bone filters to T3+)
-  pAttackSpeed: 0.3,
-  pCritDamage: 0.28,
+  critSource: "exalt",
+  pCritSuffix: P_CRIT_SUFFIX,
+  pSecondSuffix: P_SECOND_SUFFIX,
+  pCritDesecReveal: P_CRIT_DESEC_ANCIENT,
+  revealsPerCycle: 6, // Abyssal Echoes (desecrate path)
   prefixCount: 3,
   finishingDivines: 4,
 };
 
 // ---- market values (LIVE trade2 floors, equipment filters, 2026-06-28) -------
-// Pulled via: pnpm trade --category weapon.bow --crit <%> --pdps <n> [--stat +proj].
-//   proj : +4 Proj · crit>=8% · pDPS>=450 floor ~130 div; settled-typical ~200;
-//          T1 crit (>=9%) + pDPS>=600 tier ~460-630 div.
-//   crit : a crit+pDPS bow WITHOUT +levels floors at ~0.5 div (market is flooded) —
-//          so the Crit-fracture craft has no resale; BUY one instead of crafting.
 const BASE_DIV: Record<FracturePath, number> = { proj: 30, crit: 32 };
 const RESALE_DIV: Record<FracturePath, number> = { proj: 200, crit: 0.5 };
 
@@ -87,21 +81,15 @@ interface Row {
   model: SlamModel;
 }
 
-// Essence-Seeking crit is NOT usable here: essences upgrade a MAGIC base to Rare, and a
-// +Proj base is bought already fractured (rare). Crit must be desecrated.
 const rows: Row[] = [
+  { label: "A · +Proj · Perfect-Exalt crit (T1) + AS  [RECOMMENDED]", path: "proj", model: MODEL },
   {
-    label: "A · +Proj · desecrate crit (Abyssal Echoes) · Echoes AS",
+    label: "A · +Proj · DESECRATE crit (Ancient) + exalt AS",
     path: "proj",
-    model: MODEL,
+    model: { ...MODEL, critSource: "desecrate" },
   },
   {
-    label: "A · +Proj · desecrate crit · Light-clear per miss (pessimistic)",
-    path: "proj",
-    model: { ...MODEL, revealsPerCycle: 1 },
-  },
-  {
-    label: "A · +Proj · PHYS-only prefixes (Echoes crit)",
+    label: "A · +Proj · PHYS-only prefixes (exalt crit)",
     path: "proj",
     model: { ...MODEL, pPrefix: P_PREFIX_PHYS },
   },
@@ -115,27 +103,22 @@ console.log(`prices: data/economy/latest.json @ ${pulledAt} · 1 div ≈ ${div.t
 console.log(
   `inputs (div): Perfect Exalt ${costs.perfectExaltDiv.toFixed(2)} · ` +
     `exalt-omen ${costs.exaltOmenDiv.toFixed(2)} · annul ${costs.annulDiv.toFixed(2)} · ` +
-    `Light ${costs.lightDiv.toFixed(2)} · jawbone ${costs.jawboneDiv.toFixed(2)} (in-game)`,
+    `[desec-only] Light ${costs.lightDiv.toFixed(2)} · bone ${costs.boneDiv.toFixed(2)}`,
 );
 console.log(
-  `EXACT prefix odds: ele ${(P_PREFIX_ELE * 100).toFixed(1)}% · phys-only ${(
-    P_PREFIX_PHYS * 100
-  ).toFixed(1)}% (craftofexile weights, id_base 20, ilvl 81)`,
-);
-console.log(
-  `MODELLED desec odds: crit T3 ${(MODEL.pCrit * 100).toFixed(0)}% · ` +
-    `AS ${(MODEL.pAttackSpeed * 100).toFixed(0)}% · CD ${(MODEL.pCritDamage * 100).toFixed(0)}% ` +
-    `(Abyssal pool — assumption)\n`,
+  `EXACT odds: prefix ele ${(P_PREFIX_ELE * 100).toFixed(1)}% · crit suffix ` +
+    `${(P_CRIT_SUFFIX * 100).toFixed(1)}% (→T1) · 2nd suffix ${(P_SECOND_SUFFIX * 100).toFixed(1)}% ` +
+    `(craftofexile weights, id_base 20, ilvl 81)\n`,
 );
 
 console.log(
-  `${"scenario".padEnd(42)} ${"mean".padStart(5)} ${"p50".padStart(5)} ` +
+  `${"scenario".padEnd(50)} ${"mean".padStart(5)} ${"p50".padStart(5)} ` +
     `${"p85".padStart(5)} ${"p95".padStart(5)}   (consumables only)`,
 );
 for (const r of rows) {
   const s = simulateBowSlam(r.path, r.model, costs).stats;
   console.log(
-    `${r.label.padEnd(42)} ${d1(s.mean).padStart(5)} ${d1(s.p50).padStart(5)} ` +
+    `${r.label.padEnd(50)} ${d1(s.mean).padStart(5)} ${d1(s.p50).padStart(5)} ` +
       `${d1(s.p85).padStart(5)} ${d1(s.p95).padStart(5)}`,
   );
 }
@@ -147,8 +130,7 @@ console.log(
     `resale ${RESALE_DIV.proj}d / ${RESALE_DIV.crit}d)\n`,
 );
 for (const path of ["proj", "crit"] as FracturePath[]) {
-  const model = path === "proj" ? MODEL : MODEL; // both use ELE prefixes here
-  const s = simulateBowSlam(path, model, costs).stats;
+  const s = simulateBowSlam(path, MODEL, costs).stats;
   const base = BASE_DIV[path];
   const bankroll = base + s.p85;
   const typical = base + s.mean;
@@ -160,6 +142,6 @@ for (const path of ["proj", "crit"] as FracturePath[]) {
   );
 }
 console.log(
-  `\nNote: the p95 tail is the desecration crit hunt — if a run blows past p85, ` +
-    `re-bone a fresh base rather than Light-chasing a stubborn tier.\n`,
+  `\nNote: crit is only ~7% of the suffix pool, so the p95 tail is the crit-suffix hunt. ` +
+    `Perfect-Exalt it (T1 free, cheap annul misses) — don't desecrate it.\n`,
 );
