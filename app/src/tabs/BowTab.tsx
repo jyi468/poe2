@@ -207,13 +207,13 @@ export default function BowTab() {
             </tbody>
           </table>
 
-          <h3>Per-slam prefix odds (exact — craftofexile weights, ilvl 81)</h3>
+          <h3>Per-slam odds (exact — craftofexile weight shares, ilvl 81)</h3>
           <table>
             <thead>
               <tr>
-                <th>Target prefix</th>
+                <th>Target mod (prefix via Sinistral, suffix via Dextral)</th>
                 <th>Chaos-spam (random tier)</th>
-                <th>Perfect Exalt + Sinistral (top tier)</th>
+                <th>Perfect Exalt + Exaltation (top tier)</th>
               </tr>
             </thead>
             <tbody>
