@@ -243,8 +243,8 @@ export default function BowTab() {
 
           <h3>Expected cost &amp; EV by path</h3>
           <p className="muted">
-            Consumables only (base shown separately). p85 = bring-this-much bankroll; the ~7% crit-suffix hunt
-            drives the tail, so p95 &gt; p50. Resale = live trade2 floor reference.
+            Consumables only (base shown separately). p85 = bring-this-much bankroll; the rare crit-suffix hunt
+            (3.6% Greater / 2.4% Perfect) drives the tail, so p95 &gt; p50. Resale = live trade2 floor reference.
           </p>
           <table>
             <thead>
